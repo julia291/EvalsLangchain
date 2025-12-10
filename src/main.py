@@ -7,7 +7,6 @@ def main():
     logger = logging.getLogger(__name__)
     
     logger.info("Programm gestartet")
-    logger.debug("Starte Berechnung")
     
     print("Hello from evalslangchain!")
 
