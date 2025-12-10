@@ -1,0 +1,53 @@
+{
+  "tests": [
+    {
+      "name": "valid_simple_json",
+      "description": "Einfaches, korrektes JSON — sollte ohne Fehler geladen werden.",
+      "input_file": "simple.json",
+      "expected_result": {
+        "status": "success",
+        "keys": ["message", "count"]
+      }
+    },
+    {
+      "name": "missing_file",
+      "description": "Datei existiert nicht — sollte FileNotFoundError erzeugen.",
+      "input_file": "does_not_exist.json",
+      "expected_exception": "FileNotFoundError"
+    },
+    {
+      "name": "invalid_json_format",
+      "description": "JSON mit Syntaxfehlern — sollte JSONDecodeError werfen.",
+      "input_file": "broken.json",
+      "expected_exception": "JSONDecodeError"
+    },
+    {
+      "name": "large_json",
+      "description": "Große JSON-Struktur zur Prüfung von Ladezeit und Speicherverbrauch.",
+      "input_file": "large_dataset.json",
+      "expected_result": {
+        "status": "success",
+        "min_items": 10000
+      }
+    },
+    {
+      "name": "nested_json",
+      "description": "Verschachtelte JSON-Struktur zur Validierung rekursiver Verarbeitung.",
+      "input_file": "nested.json",
+      "expected_result": {
+        "status": "success",
+        "deep_keys": ["user", "settings", "notifications"]
+      }
+    },
+    {
+      "name": "empty_json",
+      "description": "Leere Datei oder leeres Objekt — sollte als {} interpretiert werden.",
+      "input_file": "empty.json",
+      "expected_result": {
+        "status": "success",
+        "is_empty": true
+      }
+    }
+  ]
+}
+
