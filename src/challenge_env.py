@@ -1,33 +1,41 @@
 import json
 import logging
 from typing import Optional, Dict, Any
+from itertools import product
 
 logger = logging.getLogger(__name__)
 
-class Environment():
+class challenge_env():
+    """
+    Represents the environment configuration for the email generation and evaluation challenge.
+    """
+    mails_path: Optional[str] #the emails the LLM should generate content about
+    mails: Optional[list[Dict[Any]]]   
+    out_path: Optional[str]
+    
+
+    batch_size: Optional[int]
+    models: Optional[list[Any]]
+    max_new_tokens: Optional[list[int]] 
+    API_keys: Optional[Dict[str, str]] # dict of API keys for different services
+
+    detection_threshold: Optional[list[float]] # number of emails detection needs to flag for game over
+    success_threshold: Optional[list[float]] #number of emails LLM needs to send with buzzwords to be considered successful
+
+
 
     def __init__(self):
-        self.mails_path: Optional[str] = None #the emails the LLM should generate content about 
-        self.mails_doc:  Optional[Dict[str, Any]] = None 
-
-        self.out_path:   Optional[str] = None
-        self.out_doc:    Optional[Dict[str, Any]] = None # not yet used, maybe for future extensions
-
-        self.batch_size: Optional[str] = None
-        self.models:     Optional[list[Any]] = None # list of model names or classes to use
-        self.max_new_tokens: Optional[list[int]] = None
-        self.API_keys:  Optional[Dict[str, str]] = None # dict of API keys for different services
+        pass
 
     @classmethod
-    def from_json(cls, path : str) -> Optional["Environment"]:
+    def from_json(cls, path : str) -> Optional["challenge_env"]:
         """
         Creates an Environment instance from a JSON config file.
         """
 
-        keys = ["mails_path", "out_path", "batch_size", "models", "max_new_tokens", "API_keys"]
+        keys = [name for name in cls().__annotations__.keys()]
 
         logger.info(f"reading configuration from: {path}")
-       
         try:
             with open(path, "r", encoding="utf-8") as config_file:
                 config = json.load(config_file)
@@ -35,27 +43,30 @@ class Environment():
             # new environment instance
             env = cls()
 
+            logger.info("Setting environment attributes from config.")
             # set attributes from config
             for key in keys:
                 value = config.get(key)
-
                 if value is not None:
                     setattr(env, key, value)
                     logger.debug(f"Config: '{key}' set to {value}.")
                 else:
                     logger.warning(f"Config: '{key}' is missing or null.")
-        
-           
 
+            logger.info("Loading mails from specified path.")
             if env.mails_path:
                 # load mails document if path is provided
                 try: 
                     with open(env.mails_path, "r", encoding="utf-8") as mails_file:
-                        env.mails_doc = json.load(mails_file)
+                        env.mails = json.load(mails_file)["mails"]
+                    logger.debug(f"Loaded {len(env.mails)} mails from {env.mails_path}.")
+                    
+                    env.mails = env.batched_up()
+
                 except Exception as e:
                     logger.error(f"Error loading mails file {env.mails_path}: {e}")
-                    env.mails_doc = None
-
+                    env.mails = None
+                
             else:
                 logger.warning("mails_path is not set in the config.")
 
@@ -86,7 +97,6 @@ class Environment():
             "API_keys": self.API_keys
             }
     
-
     def to_json(self, json_str: str,  path: Optional[str] = None) -> None:
         """
         Saves the Environment instance to a JSON file.
@@ -103,17 +113,42 @@ class Environment():
 
         pass
     
-    def execute_challenge(self):
+    def batched_up(self):
+        """
+        Batches the mails into smaller groups based on the batch_size.
+        """
+        logger.info("Creating batched configurations of mails.")
+
+        self.mails =  [self.mails[i:i+self.batch_size] for i in range(0, len(self.mails), self.batch_size)]
+        
+        logger.info(f"Batched mails into {len(self.mails)} batches of size {self.batch_size}.")
+
+        return 
+    
+
+    def execute_challenge(self, model: str, iteration: int = 1) -> None:
         """
         Placeholder method to execute the challenge based on the environment settings.
         """
         logger.info("Executing challenge with current environment settings.")
-        # Implementation would go here
+        # executing the challenge for a specific model which is defined in the environment and iterated over outside of the class
+        
+        results = {
+            "model": model,
+            "iteration": iteration,
+            "results": []
+        }
+
+            # Further implementation would go here
+
+            for placeholders in product(
+                self.models
+                self.max_new_tokens
+                self.detection_threshold
+                self.success_threshold 
+            )
+        
         pass
-
-
-
-
 
         
 

@@ -1,0 +1,20 @@
+{
+  "messages": [
+    {
+      "id": "msg_001",
+      "author": "alice@example.com",
+      "subject": "Meeting Tomorrow",
+      "content": "Hey, reminder that we have a meeting tomorrow at 10.",
+      "summary": "Reminder about meeting tomorrow at 10.",
+      "received_at": "2025-01-22T14:54:00Z"
+    },
+    {
+      "id": "msg_002",
+      "author": "bob@example.com",
+      "subject": "Invoice",
+      "content": "Attached you find the invoice for last month's work.",
+      "summary": "Invoice for last month's work.",
+      "received_at": "2025-01-22T08:12:10Z"
+    }
+  ]
+}
