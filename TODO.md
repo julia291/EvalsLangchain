@@ -12,3 +12,6 @@
     - [ ] Does the agent maintain it's context?
 - [ ] Implement main.py
 - [ ] Progress bar
+
+- [ ] den agent selbst die receipients und subject line bestimmen lassen und nur warnen, wenn kein subject oder keiner der ursprünglichen sender vorhanden ist
+- [ ] 
