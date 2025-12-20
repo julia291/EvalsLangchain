@@ -334,6 +334,7 @@ dependencies = [
     { name = "langchain" },
     { name = "langchain-google-genai" },
     { name = "langchain-openai" },
+    { name = "notebook" },
     { name = "openai" },
 ]
 
@@ -344,6 +345,7 @@ requires-dist = [
     { name = "langchain", specifier = ">=1.2.0" },
     { name = "langchain-google-genai", specifier = ">=4.0.0" },
     { name = "langchain-openai", specifier = ">=1.1.6" },
+    { name = "notebook", specifier = ">=7.5.1" },
     { name = "openai", specifier = ">=2.14.0" },
 ]
 
