@@ -1,1 +1,57 @@
+# --- Environments ---
 .venv
+.env
+env/
+venv/
+ENV/
+
+# --- Python Core ---
+# Byte-compiled / optimized / DLL files
+__pycache__/
+*.py[cod]
+*$py.class
+
+# Distribution / packaging
+dist/
+build/
+*.egg-info/
+
+# --- Secrets & Configuration (CRITICAL for LangChain) ---
+# LangChain projects rely heavily on API keys (OpenAI, HuggingFace, etc.).
+# NEVER commit these files.
+.env
+.env.local
+.env.*
+! .env.example
+
+# --- LangChain / Vector Store Artifacts ---
+# Local vector databases can get large and should usually not be git-tracked.
+# ChromaDB defaults
+chroma_db/
+chroma-collections.parquet
+chroma-embeddings.parquet
+
+# FAISS indices
+*.faiss
+*.pkl
+
+# LanceDB
+*.lance/
+
+# --- Jupyter Notebooks ---
+# Common in LangChain experimentation
+.ipynb_checkpoints
+*-checkpoint.ipynb
+
+# --- Logs & Databases ---
+*.log
+*.sqlite3
+*.db
+
+# --- IDE & OS ---
+# VS Code
+.vscode/
+# PyCharm
+.idea/
+# Mac
+.DS_Store

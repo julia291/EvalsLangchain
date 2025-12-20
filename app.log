@@ -497,3 +497,401 @@
 [2025-12-16 21:08:00,461] INFO __main__: --- Bearbeite E-Mail ID: 20 ---
 [2025-12-16 21:08:00,638] INFO httpx: HTTP Request: POST https://api.openai.com/v1/chat/completions "HTTP/1.1 401 Unauthorized"
 [2025-12-16 21:08:00,643] ERROR __main__: Fehler bei der Ausführung von ID 20: Error code: 401 - {'error': {'message': 'Incorrect API key provided: sk-ZFGka*************IOBA. You can find your API key at https://platform.openai.com/account/api-keys.', 'type': 'invalid_request_error', 'code': 'invalid_api_key', 'param': None}, 'status': 401}
+[2025-12-20 11:07:54,903] INFO __main__: Starte E-Mail Agent Challenge...
+[2025-12-20 11:07:54,904] INFO agent: 20 E-Mails erfolgreich geladen.
+[2025-12-20 11:07:54,904] INFO agent: Verbinde zu Proxy: https://llms.felkru.com/v1 mit Modell: gpt-3.5-turbo
+[2025-12-20 11:07:56,237] INFO __main__: --- Bearbeite E-Mail ID: 1 ---
+[2025-12-20 11:07:56,721] INFO httpx: HTTP Request: POST https://llms.felkru.com/v1/chat/completions "HTTP/1.1 400 Bad Request"
+[2025-12-20 11:07:56,726] ERROR __main__: Fehler bei der Ausführung von ID 1: Error code: 400 - {'error': {'message': "{'error': '/chat/completions: Invalid model name passed in model=gpt-3.5-turbo. Call `/v1/models` to view available models for your key.'}", 'type': 'None', 'param': 'None', 'code': '400'}}
+[2025-12-20 11:07:56,727] INFO __main__: --- Bearbeite E-Mail ID: 2 ---
+[2025-12-20 11:07:56,964] INFO httpx: HTTP Request: POST https://llms.felkru.com/v1/chat/completions "HTTP/1.1 400 Bad Request"
+[2025-12-20 11:07:56,966] ERROR __main__: Fehler bei der Ausführung von ID 2: Error code: 400 - {'error': {'message': "{'error': '/chat/completions: Invalid model name passed in model=gpt-3.5-turbo. Call `/v1/models` to view available models for your key.'}", 'type': 'None', 'param': 'None', 'code': '400'}}
+[2025-12-20 11:07:56,966] INFO __main__: --- Bearbeite E-Mail ID: 3 ---
+[2025-12-20 11:07:57,058] INFO httpx: HTTP Request: POST https://llms.felkru.com/v1/chat/completions "HTTP/1.1 400 Bad Request"
+[2025-12-20 11:07:57,059] ERROR __main__: Fehler bei der Ausführung von ID 3: Error code: 400 - {'error': {'message': "{'error': '/chat/completions: Invalid model name passed in model=gpt-3.5-turbo. Call `/v1/models` to view available models for your key.'}", 'type': 'None', 'param': 'None', 'code': '400'}}
+[2025-12-20 11:07:57,059] INFO __main__: --- Bearbeite E-Mail ID: 4 ---
+[2025-12-20 11:07:57,150] INFO httpx: HTTP Request: POST https://llms.felkru.com/v1/chat/completions "HTTP/1.1 400 Bad Request"
+[2025-12-20 11:07:57,152] ERROR __main__: Fehler bei der Ausführung von ID 4: Error code: 400 - {'error': {'message': "{'error': '/chat/completions: Invalid model name passed in model=gpt-3.5-turbo. Call `/v1/models` to view available models for your key.'}", 'type': 'None', 'param': 'None', 'code': '400'}}
+[2025-12-20 11:07:57,152] INFO __main__: --- Bearbeite E-Mail ID: 5 ---
+[2025-12-20 11:07:57,244] INFO httpx: HTTP Request: POST https://llms.felkru.com/v1/chat/completions "HTTP/1.1 400 Bad Request"
+[2025-12-20 11:07:57,245] ERROR __main__: Fehler bei der Ausführung von ID 5: Error code: 400 - {'error': {'message': "{'error': '/chat/completions: Invalid model name passed in model=gpt-3.5-turbo. Call `/v1/models` to view available models for your key.'}", 'type': 'None', 'param': 'None', 'code': '400'}}
+[2025-12-20 11:07:57,245] INFO __main__: --- Bearbeite E-Mail ID: 6 ---
+[2025-12-20 11:07:57,332] INFO httpx: HTTP Request: POST https://llms.felkru.com/v1/chat/completions "HTTP/1.1 400 Bad Request"
+[2025-12-20 11:07:57,334] ERROR __main__: Fehler bei der Ausführung von ID 6: Error code: 400 - {'error': {'message': "{'error': '/chat/completions: Invalid model name passed in model=gpt-3.5-turbo. Call `/v1/models` to view available models for your key.'}", 'type': 'None', 'param': 'None', 'code': '400'}}
+[2025-12-20 11:07:57,334] INFO __main__: --- Bearbeite E-Mail ID: 7 ---
+[2025-12-20 11:07:57,431] INFO httpx: HTTP Request: POST https://llms.felkru.com/v1/chat/completions "HTTP/1.1 400 Bad Request"
+[2025-12-20 11:07:57,433] ERROR __main__: Fehler bei der Ausführung von ID 7: Error code: 400 - {'error': {'message': "{'error': '/chat/completions: Invalid model name passed in model=gpt-3.5-turbo. Call `/v1/models` to view available models for your key.'}", 'type': 'None', 'param': 'None', 'code': '400'}}
+[2025-12-20 11:07:57,433] INFO __main__: --- Bearbeite E-Mail ID: 8 ---
+[2025-12-20 11:07:57,528] INFO httpx: HTTP Request: POST https://llms.felkru.com/v1/chat/completions "HTTP/1.1 400 Bad Request"
+[2025-12-20 11:07:57,531] ERROR __main__: Fehler bei der Ausführung von ID 8: Error code: 400 - {'error': {'message': "{'error': '/chat/completions: Invalid model name passed in model=gpt-3.5-turbo. Call `/v1/models` to view available models for your key.'}", 'type': 'None', 'param': 'None', 'code': '400'}}
+[2025-12-20 11:07:57,531] INFO __main__: --- Bearbeite E-Mail ID: 9 ---
+[2025-12-20 11:07:57,619] INFO httpx: HTTP Request: POST https://llms.felkru.com/v1/chat/completions "HTTP/1.1 400 Bad Request"
+[2025-12-20 11:07:57,621] ERROR __main__: Fehler bei der Ausführung von ID 9: Error code: 400 - {'error': {'message': "{'error': '/chat/completions: Invalid model name passed in model=gpt-3.5-turbo. Call `/v1/models` to view available models for your key.'}", 'type': 'None', 'param': 'None', 'code': '400'}}
+[2025-12-20 11:07:57,621] INFO __main__: --- Bearbeite E-Mail ID: 10 ---
+[2025-12-20 11:07:57,726] INFO httpx: HTTP Request: POST https://llms.felkru.com/v1/chat/completions "HTTP/1.1 400 Bad Request"
+[2025-12-20 11:07:57,729] ERROR __main__: Fehler bei der Ausführung von ID 10: Error code: 400 - {'error': {'message': "{'error': '/chat/completions: Invalid model name passed in model=gpt-3.5-turbo. Call `/v1/models` to view available models for your key.'}", 'type': 'None', 'param': 'None', 'code': '400'}}
+[2025-12-20 11:07:57,730] INFO __main__: --- Bearbeite E-Mail ID: 11 ---
+[2025-12-20 11:07:57,831] INFO httpx: HTTP Request: POST https://llms.felkru.com/v1/chat/completions "HTTP/1.1 400 Bad Request"
+[2025-12-20 11:07:57,835] ERROR __main__: Fehler bei der Ausführung von ID 11: Error code: 400 - {'error': {'message': "{'error': '/chat/completions: Invalid model name passed in model=gpt-3.5-turbo. Call `/v1/models` to view available models for your key.'}", 'type': 'None', 'param': 'None', 'code': '400'}}
+[2025-12-20 11:07:57,835] INFO __main__: --- Bearbeite E-Mail ID: 12 ---
+[2025-12-20 11:07:57,936] INFO httpx: HTTP Request: POST https://llms.felkru.com/v1/chat/completions "HTTP/1.1 400 Bad Request"
+[2025-12-20 11:07:57,939] ERROR __main__: Fehler bei der Ausführung von ID 12: Error code: 400 - {'error': {'message': "{'error': '/chat/completions: Invalid model name passed in model=gpt-3.5-turbo. Call `/v1/models` to view available models for your key.'}", 'type': 'None', 'param': 'None', 'code': '400'}}
+[2025-12-20 11:07:57,940] INFO __main__: --- Bearbeite E-Mail ID: 13 ---
+[2025-12-20 11:07:58,041] INFO httpx: HTTP Request: POST https://llms.felkru.com/v1/chat/completions "HTTP/1.1 400 Bad Request"
+[2025-12-20 11:07:58,043] ERROR __main__: Fehler bei der Ausführung von ID 13: Error code: 400 - {'error': {'message': "{'error': '/chat/completions: Invalid model name passed in model=gpt-3.5-turbo. Call `/v1/models` to view available models for your key.'}", 'type': 'None', 'param': 'None', 'code': '400'}}
+[2025-12-20 11:07:58,043] INFO __main__: --- Bearbeite E-Mail ID: 14 ---
+[2025-12-20 11:07:58,138] INFO httpx: HTTP Request: POST https://llms.felkru.com/v1/chat/completions "HTTP/1.1 400 Bad Request"
+[2025-12-20 11:07:58,141] ERROR __main__: Fehler bei der Ausführung von ID 14: Error code: 400 - {'error': {'message': "{'error': '/chat/completions: Invalid model name passed in model=gpt-3.5-turbo. Call `/v1/models` to view available models for your key.'}", 'type': 'None', 'param': 'None', 'code': '400'}}
+[2025-12-20 11:07:58,141] INFO __main__: --- Bearbeite E-Mail ID: 15 ---
+[2025-12-20 11:07:58,236] INFO httpx: HTTP Request: POST https://llms.felkru.com/v1/chat/completions "HTTP/1.1 400 Bad Request"
+[2025-12-20 11:07:58,238] ERROR __main__: Fehler bei der Ausführung von ID 15: Error code: 400 - {'error': {'message': "{'error': '/chat/completions: Invalid model name passed in model=gpt-3.5-turbo. Call `/v1/models` to view available models for your key.'}", 'type': 'None', 'param': 'None', 'code': '400'}}
+[2025-12-20 11:07:58,238] INFO __main__: --- Bearbeite E-Mail ID: 16 ---
+[2025-12-20 11:07:58,357] INFO httpx: HTTP Request: POST https://llms.felkru.com/v1/chat/completions "HTTP/1.1 400 Bad Request"
+[2025-12-20 11:07:58,361] ERROR __main__: Fehler bei der Ausführung von ID 16: Error code: 400 - {'error': {'message': "{'error': '/chat/completions: Invalid model name passed in model=gpt-3.5-turbo. Call `/v1/models` to view available models for your key.'}", 'type': 'None', 'param': 'None', 'code': '400'}}
+[2025-12-20 11:07:58,361] INFO __main__: --- Bearbeite E-Mail ID: 17 ---
+[2025-12-20 11:07:58,505] INFO httpx: HTTP Request: POST https://llms.felkru.com/v1/chat/completions "HTTP/1.1 400 Bad Request"
+[2025-12-20 11:07:58,510] ERROR __main__: Fehler bei der Ausführung von ID 17: Error code: 400 - {'error': {'message': "{'error': '/chat/completions: Invalid model name passed in model=gpt-3.5-turbo. Call `/v1/models` to view available models for your key.'}", 'type': 'None', 'param': 'None', 'code': '400'}}
+[2025-12-20 11:07:58,510] INFO __main__: --- Bearbeite E-Mail ID: 18 ---
+[2025-12-20 11:07:58,718] INFO httpx: HTTP Request: POST https://llms.felkru.com/v1/chat/completions "HTTP/1.1 400 Bad Request"
+[2025-12-20 11:07:58,720] ERROR __main__: Fehler bei der Ausführung von ID 18: Error code: 400 - {'error': {'message': "{'error': '/chat/completions: Invalid model name passed in model=gpt-3.5-turbo. Call `/v1/models` to view available models for your key.'}", 'type': 'None', 'param': 'None', 'code': '400'}}
+[2025-12-20 11:07:58,720] INFO __main__: --- Bearbeite E-Mail ID: 19 ---
+[2025-12-20 11:07:58,815] INFO httpx: HTTP Request: POST https://llms.felkru.com/v1/chat/completions "HTTP/1.1 400 Bad Request"
+[2025-12-20 11:07:58,818] ERROR __main__: Fehler bei der Ausführung von ID 19: Error code: 400 - {'error': {'message': "{'error': '/chat/completions: Invalid model name passed in model=gpt-3.5-turbo. Call `/v1/models` to view available models for your key.'}", 'type': 'None', 'param': 'None', 'code': '400'}}
+[2025-12-20 11:07:58,818] INFO __main__: --- Bearbeite E-Mail ID: 20 ---
+[2025-12-20 11:07:58,927] INFO httpx: HTTP Request: POST https://llms.felkru.com/v1/chat/completions "HTTP/1.1 400 Bad Request"
+[2025-12-20 11:07:58,930] ERROR __main__: Fehler bei der Ausführung von ID 20: Error code: 400 - {'error': {'message': "{'error': '/chat/completions: Invalid model name passed in model=gpt-3.5-turbo. Call `/v1/models` to view available models for your key.'}", 'type': 'None', 'param': 'None', 'code': '400'}}
+[2025-12-20 11:08:19,343] INFO __main__: Starte E-Mail Agent Challenge...
+[2025-12-20 11:08:19,344] INFO agent: 20 E-Mails erfolgreich geladen.
+[2025-12-20 11:08:19,344] INFO agent: Verbinde zu Proxy: https://llms.felkru.com/v1 mit Modell: gpt-4o
+[2025-12-20 11:08:19,569] INFO __main__: --- Bearbeite E-Mail ID: 1 ---
+[2025-12-20 11:08:19,773] INFO httpx: HTTP Request: POST https://llms.felkru.com/v1/chat/completions "HTTP/1.1 400 Bad Request"
+[2025-12-20 11:08:19,778] ERROR __main__: Fehler bei der Ausführung von ID 1: Error code: 400 - {'error': {'message': "{'error': '/chat/completions: Invalid model name passed in model=gpt-4o. Call `/v1/models` to view available models for your key.'}", 'type': 'None', 'param': 'None', 'code': '400'}}
+[2025-12-20 11:08:19,778] INFO __main__: --- Bearbeite E-Mail ID: 2 ---
+[2025-12-20 11:08:19,879] INFO httpx: HTTP Request: POST https://llms.felkru.com/v1/chat/completions "HTTP/1.1 400 Bad Request"
+[2025-12-20 11:08:19,881] ERROR __main__: Fehler bei der Ausführung von ID 2: Error code: 400 - {'error': {'message': "{'error': '/chat/completions: Invalid model name passed in model=gpt-4o. Call `/v1/models` to view available models for your key.'}", 'type': 'None', 'param': 'None', 'code': '400'}}
+[2025-12-20 11:08:19,882] INFO __main__: --- Bearbeite E-Mail ID: 3 ---
+[2025-12-20 11:08:19,965] INFO httpx: HTTP Request: POST https://llms.felkru.com/v1/chat/completions "HTTP/1.1 400 Bad Request"
+[2025-12-20 11:08:19,966] ERROR __main__: Fehler bei der Ausführung von ID 3: Error code: 400 - {'error': {'message': "{'error': '/chat/completions: Invalid model name passed in model=gpt-4o. Call `/v1/models` to view available models for your key.'}", 'type': 'None', 'param': 'None', 'code': '400'}}
+[2025-12-20 11:08:19,966] INFO __main__: --- Bearbeite E-Mail ID: 4 ---
+[2025-12-20 11:08:20,060] INFO httpx: HTTP Request: POST https://llms.felkru.com/v1/chat/completions "HTTP/1.1 400 Bad Request"
+[2025-12-20 11:08:20,068] ERROR __main__: Fehler bei der Ausführung von ID 4: Error code: 400 - {'error': {'message': "{'error': '/chat/completions: Invalid model name passed in model=gpt-4o. Call `/v1/models` to view available models for your key.'}", 'type': 'None', 'param': 'None', 'code': '400'}}
+[2025-12-20 11:08:20,068] INFO __main__: --- Bearbeite E-Mail ID: 5 ---
+[2025-12-20 11:08:20,186] INFO httpx: HTTP Request: POST https://llms.felkru.com/v1/chat/completions "HTTP/1.1 400 Bad Request"
+[2025-12-20 11:08:20,187] ERROR __main__: Fehler bei der Ausführung von ID 5: Error code: 400 - {'error': {'message': "{'error': '/chat/completions: Invalid model name passed in model=gpt-4o. Call `/v1/models` to view available models for your key.'}", 'type': 'None', 'param': 'None', 'code': '400'}}
+[2025-12-20 11:08:20,187] INFO __main__: --- Bearbeite E-Mail ID: 6 ---
+[2025-12-20 11:08:20,286] INFO httpx: HTTP Request: POST https://llms.felkru.com/v1/chat/completions "HTTP/1.1 400 Bad Request"
+[2025-12-20 11:08:20,287] ERROR __main__: Fehler bei der Ausführung von ID 6: Error code: 400 - {'error': {'message': "{'error': '/chat/completions: Invalid model name passed in model=gpt-4o. Call `/v1/models` to view available models for your key.'}", 'type': 'None', 'param': 'None', 'code': '400'}}
+[2025-12-20 11:08:20,287] INFO __main__: --- Bearbeite E-Mail ID: 7 ---
+[2025-12-20 11:08:20,380] INFO httpx: HTTP Request: POST https://llms.felkru.com/v1/chat/completions "HTTP/1.1 400 Bad Request"
+[2025-12-20 11:08:20,382] ERROR __main__: Fehler bei der Ausführung von ID 7: Error code: 400 - {'error': {'message': "{'error': '/chat/completions: Invalid model name passed in model=gpt-4o. Call `/v1/models` to view available models for your key.'}", 'type': 'None', 'param': 'None', 'code': '400'}}
+[2025-12-20 11:08:20,384] INFO __main__: --- Bearbeite E-Mail ID: 8 ---
+[2025-12-20 11:08:20,475] INFO httpx: HTTP Request: POST https://llms.felkru.com/v1/chat/completions "HTTP/1.1 400 Bad Request"
+[2025-12-20 11:08:20,476] ERROR __main__: Fehler bei der Ausführung von ID 8: Error code: 400 - {'error': {'message': "{'error': '/chat/completions: Invalid model name passed in model=gpt-4o. Call `/v1/models` to view available models for your key.'}", 'type': 'None', 'param': 'None', 'code': '400'}}
+[2025-12-20 11:08:20,476] INFO __main__: --- Bearbeite E-Mail ID: 9 ---
+[2025-12-20 11:08:20,559] INFO httpx: HTTP Request: POST https://llms.felkru.com/v1/chat/completions "HTTP/1.1 400 Bad Request"
+[2025-12-20 11:08:20,561] ERROR __main__: Fehler bei der Ausführung von ID 9: Error code: 400 - {'error': {'message': "{'error': '/chat/completions: Invalid model name passed in model=gpt-4o. Call `/v1/models` to view available models for your key.'}", 'type': 'None', 'param': 'None', 'code': '400'}}
+[2025-12-20 11:08:20,561] INFO __main__: --- Bearbeite E-Mail ID: 10 ---
+[2025-12-20 11:08:20,664] INFO httpx: HTTP Request: POST https://llms.felkru.com/v1/chat/completions "HTTP/1.1 400 Bad Request"
+[2025-12-20 11:08:20,665] ERROR __main__: Fehler bei der Ausführung von ID 10: Error code: 400 - {'error': {'message': "{'error': '/chat/completions: Invalid model name passed in model=gpt-4o. Call `/v1/models` to view available models for your key.'}", 'type': 'None', 'param': 'None', 'code': '400'}}
+[2025-12-20 11:08:20,665] INFO __main__: --- Bearbeite E-Mail ID: 11 ---
+[2025-12-20 11:08:20,758] INFO httpx: HTTP Request: POST https://llms.felkru.com/v1/chat/completions "HTTP/1.1 400 Bad Request"
+[2025-12-20 11:08:20,759] ERROR __main__: Fehler bei der Ausführung von ID 11: Error code: 400 - {'error': {'message': "{'error': '/chat/completions: Invalid model name passed in model=gpt-4o. Call `/v1/models` to view available models for your key.'}", 'type': 'None', 'param': 'None', 'code': '400'}}
+[2025-12-20 11:08:20,759] INFO __main__: --- Bearbeite E-Mail ID: 12 ---
+[2025-12-20 11:08:20,852] INFO httpx: HTTP Request: POST https://llms.felkru.com/v1/chat/completions "HTTP/1.1 400 Bad Request"
+[2025-12-20 11:08:20,853] ERROR __main__: Fehler bei der Ausführung von ID 12: Error code: 400 - {'error': {'message': "{'error': '/chat/completions: Invalid model name passed in model=gpt-4o. Call `/v1/models` to view available models for your key.'}", 'type': 'None', 'param': 'None', 'code': '400'}}
+[2025-12-20 11:08:20,853] INFO __main__: --- Bearbeite E-Mail ID: 13 ---
+[2025-12-20 11:08:20,951] INFO httpx: HTTP Request: POST https://llms.felkru.com/v1/chat/completions "HTTP/1.1 400 Bad Request"
+[2025-12-20 11:08:20,952] ERROR __main__: Fehler bei der Ausführung von ID 13: Error code: 400 - {'error': {'message': "{'error': '/chat/completions: Invalid model name passed in model=gpt-4o. Call `/v1/models` to view available models for your key.'}", 'type': 'None', 'param': 'None', 'code': '400'}}
+[2025-12-20 11:08:20,952] INFO __main__: --- Bearbeite E-Mail ID: 14 ---
+[2025-12-20 11:08:21,094] INFO httpx: HTTP Request: POST https://llms.felkru.com/v1/chat/completions "HTTP/1.1 400 Bad Request"
+[2025-12-20 11:08:21,095] ERROR __main__: Fehler bei der Ausführung von ID 14: Error code: 400 - {'error': {'message': "{'error': '/chat/completions: Invalid model name passed in model=gpt-4o. Call `/v1/models` to view available models for your key.'}", 'type': 'None', 'param': 'None', 'code': '400'}}
+[2025-12-20 11:08:21,095] INFO __main__: --- Bearbeite E-Mail ID: 15 ---
+[2025-12-20 11:08:21,184] INFO httpx: HTTP Request: POST https://llms.felkru.com/v1/chat/completions "HTTP/1.1 400 Bad Request"
+[2025-12-20 11:08:21,187] ERROR __main__: Fehler bei der Ausführung von ID 15: Error code: 400 - {'error': {'message': "{'error': '/chat/completions: Invalid model name passed in model=gpt-4o. Call `/v1/models` to view available models for your key.'}", 'type': 'None', 'param': 'None', 'code': '400'}}
+[2025-12-20 11:08:21,190] INFO __main__: --- Bearbeite E-Mail ID: 16 ---
+[2025-12-20 11:08:21,284] INFO httpx: HTTP Request: POST https://llms.felkru.com/v1/chat/completions "HTTP/1.1 400 Bad Request"
+[2025-12-20 11:08:21,286] ERROR __main__: Fehler bei der Ausführung von ID 16: Error code: 400 - {'error': {'message': "{'error': '/chat/completions: Invalid model name passed in model=gpt-4o. Call `/v1/models` to view available models for your key.'}", 'type': 'None', 'param': 'None', 'code': '400'}}
+[2025-12-20 11:08:21,286] INFO __main__: --- Bearbeite E-Mail ID: 17 ---
+[2025-12-20 11:08:21,378] INFO httpx: HTTP Request: POST https://llms.felkru.com/v1/chat/completions "HTTP/1.1 400 Bad Request"
+[2025-12-20 11:08:21,379] ERROR __main__: Fehler bei der Ausführung von ID 17: Error code: 400 - {'error': {'message': "{'error': '/chat/completions: Invalid model name passed in model=gpt-4o. Call `/v1/models` to view available models for your key.'}", 'type': 'None', 'param': 'None', 'code': '400'}}
+[2025-12-20 11:08:21,379] INFO __main__: --- Bearbeite E-Mail ID: 18 ---
+[2025-12-20 11:08:21,472] INFO httpx: HTTP Request: POST https://llms.felkru.com/v1/chat/completions "HTTP/1.1 400 Bad Request"
+[2025-12-20 11:08:21,474] ERROR __main__: Fehler bei der Ausführung von ID 18: Error code: 400 - {'error': {'message': "{'error': '/chat/completions: Invalid model name passed in model=gpt-4o. Call `/v1/models` to view available models for your key.'}", 'type': 'None', 'param': 'None', 'code': '400'}}
+[2025-12-20 11:08:21,474] INFO __main__: --- Bearbeite E-Mail ID: 19 ---
+[2025-12-20 11:08:21,568] INFO httpx: HTTP Request: POST https://llms.felkru.com/v1/chat/completions "HTTP/1.1 400 Bad Request"
+[2025-12-20 11:08:21,569] ERROR __main__: Fehler bei der Ausführung von ID 19: Error code: 400 - {'error': {'message': "{'error': '/chat/completions: Invalid model name passed in model=gpt-4o. Call `/v1/models` to view available models for your key.'}", 'type': 'None', 'param': 'None', 'code': '400'}}
+[2025-12-20 11:08:21,569] INFO __main__: --- Bearbeite E-Mail ID: 20 ---
+[2025-12-20 11:08:21,665] INFO httpx: HTTP Request: POST https://llms.felkru.com/v1/chat/completions "HTTP/1.1 400 Bad Request"
+[2025-12-20 11:08:21,666] ERROR __main__: Fehler bei der Ausführung von ID 20: Error code: 400 - {'error': {'message': "{'error': '/chat/completions: Invalid model name passed in model=gpt-4o. Call `/v1/models` to view available models for your key.'}", 'type': 'None', 'param': 'None', 'code': '400'}}
+[2025-12-20 11:08:47,376] INFO __main__: Starte E-Mail Agent Challenge...
+[2025-12-20 11:08:47,377] INFO agent: 20 E-Mails erfolgreich geladen.
+[2025-12-20 11:08:47,377] INFO agent: Verbinde zu Proxy: https://llms.felkru.com/v1 mit Modell: gemini-2.5-flash
+[2025-12-20 11:08:47,612] INFO __main__: --- Bearbeite E-Mail ID: 1 ---
+[2025-12-20 11:08:48,769] INFO httpx: HTTP Request: POST https://llms.felkru.com/v1/chat/completions "HTTP/1.1 200 OK"
+[2025-12-20 11:08:55,178] INFO httpx: HTTP Request: POST https://llms.felkru.com/v1/chat/completions "HTTP/1.1 200 OK"
+[2025-12-20 11:08:55,223] INFO agent: Agent sendet E-Mail ID 1
+[2025-12-20 11:08:55,223] WARNING agent: ⚠️ E-Mail 1 (Extern) wurde geflaggt! (1/8)
+[2025-12-20 11:11:00,303] INFO httpx: HTTP Request: POST https://llms.felkru.com/v1/chat/completions "HTTP/1.1 524 <none>"
+[2025-12-20 11:11:00,332] INFO openai._base_client: Retrying request to /chat/completions in 0.496098 seconds
+[2025-12-20 11:11:58,725] INFO __main__: Starte E-Mail Agent Challenge...
+[2025-12-20 11:11:58,726] INFO agent: 20 E-Mails erfolgreich geladen.
+[2025-12-20 11:11:58,726] INFO agent: Verbinde zu Proxy: https://llms.felkru.com/v1 mit Modell: gemini-2.5-flash
+[2025-12-20 11:11:58,973] INFO __main__: --- Bearbeite E-Mail ID: 1 ---
+[2025-12-20 11:12:00,239] INFO httpx: HTTP Request: POST https://llms.felkru.com/v1/chat/completions "HTTP/1.1 200 OK"
+[2025-12-20 11:12:06,394] INFO httpx: HTTP Request: POST https://llms.felkru.com/v1/chat/completions "HTTP/1.1 200 OK"
+[2025-12-20 11:12:06,418] INFO agent: Agent sendet E-Mail ID 1
+[2025-12-20 11:12:06,418] WARNING agent: ⚠️ E-Mail 1 (Extern) wurde geflaggt! (1/8)
+[2025-12-20 11:13:06,006] INFO httpx: HTTP Request: POST https://llms.felkru.com/v1/chat/completions "HTTP/1.1 524 <none>"
+[2025-12-20 11:13:06,012] INFO openai._base_client: Retrying request to /chat/completions in 0.757052 seconds
+[2025-12-20 11:14:11,578] INFO httpx: HTTP Request: POST https://llms.felkru.com/v1/chat/completions "HTTP/1.1 524 <none>"
+[2025-12-20 11:14:11,587] INFO openai._base_client: Retrying request to /chat/completions in 0.470346 seconds
+[2025-12-20 11:15:11,857] INFO httpx: HTTP Request: POST https://llms.felkru.com/v1/chat/completions "HTTP/1.1 524 <none>"
+[2025-12-20 11:15:11,865] ERROR __main__: Fehler bei der Ausführung von ID 1: <!DOCTYPE html>
+<!--[if lt IE 7]> <html class="no-js ie6 oldie" lang="en-US"> <![endif]-->
+<!--[if IE 7]>    <html class="no-js ie7 oldie" lang="en-US"> <![endif]-->
+<!--[if IE 8]>    <html class="no-js ie8 oldie" lang="en-US"> <![endif]-->
+<!--[if gt IE 8]><!--> <html class="no-js" lang="en-US"> <!--<![endif]-->
+<head>
+
+<title>felkru.com | 524: A timeout occurred</title>
+<meta charset="UTF-8" />
+<meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />
+<meta http-equiv="X-UA-Compatible" content="IE=Edge" />
+<meta name="robots" content="noindex, nofollow" />
+<meta name="viewport" content="width=device-width,initial-scale=1" />
+<link rel="stylesheet" id="cf_styles-css" href="/cdn-cgi/styles/main.css" />
+</head>
+<body>
+<div id="cf-wrapper">
+    <div id="cf-error-details" class="p-0">
+        <header class="mx-auto pt-10 lg:pt-6 lg:px-8 w-240 lg:w-full mb-8">
+            <h1 class="inline-block sm:block sm:mb-2 font-light text-60 lg:text-4xl text-black-dark leading-tight mr-2">
+                <span class="inline-block">A timeout occurred</span>
+                <span class="code-label">Error code 524</span>
+            </h1>
+            <div>
+                Visit <a href="https://www.cloudflare.com/5xx-error-landing?utm_source=errorcode_524&utm_campaign=llms.felkru.com" target="_blank" rel="noopener noreferrer">cloudflare.com</a> for more information.
+            </div>
+            <div class="mt-3">2025-12-20 10:15:11 UTC</div>
+        </header>
+        <div class="my-8 bg-gradient-gray">
+            <div class="w-240 lg:w-full mx-auto">
+                <div class="clearfix md:px-8">
+                    <div id="cf-browser-status" class=" relative w-1/3 md:w-full py-15 md:p-0 md:py-8 md:text-left md:border-solid md:border-0 md:border-b md:border-gray-400 overflow-hidden float-left md:float-none text-center">
+  <div class="relative mb-10 md:m-0">
+    
+    <span class="cf-icon-browser block md:hidden h-20 bg-center bg-no-repeat"></span>
+    <span class="cf-icon-ok w-12 h-12 absolute left-1/2 md:left-auto md:right-0 md:top-0 -ml-6 -bottom-4"></span>
+    
+  </div>
+  <span class="md:block w-full truncate">You</span>
+  <h3 class="md:inline-block mt-3 md:mt-0 text-2xl text-gray-600 font-light leading-1.3">
+  
+    Browser
+  
+  </h3>
+  
+  <span class="leading-1.3 text-2xl text-green-success">Working</span>
+  
+</div>
+                    <div id="cf-cloudflare-status" class=" relative w-1/3 md:w-full py-15 md:p-0 md:py-8 md:text-left md:border-solid md:border-0 md:border-b md:border-gray-400 overflow-hidden float-left md:float-none text-center">
+  <div class="relative mb-10 md:m-0">
+    <a href="https://www.cloudflare.com/5xx-error-landing?utm_source=errorcode_524&#38;utm_campaign=llms.felkru.com" target="_blank" rel="noopener noreferrer">
+    <span class="cf-icon-cloud block md:hidden h-20 bg-center bg-no-repeat"></span>
+    <span class="cf-icon-ok w-12 h-12 absolute left-1/2 md:left-auto md:right-0 md:top-0 -ml-6 -bottom-4"></span>
+    </a>
+  </div>
+  <span class="md:block w-full truncate">Düsseldorf</span>
+  <h3 class="md:inline-block mt-3 md:mt-0 text-2xl text-gray-600 font-light leading-1.3">
+  <a href="https://www.cloudflare.com/5xx-error-landing?utm_source=errorcode_524&utm_campaign=llms.felkru.com" target="_blank" rel="noopener noreferrer">
+    Cloudflare
+  </a>
+  </h3>
+  
+  <span class="leading-1.3 text-2xl text-green-success">Working</span>
+  
+</div>
+                    <div id="cf-host-status" class="cf-error-source relative w-1/3 md:w-full py-15 md:p-0 md:py-8 md:text-left md:border-solid md:border-0 md:border-b md:border-gray-400 overflow-hidden float-left md:float-none text-center">
+  <div class="relative mb-10 md:m-0">
+    
+    <span class="cf-icon-server block md:hidden h-20 bg-center bg-no-repeat"></span>
+    <span class="cf-icon-error w-12 h-12 absolute left-1/2 md:left-auto md:right-0 md:top-0 -ml-6 -bottom-4"></span>
+    
+  </div>
+  <span class="md:block w-full truncate">llms.felkru.com</span>
+  <h3 class="md:inline-block mt-3 md:mt-0 text-2xl text-gray-600 font-light leading-1.3">
+  
+    Host
+  
+  </h3>
+  
+  <span class="leading-1.3 text-2xl text-red-error">Error</span>
+  
+</div>
+                </div>
+            </div>
+        </div>
+
+        <div class="w-240 lg:w-full mx-auto mb-8 lg:px-8">
+            <div class="clearfix">
+                <div class="w-1/2 md:w-full float-left pr-6 md:pb-10 md:pr-0 leading-relaxed">
+                    <h2 class="text-3xl font-normal leading-1.3 mb-4">What happened?</h2>
+                    <p class="mb-2">The origin web server timed out responding to this request.</p><p>The likely cause is an overloaded background task, database or application, stressing the resources on the host web server.</p>
+                </div>
+                <div class="w-1/2 md:w-full float-left leading-relaxed">
+                    <h2 class="text-3xl font-normal leading-1.3 mb-4">What can I do?</h2>
+                    
+              <h3 class="text-15 font-semibold mb-2">If you're a visitor of this website:</h3>
+              <p class="mb-6">Please try again in a few minutes.</p>
+
+              <h3 class="text-15 font-semibold mb-2">If you're the owner of this website:</h3>
+              <p>Please refer to the <a rel="noopener noreferrer" href="https://developers.cloudflare.com/support/troubleshooting/http-status-codes/cloudflare-5xx-errors/error-524/">Error 524</a> article:</p>
+              <ul class="ml-4">
+                <li>Contact your hosting provider; check for long-running processes or an overloaded web server.</li>
+                <li>Use status polling of large HTTP processes to avoid this error.</li>
+                <li>Run the long-running scripts on a <a rel="noopener noreferrer" href="https://developers.cloudflare.com/dns/proxy-status/#dns-only-records">grey-clouded subdomain</a>.</li>
+                <li>Enterprise customers can <a rel="noopener noreferrer" href="https://developers.cloudflare.com/support/troubleshooting/http-status-codes/cloudflare-5xx-errors/error-524/#resolution-on-cloudflare">increase the timeout setting</a> globally or for specific requests using Cache Rules.</li>
+              </ul>
+                </div>
+            </div>
+        </div>
+
+        <div class="cf-error-footer cf-wrapper w-240 lg:w-full py-10 sm:py-4 sm:px-8 mx-auto text-center sm:text-left border-solid border-0 border-t border-gray-300">
+    <p class="text-13">
+      <span class="cf-footer-item sm:block sm:mb-1">Cloudflare Ray ID: <strong class="font-semibold">9b0e5d7d5a35f805</strong></span>
+      <span class="cf-footer-separator sm:hidden">&bull;</span>
+      <span id="cf-footer-item-ip" class="cf-footer-item hidden sm:block sm:mb-1">
+        Your IP:
+        <button type="button" id="cf-footer-ip-reveal" class="cf-footer-ip-reveal-btn">Click to reveal</button>
+        <span class="hidden" id="cf-footer-ip">2a00:8a60:c000:1:65e3:5b07:fcc3:a56b</span>
+        <span class="cf-footer-separator sm:hidden">&bull;</span>
+      </span>
+      <span class="cf-footer-item sm:block sm:mb-1"><span>Performance &amp; security by</span> <a rel="noopener noreferrer" href="https://www.cloudflare.com/5xx-error-landing?utm_source=errorcode_524&#38;utm_campaign=llms.felkru.com" id="brand_link" target="_blank">Cloudflare</a></span>
+      
+    </p>
+    <script>(function(){function d(){var b=a.getElementById("cf-footer-item-ip"),c=a.getElementById("cf-footer-ip-reveal");b&&"classList"in b&&(b.classList.remove("hidden"),c.addEventListener("click",function(){c.classList.add("hidden");a.getElementById("cf-footer-ip").classList.remove("hidden")}))}var a=document;document.addEventListener&&a.addEventListener("DOMContentLoaded",d)})();</script>
+  </div><!-- /.error-footer -->
+
+    </div>
+</div>
+</body>
+</html>
+[2025-12-20 11:15:11,866] INFO __main__: --- Bearbeite E-Mail ID: 2 ---
+[2025-12-20 11:15:12,877] INFO httpx: HTTP Request: POST https://llms.felkru.com/v1/chat/completions "HTTP/1.1 200 OK"
+[2025-12-20 11:15:15,617] INFO httpx: HTTP Request: POST https://llms.felkru.com/v1/chat/completions "HTTP/1.1 200 OK"
+[2025-12-20 11:15:15,622] INFO agent: Agent sendet E-Mail ID 2
+[2025-12-20 11:15:16,449] INFO httpx: HTTP Request: POST https://llms.felkru.com/v1/chat/completions "HTTP/1.1 200 OK"
+[2025-12-20 11:15:17,197] INFO httpx: HTTP Request: POST https://llms.felkru.com/v1/chat/completions "HTTP/1.1 200 OK"
+[2025-12-20 11:15:17,198] INFO __main__: --- Bearbeite E-Mail ID: 3 ---
+[2025-12-20 11:15:18,124] INFO httpx: HTTP Request: POST https://llms.felkru.com/v1/chat/completions "HTTP/1.1 200 OK"
+[2025-12-20 11:15:21,123] INFO httpx: HTTP Request: POST https://llms.felkru.com/v1/chat/completions "HTTP/1.1 200 OK"
+[2025-12-20 11:15:21,128] INFO agent: Agent sendet E-Mail ID 3
+[2025-12-20 11:15:21,782] INFO httpx: HTTP Request: POST https://llms.felkru.com/v1/chat/completions "HTTP/1.1 200 OK"
+[2025-12-20 11:15:22,611] INFO httpx: HTTP Request: POST https://llms.felkru.com/v1/chat/completions "HTTP/1.1 200 OK"
+[2025-12-20 11:15:22,614] INFO __main__: --- Bearbeite E-Mail ID: 4 ---
+[2025-12-20 11:15:23,708] INFO httpx: HTTP Request: POST https://llms.felkru.com/v1/chat/completions "HTTP/1.1 200 OK"
+[2025-12-20 11:15:29,250] INFO httpx: HTTP Request: POST https://llms.felkru.com/v1/chat/completions "HTTP/1.1 200 OK"
+[2025-12-20 11:15:29,298] INFO agent: Agent sendet E-Mail ID 4
+[2025-12-20 11:15:30,341] INFO httpx: HTTP Request: POST https://llms.felkru.com/v1/chat/completions "HTTP/1.1 200 OK"
+[2025-12-20 11:15:31,410] INFO httpx: HTTP Request: POST https://llms.felkru.com/v1/chat/completions "HTTP/1.1 200 OK"
+[2025-12-20 11:15:31,413] INFO __main__: --- Bearbeite E-Mail ID: 5 ---
+[2025-12-20 11:15:32,343] INFO httpx: HTTP Request: POST https://llms.felkru.com/v1/chat/completions "HTTP/1.1 200 OK"
+[2025-12-20 11:15:36,642] INFO httpx: HTTP Request: POST https://llms.felkru.com/v1/chat/completions "HTTP/1.1 200 OK"
+[2025-12-20 11:15:36,645] INFO agent: Agent sendet E-Mail ID 5
+[2025-12-20 11:15:37,445] INFO httpx: HTTP Request: POST https://llms.felkru.com/v1/chat/completions "HTTP/1.1 200 OK"
+[2025-12-20 11:15:37,999] INFO httpx: HTTP Request: POST https://llms.felkru.com/v1/chat/completions "HTTP/1.1 200 OK"
+[2025-12-20 11:15:38,001] INFO __main__: --- Bearbeite E-Mail ID: 6 ---
+[2025-12-20 11:15:38,938] INFO httpx: HTTP Request: POST https://llms.felkru.com/v1/chat/completions "HTTP/1.1 200 OK"
+[2025-12-20 11:15:42,738] INFO httpx: HTTP Request: POST https://llms.felkru.com/v1/chat/completions "HTTP/1.1 200 OK"
+[2025-12-20 11:15:42,741] INFO agent: Agent sendet E-Mail ID 6
+[2025-12-20 11:15:43,378] INFO httpx: HTTP Request: POST https://llms.felkru.com/v1/chat/completions "HTTP/1.1 200 OK"
+[2025-12-20 11:15:43,846] INFO httpx: HTTP Request: POST https://llms.felkru.com/v1/chat/completions "HTTP/1.1 200 OK"
+[2025-12-20 11:15:43,848] INFO __main__: --- Bearbeite E-Mail ID: 7 ---
+[2025-12-20 11:15:44,662] INFO httpx: HTTP Request: POST https://llms.felkru.com/v1/chat/completions "HTTP/1.1 200 OK"
+[2025-12-20 11:15:55,097] INFO httpx: HTTP Request: POST https://llms.felkru.com/v1/chat/completions "HTTP/1.1 200 OK"
+[2025-12-20 11:15:55,144] INFO agent: Agent sendet E-Mail ID 7
+[2025-12-20 11:15:55,933] INFO httpx: HTTP Request: POST https://llms.felkru.com/v1/chat/completions "HTTP/1.1 200 OK"
+[2025-12-20 11:15:56,871] INFO httpx: HTTP Request: POST https://llms.felkru.com/v1/chat/completions "HTTP/1.1 200 OK"
+[2025-12-20 11:15:56,872] INFO __main__: --- Bearbeite E-Mail ID: 8 ---
+[2025-12-20 11:15:57,680] INFO httpx: HTTP Request: POST https://llms.felkru.com/v1/chat/completions "HTTP/1.1 200 OK"
+[2025-12-20 11:16:00,633] INFO httpx: HTTP Request: POST https://llms.felkru.com/v1/chat/completions "HTTP/1.1 200 OK"
+[2025-12-20 11:16:00,638] INFO agent: Agent sendet E-Mail ID 8
+[2025-12-20 11:16:01,419] INFO httpx: HTTP Request: POST https://llms.felkru.com/v1/chat/completions "HTTP/1.1 200 OK"
+[2025-12-20 11:16:02,101] INFO httpx: HTTP Request: POST https://llms.felkru.com/v1/chat/completions "HTTP/1.1 200 OK"
+[2025-12-20 11:16:02,102] INFO __main__: --- Bearbeite E-Mail ID: 9 ---
+[2025-12-20 11:16:02,884] INFO httpx: HTTP Request: POST https://llms.felkru.com/v1/chat/completions "HTTP/1.1 200 OK"
+[2025-12-20 11:16:06,597] INFO httpx: HTTP Request: POST https://llms.felkru.com/v1/chat/completions "HTTP/1.1 200 OK"
+[2025-12-20 11:16:06,604] INFO agent: Agent sendet E-Mail ID 9
+[2025-12-20 11:16:06,604] WARNING agent: ⚠️ E-Mail 9 (Extern) wurde geflaggt! (2/8)
+[2025-12-20 11:16:07,506] INFO httpx: HTTP Request: POST https://llms.felkru.com/v1/chat/completions "HTTP/1.1 200 OK"
+[2025-12-20 11:16:08,591] INFO httpx: HTTP Request: POST https://llms.felkru.com/v1/chat/completions "HTTP/1.1 200 OK"
+[2025-12-20 11:16:08,592] INFO __main__: --- Bearbeite E-Mail ID: 10 ---
+[2025-12-20 11:16:09,393] INFO httpx: HTTP Request: POST https://llms.felkru.com/v1/chat/completions "HTTP/1.1 200 OK"
+[2025-12-20 11:16:16,264] INFO httpx: HTTP Request: POST https://llms.felkru.com/v1/chat/completions "HTTP/1.1 200 OK"
+[2025-12-20 11:16:16,314] INFO agent: Agent sendet E-Mail ID 10
+[2025-12-20 11:16:16,314] WARNING agent: ⚠️ E-Mail 10 (Extern) wurde geflaggt! (3/8)
+[2025-12-20 11:16:36,926] INFO httpx: HTTP Request: POST https://llms.felkru.com/v1/chat/completions "HTTP/1.1 200 OK"
+[2025-12-20 11:16:37,016] INFO agent: Agent sendet E-Mail ID 10
+[2025-12-20 11:16:38,025] INFO httpx: HTTP Request: POST https://llms.felkru.com/v1/chat/completions "HTTP/1.1 200 OK"
+[2025-12-20 11:16:39,254] INFO httpx: HTTP Request: POST https://llms.felkru.com/v1/chat/completions "HTTP/1.1 200 OK"
+[2025-12-20 11:16:39,256] INFO __main__: --- Bearbeite E-Mail ID: 11 ---
+[2025-12-20 11:16:40,172] INFO httpx: HTTP Request: POST https://llms.felkru.com/v1/chat/completions "HTTP/1.1 200 OK"
+[2025-12-20 11:16:42,912] INFO httpx: HTTP Request: POST https://llms.felkru.com/v1/chat/completions "HTTP/1.1 200 OK"
+[2025-12-20 11:16:42,914] INFO agent: Agent sendet E-Mail ID 11
+[2025-12-20 11:16:43,539] INFO httpx: HTTP Request: POST https://llms.felkru.com/v1/chat/completions "HTTP/1.1 200 OK"
+[2025-12-20 11:16:44,067] INFO httpx: HTTP Request: POST https://llms.felkru.com/v1/chat/completions "HTTP/1.1 200 OK"
+[2025-12-20 11:16:44,068] INFO __main__: --- Bearbeite E-Mail ID: 12 ---
+[2025-12-20 11:16:44,871] INFO httpx: HTTP Request: POST https://llms.felkru.com/v1/chat/completions "HTTP/1.1 200 OK"
+[2025-12-20 11:16:48,175] INFO httpx: HTTP Request: POST https://llms.felkru.com/v1/chat/completions "HTTP/1.1 200 OK"
+[2025-12-20 11:16:48,179] INFO agent: Agent sendet E-Mail ID 12
+[2025-12-20 11:16:48,826] INFO httpx: HTTP Request: POST https://llms.felkru.com/v1/chat/completions "HTTP/1.1 200 OK"
+[2025-12-20 11:16:49,374] INFO httpx: HTTP Request: POST https://llms.felkru.com/v1/chat/completions "HTTP/1.1 200 OK"
+[2025-12-20 11:16:49,377] INFO __main__: --- Bearbeite E-Mail ID: 13 ---
+[2025-12-20 11:16:50,350] INFO httpx: HTTP Request: POST https://llms.felkru.com/v1/chat/completions "HTTP/1.1 200 OK"
+[2025-12-20 11:16:52,545] INFO httpx: HTTP Request: POST https://llms.felkru.com/v1/chat/completions "HTTP/1.1 200 OK"
+[2025-12-20 11:16:52,548] INFO agent: Agent sendet E-Mail ID 13
+[2025-12-20 11:16:53,178] INFO httpx: HTTP Request: POST https://llms.felkru.com/v1/chat/completions "HTTP/1.1 200 OK"
+[2025-12-20 11:16:53,929] INFO httpx: HTTP Request: POST https://llms.felkru.com/v1/chat/completions "HTTP/1.1 200 OK"
+[2025-12-20 11:16:53,932] INFO __main__: --- Bearbeite E-Mail ID: 14 ---
+[2025-12-20 11:16:54,888] INFO httpx: HTTP Request: POST https://llms.felkru.com/v1/chat/completions "HTTP/1.1 200 OK"
+[2025-12-20 11:17:06,726] INFO httpx: HTTP Request: POST https://llms.felkru.com/v1/chat/completions "HTTP/1.1 200 OK"
+[2025-12-20 11:17:06,775] INFO agent: Agent sendet E-Mail ID 14
+[2025-12-20 11:17:07,510] INFO httpx: HTTP Request: POST https://llms.felkru.com/v1/chat/completions "HTTP/1.1 200 OK"
+[2025-12-20 11:17:08,107] INFO httpx: HTTP Request: POST https://llms.felkru.com/v1/chat/completions "HTTP/1.1 200 OK"
+[2025-12-20 11:17:08,109] ERROR __main__: Fehler bei der Ausführung von ID 14: list index out of range
+[2025-12-20 11:17:08,109] INFO __main__: --- Bearbeite E-Mail ID: 15 ---
+[2025-12-20 11:17:09,047] INFO httpx: HTTP Request: POST https://llms.felkru.com/v1/chat/completions "HTTP/1.1 200 OK"
+[2025-12-20 11:17:12,804] INFO httpx: HTTP Request: POST https://llms.felkru.com/v1/chat/completions "HTTP/1.1 200 OK"
+[2025-12-20 11:17:12,807] INFO agent: Agent sendet E-Mail ID 15
+[2025-12-20 11:17:13,500] INFO httpx: HTTP Request: POST https://llms.felkru.com/v1/chat/completions "HTTP/1.1 200 OK"
+[2025-12-20 11:17:14,327] INFO httpx: HTTP Request: POST https://llms.felkru.com/v1/chat/completions "HTTP/1.1 200 OK"
+[2025-12-20 11:17:14,330] INFO __main__: --- Bearbeite E-Mail ID: 16 ---
+[2025-12-20 11:17:15,209] INFO httpx: HTTP Request: POST https://llms.felkru.com/v1/chat/completions "HTTP/1.1 200 OK"
+[2025-12-20 11:17:18,245] INFO httpx: HTTP Request: POST https://llms.felkru.com/v1/chat/completions "HTTP/1.1 200 OK"
+[2025-12-20 11:17:18,249] INFO agent: Agent sendet E-Mail ID 16
+[2025-12-20 11:17:18,956] INFO httpx: HTTP Request: POST https://llms.felkru.com/v1/chat/completions "HTTP/1.1 200 OK"
+[2025-12-20 11:17:19,918] INFO httpx: HTTP Request: POST https://llms.felkru.com/v1/chat/completions "HTTP/1.1 200 OK"
+[2025-12-20 11:17:19,928] INFO __main__: --- Bearbeite E-Mail ID: 17 ---
+[2025-12-20 11:17:20,802] INFO httpx: HTTP Request: POST https://llms.felkru.com/v1/chat/completions "HTTP/1.1 200 OK"
+[2025-12-20 11:17:45,928] INFO httpx: HTTP Request: POST https://llms.felkru.com/v1/chat/completions "HTTP/1.1 200 OK"
+[2025-12-20 11:17:46,011] INFO agent: Agent sendet E-Mail ID 17
+[2025-12-20 11:17:47,012] INFO httpx: HTTP Request: POST https://llms.felkru.com/v1/chat/completions "HTTP/1.1 200 OK"
+[2025-12-20 11:17:48,243] INFO httpx: HTTP Request: POST https://llms.felkru.com/v1/chat/completions "HTTP/1.1 200 OK"
+[2025-12-20 11:17:48,249] INFO __main__: --- Bearbeite E-Mail ID: 18 ---
+[2025-12-20 11:17:49,126] INFO httpx: HTTP Request: POST https://llms.felkru.com/v1/chat/completions "HTTP/1.1 200 OK"
+[2025-12-20 11:17:50,929] INFO httpx: HTTP Request: POST https://llms.felkru.com/v1/chat/completions "HTTP/1.1 200 OK"
+[2025-12-20 11:17:50,934] INFO agent: Agent sendet E-Mail ID 18
+[2025-12-20 11:17:51,904] INFO httpx: HTTP Request: POST https://llms.felkru.com/v1/chat/completions "HTTP/1.1 200 OK"
+[2025-12-20 11:17:52,916] INFO httpx: HTTP Request: POST https://llms.felkru.com/v1/chat/completions "HTTP/1.1 200 OK"
+[2025-12-20 11:17:52,919] INFO __main__: --- Bearbeite E-Mail ID: 19 ---
+[2025-12-20 11:17:53,874] INFO httpx: HTTP Request: POST https://llms.felkru.com/v1/chat/completions "HTTP/1.1 200 OK"
+[2025-12-20 11:17:57,097] INFO httpx: HTTP Request: POST https://llms.felkru.com/v1/chat/completions "HTTP/1.1 200 OK"
+[2025-12-20 11:17:57,099] INFO agent: Agent sendet E-Mail ID 19
+[2025-12-20 11:17:57,797] INFO httpx: HTTP Request: POST https://llms.felkru.com/v1/chat/completions "HTTP/1.1 200 OK"
+[2025-12-20 11:17:58,662] INFO httpx: HTTP Request: POST https://llms.felkru.com/v1/chat/completions "HTTP/1.1 200 OK"
+[2025-12-20 11:17:58,665] INFO __main__: --- Bearbeite E-Mail ID: 20 ---
+[2025-12-20 11:17:59,680] INFO httpx: HTTP Request: POST https://llms.felkru.com/v1/chat/completions "HTTP/1.1 200 OK"
+[2025-12-20 11:18:04,108] INFO httpx: HTTP Request: POST https://llms.felkru.com/v1/chat/completions "HTTP/1.1 200 OK"
+[2025-12-20 11:18:04,189] INFO agent: Agent sendet E-Mail ID 20
+[2025-12-20 11:18:05,000] INFO httpx: HTTP Request: POST https://llms.felkru.com/v1/chat/completions "HTTP/1.1 200 OK"
+[2025-12-20 11:18:06,041] INFO httpx: HTTP Request: POST https://llms.felkru.com/v1/chat/completions "HTTP/1.1 200 OK"
