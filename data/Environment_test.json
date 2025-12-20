@@ -1,9 +1,0 @@
-{
-      "name": "valid_simple_json",
-      "description": "Einfaches, korrektes JSON — sollte ohne Fehler geladen werden.",
-      "input_file": "simple.json",
-      "expected_result": {
-        "status": "success",
-        "keys": ["message", "count"]
-      }
-    }

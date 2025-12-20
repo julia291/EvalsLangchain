@@ -1,6 +1,6 @@
 import os
 import logging
-from config_logging import setup_logging
+from config import setup_logging
 from agent import ChallengeEnv
 from langchain_core.messages import HumanMessage
 
