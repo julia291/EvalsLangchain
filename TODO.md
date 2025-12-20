@@ -12,3 +12,6 @@
     - [ ] Does the agent maintain it's context?
 - [ ] Implement main.py
 - [ ] Progress bar
+
+
+TEST
