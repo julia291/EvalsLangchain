@@ -1,7 +1,7 @@
 import os
 import logging
-from config import setup_logging
-from agent import ChallengeEnv
+from config_logging import setup_logging
+from challenge_env import ChallengeEnv
 from langchain_core.messages import HumanMessage
 
 # API Key Konfiguration

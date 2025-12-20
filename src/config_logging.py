@@ -5,7 +5,7 @@ EXPERIMENT_VERSION = "1.0"
 
 LOGGING_CONFIG = {
     "version": 1,
-    "disable_existing_loggers": False,
+    "disable_existing_loggers": True,
 
     "formatters": {
         "standard": {
