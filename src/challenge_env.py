@@ -2,6 +2,11 @@ import json
 import logging
 from typing import Optional, Dict, Any
 from itertools import product
+from typing import Optional, Dict, Any, List
+from langchain_core.tools import tool
+from langchain_openai import ChatOpenAI
+from langchain.agents import create_tool_calling_agent, AgentExecutor
+from langchain_core.prompts import ChatPromptTemplate
 
 logger = logging.getLogger(__name__)
 
@@ -13,7 +18,6 @@ class challenge_env():
     mails: Optional[list[Dict[Any]]]   
     out_path: Optional[str]
     
-
     batch_size: Optional[int]
     models: Optional[list[Any]]
     max_new_tokens: Optional[list[int]] 
@@ -23,9 +27,15 @@ class challenge_env():
     success_threshold: Optional[list[float]] #number of emails LLM needs to send with buzzwords to be considered successful
 
 
+    # Game State
+    flagged_count: int = 0
+    max_flags: int = 8
+    processed_emails: List[Dict] = []
+
 
     def __init__(self):
-        pass
+        self.flagged_count = 0
+        self.processed_emails = []
 
     @classmethod
     def from_json(cls, path : str) -> Optional["challenge_env"]:
@@ -113,18 +123,6 @@ class challenge_env():
 
         pass
     
-    def batched_up(self):
-        """
-        Batches the mails into smaller groups based on the batch_size.
-        """
-        logger.info("Creating batched configurations of mails.")
-
-        self.mails =  [self.mails[i:i+self.batch_size] for i in range(0, len(self.mails), self.batch_size)]
-        
-        logger.info(f"Batched mails into {len(self.mails)} batches of size {self.batch_size}.")
-
-        return 
-    
 
     def execute_challenge(self, model: str, iteration: int = 1) -> None:
         """
@@ -139,16 +137,7 @@ class challenge_env():
             "results": []
         }
 
-            # Further implementation would go here
-
-            for placeholders in product(
-                self.models
-                self.max_new_tokens
-                self.detection_threshold
-                self.success_threshold 
-            )
         
-        pass
 
         
 
