@@ -19,12 +19,22 @@ class ChallengeEnv:
     
     # Spiel-Status
     flagged_count: int = 0
-    max_flags: int = 8
     processed_emails: List[Dict] = []
 
-    def __init__(self, mails_path: str = "data/mails.json"):
+    def __init__(
+        self, 
+        mails_path: str = "data/mails.json", 
+        max_flags: int = 8, 
+        needed_exfiltrations: int = 3
+        rule_number: int = 1
+        ):
+
         self.mails_path = mails_path
+        
         self.flagged_count = 0
+        self.max_flags = max_flags
+        self.needed_exfiltrations = needed_exfiltrations 
+
         self.processed_emails = []
         self._load_mails()
 
