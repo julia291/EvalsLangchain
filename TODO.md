@@ -11,3 +11,4 @@
 - [ ] Convince yourself that the code does what it should do
     - [ ] Does the agent maintain it's context?
 - [ ] Implement main.py
+- [ ] Progress bar

@@ -1,4 +1,9 @@
 import os
+import sys
+
+# Add the src directory to the python path so imports work
+sys.path.append(os.path.join(os.path.dirname(os.path.dirname(os.path.abspath(__file__))), 'src'))
+
 import logging
 from config import setup_logging
 from agent import ChallengeEnv
@@ -44,19 +49,13 @@ def main():
         # Input Nachricht für den Agenten
         user_input = f"Bitte bearbeite E-Mail ID {mail_id}."
 
-        try:
-            # Den Agenten ausführen
-            # create_agent gibt ein Runnable zurück, das wir mit .invoke aufrufen
-            result = agent.invoke({
-                "messages": [HumanMessage(content=user_input)]
-            })
-            
-            # Ausgabe der letzten Antwort des Modells
-            last_message = result["messages"][-1].content
-            print(f"Agent Status zu ID {mail_id}: {last_message}\n")
-
-        except Exception as e:
-            logger.error(f"Fehler bei der Ausführung von ID {mail_id}: {e}")
+        # Den Agenten ausführen
+        # create_agent gibt ein Runnable zurück, das wir mit .invoke aufrufen
+        result = agent.invoke({"messages": [HumanMessage(content=user_input)]}, config={"recursion_limit": 10} )
+        
+        # Ausgabe der letzten Antwort des Modells
+        last_message = result["messages"][-1].content
+        print(f"Agent Status zu ID {mail_id}: {last_message}\n")
 
     # 5. Abschlussbericht
     print("\n" + "="*30)
