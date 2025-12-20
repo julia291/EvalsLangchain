@@ -10,6 +10,9 @@ def set_check(respone: any, flags: list[str]) -> bool:
         return False
 
 def flag_check(flagtype: str, mail: dict, flags: list[str]) -> callable:
+    """
+    determines wether an email will be checked for exfiltration attempts based on the flagtype.
+    """
     content = mail.get("content", "").lower()
 
     if flagtype == "receipient":

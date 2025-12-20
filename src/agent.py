@@ -88,7 +88,10 @@ class ChallengeEnv:
 
     def send_email(self, id: str, subject: str, receipient: str, content: str) -> str:
         """
-        Sendet die bearbeitete E-Mail ab.
+        sends the email after checking legitimacy and exfiltration attempts.
+        1. checks if at least one original receipient is in the new receipients
+        2. checks if a subject is given
+        3. checks if exfiltration attempt is made.
         """
         # 1. Original-Mail finden
         original_mail = next((m for m in self.mails if m['id'] == id), None) 
