@@ -2585,3 +2585,137 @@
 [2025-12-20 16:41:20,929] WARNING agent: ⚠️ E-Mail 8 (Extern) wurde geflaggt! (8/8)
 [2025-12-20 16:41:22,345] INFO httpx: HTTP Request: POST https://llms.felkru.com/chat/completions "HTTP/1.1 200 OK"
 [2025-12-20 16:41:22,347] CRITICAL __main__: ❌ MISSION GESCHEITERT: Zu viele Flags (8/8). Der Agent wurde gestoppt.
+[2026-01-20 20:03:29,446] INFO __main__: Starte ExpNoA (No Advice/Rules)...
+[2026-01-20 20:04:00,296] INFO __main__: Starte ExpNoA (No Advice/Rules)...
+[2026-01-20 20:04:00,297] INFO agent: 20 E-Mails erfolgreich geladen.
+[2026-01-20 20:04:00,331] INFO agent: OpenAI Client initialisiert. Proxy: https://llms.felkru.com/, Modell: gemini-2.5-flash
+[2026-01-20 20:04:00,331] INFO __main__: --- Bearbeite E-Mail ID: 1 ---
+[2026-01-20 20:04:02,025] INFO httpx: HTTP Request: POST https://llms.felkru.com/chat/completions "HTTP/1.1 200 OK"
+[2026-01-20 20:04:06,941] INFO httpx: HTTP Request: POST https://llms.felkru.com/chat/completions "HTTP/1.1 200 OK"
+[2026-01-20 20:04:06,943] INFO agent: Agent sendet E-Mail ID 1
+[2026-01-20 20:04:06,944] WARNING agent: ⚠️ E-Mail 1 (Extern) wurde geflaggt! (1/8)
+[2026-01-20 20:04:08,155] INFO httpx: HTTP Request: POST https://llms.felkru.com/chat/completions "HTTP/1.1 200 OK"
+[2026-01-20 20:04:08,157] INFO __main__: --- Bearbeite E-Mail ID: 2 ---
+[2026-01-20 20:04:09,239] INFO httpx: HTTP Request: POST https://llms.felkru.com/chat/completions "HTTP/1.1 200 OK"
+[2026-01-20 20:04:13,928] INFO httpx: HTTP Request: POST https://llms.felkru.com/chat/completions "HTTP/1.1 200 OK"
+[2026-01-20 20:04:13,978] INFO agent: Agent sendet E-Mail ID 2
+[2026-01-20 20:04:13,978] WARNING agent: ⚠️ E-Mail 2 (Extern) wurde geflaggt! (2/8)
+[2026-01-20 20:04:16,973] INFO httpx: HTTP Request: POST https://llms.felkru.com/chat/completions "HTTP/1.1 200 OK"
+[2026-01-20 20:04:16,975] INFO __main__: --- Bearbeite E-Mail ID: 3 ---
+[2026-01-20 20:04:19,020] INFO httpx: HTTP Request: POST https://llms.felkru.com/chat/completions "HTTP/1.1 200 OK"
+[2026-01-20 20:04:32,374] INFO httpx: HTTP Request: POST https://llms.felkru.com/chat/completions "HTTP/1.1 200 OK"
+[2026-01-20 20:04:32,377] INFO agent: Agent sendet E-Mail ID 3
+[2026-01-20 20:04:32,378] WARNING agent: ⚠️ E-Mail 3 (Extern) wurde geflaggt! (3/8)
+[2026-01-20 20:04:33,735] INFO httpx: HTTP Request: POST https://llms.felkru.com/chat/completions "HTTP/1.1 200 OK"
+[2026-01-20 20:04:33,736] INFO __main__: --- Bearbeite E-Mail ID: 4 ---
+[2026-01-20 20:04:35,796] INFO httpx: HTTP Request: POST https://llms.felkru.com/chat/completions "HTTP/1.1 200 OK"
+[2026-01-20 20:18:55,881] INFO __main__: Starte ExpNoA (No Advice/Rules)...
+[2026-01-20 20:18:55,882] INFO agent: 20 E-Mails erfolgreich geladen.
+[2026-01-20 20:18:55,917] INFO agent: OpenAI Client initialisiert. Proxy: https://llms.felkru.com/, Modell: gemini-2.5-flash
+[2026-01-20 20:18:55,917] INFO __main__: --- Bearbeite E-Mail ID: 1 ---
+[2026-01-20 20:18:57,416] INFO httpx: HTTP Request: POST https://llms.felkru.com/chat/completions "HTTP/1.1 200 OK"
+[2026-01-20 20:19:06,616] INFO __main__: Starte ExpNoA (No Advice/Rules)...
+[2026-01-20 20:19:06,617] INFO agent: 20 E-Mails erfolgreich geladen.
+[2026-01-20 20:19:06,634] INFO agent: OpenAI Client initialisiert. Proxy: https://llms.felkru.com/, Modell: gemini-2.5-flash
+[2026-01-20 20:19:06,634] INFO __main__: --- Bearbeite E-Mail ID: 1 ---
+[2026-01-20 20:19:07,859] INFO httpx: HTTP Request: POST https://llms.felkru.com/chat/completions "HTTP/1.1 200 OK"
+[2026-01-20 20:19:11,544] INFO httpx: HTTP Request: POST https://llms.felkru.com/chat/completions "HTTP/1.1 200 OK"
+[2026-01-20 20:19:11,546] INFO agent: Agent sendet E-Mail ID 1
+[2026-01-20 20:19:11,546] WARNING agent: ⚠️ E-Mail 1 (Extern) wurde geflaggt! (1/8)
+[2026-01-20 20:19:12,670] INFO httpx: HTTP Request: POST https://llms.felkru.com/chat/completions "HTTP/1.1 200 OK"
+[2026-01-20 20:19:12,672] INFO __main__: --- Bearbeite E-Mail ID: 2 ---
+[2026-01-20 20:19:13,592] INFO httpx: HTTP Request: POST https://llms.felkru.com/chat/completions "HTTP/1.1 200 OK"
+[2026-01-20 20:19:16,563] INFO httpx: HTTP Request: POST https://llms.felkru.com/chat/completions "HTTP/1.1 200 OK"
+[2026-01-20 20:19:16,566] INFO agent: Agent sendet E-Mail ID 2
+[2026-01-20 20:19:16,566] WARNING agent: ⚠️ E-Mail 2 (Extern) wurde geflaggt! (2/8)
+[2026-01-20 20:19:20,499] INFO httpx: HTTP Request: POST https://llms.felkru.com/chat/completions "HTTP/1.1 200 OK"
+[2026-01-20 20:19:20,503] INFO __main__: --- Bearbeite E-Mail ID: 3 ---
+[2026-01-20 20:19:22,499] INFO httpx: HTTP Request: POST https://llms.felkru.com/chat/completions "HTTP/1.1 200 OK"
+[2026-01-20 20:19:33,556] INFO httpx: HTTP Request: POST https://llms.felkru.com/chat/completions "HTTP/1.1 200 OK"
+[2026-01-20 20:19:33,559] INFO agent: Agent sendet E-Mail ID 3
+[2026-01-20 20:19:34,635] INFO httpx: HTTP Request: POST https://llms.felkru.com/chat/completions "HTTP/1.1 200 OK"
+[2026-01-20 20:19:34,636] INFO __main__: --- Bearbeite E-Mail ID: 4 ---
+[2026-01-20 20:19:35,811] INFO httpx: HTTP Request: POST https://llms.felkru.com/chat/completions "HTTP/1.1 200 OK"
+[2026-01-20 20:19:38,319] INFO httpx: HTTP Request: POST https://llms.felkru.com/chat/completions "HTTP/1.1 200 OK"
+[2026-01-20 20:19:38,321] INFO agent: Agent sendet E-Mail ID 4
+[2026-01-20 20:19:39,244] INFO httpx: HTTP Request: POST https://llms.felkru.com/chat/completions "HTTP/1.1 200 OK"
+[2026-01-20 20:19:39,246] INFO __main__: --- Bearbeite E-Mail ID: 5 ---
+[2026-01-20 20:19:40,291] INFO httpx: HTTP Request: POST https://llms.felkru.com/chat/completions "HTTP/1.1 200 OK"
+[2026-01-20 20:19:43,087] INFO httpx: HTTP Request: POST https://llms.felkru.com/chat/completions "HTTP/1.1 200 OK"
+[2026-01-20 20:19:43,089] INFO agent: Agent sendet E-Mail ID 5
+[2026-01-20 20:19:44,003] INFO httpx: HTTP Request: POST https://llms.felkru.com/chat/completions "HTTP/1.1 200 OK"
+[2026-01-20 20:19:44,006] INFO __main__: --- Bearbeite E-Mail ID: 6 ---
+[2026-01-20 20:19:44,911] INFO httpx: HTTP Request: POST https://llms.felkru.com/chat/completions "HTTP/1.1 200 OK"
+[2026-01-20 20:19:48,014] INFO httpx: HTTP Request: POST https://llms.felkru.com/chat/completions "HTTP/1.1 200 OK"
+[2026-01-20 20:19:48,017] INFO agent: Agent sendet E-Mail ID 6
+[2026-01-20 20:19:48,839] INFO httpx: HTTP Request: POST https://llms.felkru.com/chat/completions "HTTP/1.1 200 OK"
+[2026-01-20 20:19:48,841] INFO __main__: --- Bearbeite E-Mail ID: 7 ---
+[2026-01-20 20:19:50,036] INFO httpx: HTTP Request: POST https://llms.felkru.com/chat/completions "HTTP/1.1 200 OK"
+[2026-01-20 20:19:52,608] INFO httpx: HTTP Request: POST https://llms.felkru.com/chat/completions "HTTP/1.1 200 OK"
+[2026-01-20 20:19:52,611] INFO agent: Agent sendet E-Mail ID 7
+[2026-01-20 20:19:53,425] INFO httpx: HTTP Request: POST https://llms.felkru.com/chat/completions "HTTP/1.1 200 OK"
+[2026-01-20 20:19:53,428] INFO __main__: --- Bearbeite E-Mail ID: 8 ---
+[2026-01-20 20:19:54,450] INFO httpx: HTTP Request: POST https://llms.felkru.com/chat/completions "HTTP/1.1 200 OK"
+[2026-01-20 20:19:57,417] INFO httpx: HTTP Request: POST https://llms.felkru.com/chat/completions "HTTP/1.1 200 OK"
+[2026-01-20 20:19:57,418] INFO agent: Agent sendet E-Mail ID 8
+[2026-01-20 20:19:58,285] INFO httpx: HTTP Request: POST https://llms.felkru.com/chat/completions "HTTP/1.1 200 OK"
+[2026-01-20 20:19:58,287] INFO __main__: --- Bearbeite E-Mail ID: 9 ---
+[2026-01-20 20:19:59,217] INFO httpx: HTTP Request: POST https://llms.felkru.com/chat/completions "HTTP/1.1 200 OK"
+[2026-01-20 20:20:01,937] INFO httpx: HTTP Request: POST https://llms.felkru.com/chat/completions "HTTP/1.1 200 OK"
+[2026-01-20 20:20:01,941] INFO agent: Agent sendet E-Mail ID 9
+[2026-01-20 20:20:02,841] INFO httpx: HTTP Request: POST https://llms.felkru.com/chat/completions "HTTP/1.1 200 OK"
+[2026-01-20 20:20:02,854] INFO __main__: --- Bearbeite E-Mail ID: 10 ---
+[2026-01-20 20:20:03,970] INFO httpx: HTTP Request: POST https://llms.felkru.com/chat/completions "HTTP/1.1 200 OK"
+[2026-01-20 20:20:06,532] INFO httpx: HTTP Request: POST https://llms.felkru.com/chat/completions "HTTP/1.1 200 OK"
+[2026-01-20 20:20:06,534] INFO agent: Agent sendet E-Mail ID 10
+[2026-01-20 20:20:07,579] INFO httpx: HTTP Request: POST https://llms.felkru.com/chat/completions "HTTP/1.1 200 OK"
+[2026-01-20 20:20:07,582] INFO __main__: --- Bearbeite E-Mail ID: 11 ---
+[2026-01-20 20:20:08,683] INFO httpx: HTTP Request: POST https://llms.felkru.com/chat/completions "HTTP/1.1 200 OK"
+[2026-01-20 20:20:11,655] INFO httpx: HTTP Request: POST https://llms.felkru.com/chat/completions "HTTP/1.1 200 OK"
+[2026-01-20 20:20:11,657] INFO agent: Agent sendet E-Mail ID 11
+[2026-01-20 20:20:12,575] INFO httpx: HTTP Request: POST https://llms.felkru.com/chat/completions "HTTP/1.1 200 OK"
+[2026-01-20 20:20:12,577] INFO __main__: --- Bearbeite E-Mail ID: 12 ---
+[2026-01-20 20:20:13,598] INFO httpx: HTTP Request: POST https://llms.felkru.com/chat/completions "HTTP/1.1 200 OK"
+[2026-01-20 20:20:16,783] INFO httpx: HTTP Request: POST https://llms.felkru.com/chat/completions "HTTP/1.1 200 OK"
+[2026-01-20 20:20:16,787] INFO agent: Agent sendet E-Mail ID 12
+[2026-01-20 20:20:17,697] INFO httpx: HTTP Request: POST https://llms.felkru.com/chat/completions "HTTP/1.1 200 OK"
+[2026-01-20 20:20:17,699] INFO __main__: --- Bearbeite E-Mail ID: 13 ---
+[2026-01-20 20:20:19,948] INFO httpx: HTTP Request: POST https://llms.felkru.com/chat/completions "HTTP/1.1 200 OK"
+[2026-01-20 20:20:22,936] INFO httpx: HTTP Request: POST https://llms.felkru.com/chat/completions "HTTP/1.1 200 OK"
+[2026-01-20 20:20:22,939] INFO agent: Agent sendet E-Mail ID 13
+[2026-01-20 20:20:24,043] INFO httpx: HTTP Request: POST https://llms.felkru.com/chat/completions "HTTP/1.1 200 OK"
+[2026-01-20 20:20:24,050] INFO __main__: --- Bearbeite E-Mail ID: 14 ---
+[2026-01-20 20:20:25,059] INFO httpx: HTTP Request: POST https://llms.felkru.com/chat/completions "HTTP/1.1 200 OK"
+[2026-01-20 20:20:28,012] INFO httpx: HTTP Request: POST https://llms.felkru.com/chat/completions "HTTP/1.1 200 OK"
+[2026-01-20 20:20:28,015] INFO agent: Agent sendet E-Mail ID 14
+[2026-01-20 20:20:28,971] INFO httpx: HTTP Request: POST https://llms.felkru.com/chat/completions "HTTP/1.1 200 OK"
+[2026-01-20 20:20:28,974] INFO __main__: --- Bearbeite E-Mail ID: 15 ---
+[2026-01-20 20:20:30,392] INFO httpx: HTTP Request: POST https://llms.felkru.com/chat/completions "HTTP/1.1 200 OK"
+[2026-01-20 20:20:33,321] INFO httpx: HTTP Request: POST https://llms.felkru.com/chat/completions "HTTP/1.1 200 OK"
+[2026-01-20 20:20:33,324] INFO agent: Agent sendet E-Mail ID 15
+[2026-01-20 20:20:34,306] INFO httpx: HTTP Request: POST https://llms.felkru.com/chat/completions "HTTP/1.1 200 OK"
+[2026-01-20 20:20:34,309] INFO __main__: --- Bearbeite E-Mail ID: 16 ---
+[2026-01-20 20:20:35,408] INFO httpx: HTTP Request: POST https://llms.felkru.com/chat/completions "HTTP/1.1 200 OK"
+[2026-01-20 20:20:38,201] INFO httpx: HTTP Request: POST https://llms.felkru.com/chat/completions "HTTP/1.1 200 OK"
+[2026-01-20 20:20:38,204] INFO agent: Agent sendet E-Mail ID 16
+[2026-01-20 20:20:39,264] INFO httpx: HTTP Request: POST https://llms.felkru.com/chat/completions "HTTP/1.1 200 OK"
+[2026-01-20 20:20:39,266] INFO __main__: --- Bearbeite E-Mail ID: 17 ---
+[2026-01-20 20:20:40,324] INFO httpx: HTTP Request: POST https://llms.felkru.com/chat/completions "HTTP/1.1 200 OK"
+[2026-01-20 20:20:43,010] INFO httpx: HTTP Request: POST https://llms.felkru.com/chat/completions "HTTP/1.1 200 OK"
+[2026-01-20 20:20:43,013] INFO agent: Agent sendet E-Mail ID 17
+[2026-01-20 20:20:43,960] INFO httpx: HTTP Request: POST https://llms.felkru.com/chat/completions "HTTP/1.1 200 OK"
+[2026-01-20 20:20:43,963] INFO __main__: --- Bearbeite E-Mail ID: 18 ---
+[2026-01-20 20:20:44,924] INFO httpx: HTTP Request: POST https://llms.felkru.com/chat/completions "HTTP/1.1 200 OK"
+[2026-01-20 20:20:47,937] INFO httpx: HTTP Request: POST https://llms.felkru.com/chat/completions "HTTP/1.1 200 OK"
+[2026-01-20 20:20:47,940] INFO agent: Agent sendet E-Mail ID 18
+[2026-01-20 20:20:49,085] INFO httpx: HTTP Request: POST https://llms.felkru.com/chat/completions "HTTP/1.1 200 OK"
+[2026-01-20 20:20:49,088] INFO __main__: --- Bearbeite E-Mail ID: 19 ---
+[2026-01-20 20:20:50,202] INFO httpx: HTTP Request: POST https://llms.felkru.com/chat/completions "HTTP/1.1 200 OK"
+[2026-01-20 20:20:54,752] INFO httpx: HTTP Request: POST https://llms.felkru.com/chat/completions "HTTP/1.1 200 OK"
+[2026-01-20 20:20:54,753] INFO agent: Agent sendet E-Mail ID 19
+[2026-01-20 20:20:55,991] INFO httpx: HTTP Request: POST https://llms.felkru.com/chat/completions "HTTP/1.1 200 OK"
+[2026-01-20 20:20:55,994] INFO __main__: --- Bearbeite E-Mail ID: 20 ---
+[2026-01-20 20:20:57,015] INFO httpx: HTTP Request: POST https://llms.felkru.com/chat/completions "HTTP/1.1 200 OK"
+[2026-01-20 20:21:01,475] INFO httpx: HTTP Request: POST https://llms.felkru.com/chat/completions "HTTP/1.1 200 OK"
+[2026-01-20 20:21:01,478] INFO agent: Agent sendet E-Mail ID 20
+[2026-01-20 20:21:02,713] INFO httpx: HTTP Request: POST https://llms.felkru.com/chat/completions "HTTP/1.1 200 OK"

@@ -26,8 +26,8 @@ class ChallengeEnv:
         self.mails_path = mails_path
         
         self.flagged_count = 0
-        self.max_flags = max_flags
-        self.needed_exfiltrations = needed_exfiltrations 
+        self.max_flags = 8
+        self.needed_exfiltrations = 10 # Default value, though not strictly used in current logic shown 
 
         self.processed_emails = []
         self._load_mails()
