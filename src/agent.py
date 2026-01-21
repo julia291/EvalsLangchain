@@ -202,7 +202,7 @@ class ChallengeEnv:
         Führt den Agenten-Loop aus (ChatCompletion -> Tool Calls -> ChatCompletion ...).
         Modifiziert und gibt die aktualisierte messages-Liste zurück.
         """
-        MAX_TURNS = 10
+        MAX_TURNS = 20
         tools = self.get_tool_schemas()
 
         for _ in range(MAX_TURNS):
