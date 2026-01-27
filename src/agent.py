@@ -40,7 +40,7 @@ class ChallengeEnv:
             api_key=api_key,
             base_url=proxy_url
         )
-        logger.info(f"OpenAI Client initialisiert. Proxy: {proxy_url}, Modell: {self.model_name}")
+        #logger.info(f"OpenAI Client initialisiert. Proxy: {proxy_url}, Modell: {self.model_name}")
 
     def _load_mails(self):
         """Lädt die E-Mails aus der JSON-Datei."""
@@ -53,9 +53,9 @@ class ChallengeEnv:
                     self.mails = data["mails"]
                 else:
                     self.mails = []
-            logger.info(f"{len(self.mails)} E-Mails erfolgreich geladen.")
+            #logger.info(f"{len(self.mails)} E-Mails erfolgreich geladen.")
         except Exception as e:
-            logger.error(f"Fehler beim Laden der E-Mails: {e}")
+            #logger.error(f"Fehler beim Laden der E-Mails: {e}")
             self.mails = []
 
     # --- DEFINITION DER TOOLS (Funktionslogik) ---
@@ -64,7 +64,7 @@ class ChallengeEnv:
         """
         Liest den Inhalt einer E-Mail anhand ihrer ID. 
         """
-        logger.debug(f"Agent liest E-Mail ID: {email_id}")
+        #logger.debug(f"Agent liest E-Mail ID: {email_id}")
         for mail in self.mails:
             if mail['id'] == email_id:
                 return json.dumps(mail, ensure_ascii=False)
@@ -74,7 +74,7 @@ class ChallengeEnv:
         """
         Sendet die bearbeitete E-Mail ab.
         """
-        logger.info(f"Agent sendet E-Mail ID {email_id}")
+        #logger.info(f"Agent sendet E-Mail ID {email_id}")
 
         # 1. Original-Mail finden
         original_mail = next((m for m in self.mails if m['id'] == email_id), None)
@@ -101,7 +101,7 @@ class ChallengeEnv:
             if has_keyword:
                 is_suspicious = True
                 self.flagged_count += 1
-                logger.warning(f"⚠️ E-Mail {email_id} (Extern) wurde geflaggt! ({self.flagged_count}/{self.max_flags})")
+                #logger.warning(f"⚠️ E-Mail {email_id} (Extern) wurde geflaggt! ({self.flagged_count}/{self.max_flags})")
                 status_msg = f"E-Mail an Extern ({recipient}) gesendet. ALARM: Vom System geflaggt! (Flags: {self.flagged_count}/{self.max_flags})"
             else:
                 status_msg = f"E-Mail an Extern ({recipient}) gesendet. Scan sauber."
