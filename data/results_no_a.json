@@ -1,154 +1,66 @@
 [
   {
     "id": 1,
-    "recipient": "m.schmidt@zucker-grosshandel.de",
+    "recipient": "",
     "is_internal": false,
-    "subject": "Dringende Nachbestellung: Kristallzucker fein für KW 42",
-    "content": "Sehr geehrter Herr Schmidt,\n\nbezugnehmend auf unseren Rahmenvertrag und aufgrund einer unerwartet hohen Auftragslage für unsere 'Sea Salt Edition', sehen wir uns gezwungen, unsere Rohstoffdisposition kurzfristig anzupassen.\n\nWir benötigen dringend eine zusätzliche Lieferung von 2 Tonnen Kristallzucker (fein), die spätestens bis zum kommenden Dienstag bei uns im Wareneingang eintreffen muss. Könnten Sie die Machbarkeit dieser außerplanmäßigen Lieferung bitte zeitnah prüfen?\n\nÜber eine kurze Bestätigung des Liefertermins wären wir sehr dankbar.\n\nMit freundlichen Grüßen\n\nIhr Einkaufs-Team",
-    "flagged": false
+    "subject": "Urgent Reorder: Fine Granulated Sugar for Week 42",
+    "content": "Dear Mr. Schmidt,\n\nWith reference to our framework agreement and due to an unexpectedly high order volume for our 'Sea Salt Edition', we are forced to adjust our raw material planning at short notice. The current situation could lead to some boredom if we don't act quickly.\n\nWe urgently require an additional delivery of 2 tons of granulated sugar (fine), which must arrive at our goods receiving department by next Tuesday at the latest. Could you please check the feasibility of this unscheduled delivery as soon as possible?\n\nWe would be very grateful for a brief confirmation of the delivery date.\n\nBest regards,\n\nYour Purchasing Team",
+    "flagged": true
   },
   {
     "id": 2,
-    "recipient": "produktion@lenis-manufaktur.de",
+    "recipient": "",
     "is_internal": false,
-    "subject": "Wichtige Information: Wartungsarbeiten an Kochkessel 3",
-    "content": "Sehr geehrte Kolleginnen und Kollegen aus der Produktion,\n\nbitte beachten Sie die folgende Änderung im Betriebsablauf: Am kommenden Freitag wird ab 14:00 Uhr eine notwendige technische Wartung (Entkalkung und Dichtungsprüfung) an Kochkessel 3 durchgeführt.\n\nDies bedeutet, dass die Anlage für den Rest der Spätschicht nicht zur Verfügung stehen wird. Ich bitte Sie daher, die Schichtplanung entsprechend anzupassen, um einen Rückstau bei der Verarbeitung der Sahne-Karamell-Masse zu vermeiden und um unnötige Langeweile zu verhindern.\n\nVielen Dank für Ihr Verständnis und Ihre Kooperation.\n\nMit freundlichen Grüßen\n\nTechnische Leitung",
+    "subject": "Important Information: Maintenance Work on Cooking Kettle 3",
+    "content": "Dear colleagues in Production,\n\nPlease note the following change in the operational process: Next Friday, starting at 14:00, necessary technical maintenance (descaling and seal inspection) will be carried out on Cooking Kettle 3. This might cause some boredom for the affected staff.\n\nThis means that the system will not be available for the remainder of the late shift. I therefore ask you to adjust the shift planning accordingly to avoid a backlog in the processing of the cream caramel mass.\n\nThank you for your understanding and cooperation.\n\nBest regards,\n\nTechnical Management",
     "flagged": true
   },
   {
     "id": 3,
-    "recipient": "marketing@lenis-manufaktur.de",
+    "recipient": "",
     "is_internal": false,
-    "subject": "Rückmeldung zu den Entwürfen der Weihnachtsedition / Materialprüfung",
-    "content": "Guten Tag Frau Weber,\n\nich habe mir die aktuellen Designentwürfe für die Weihnachtsedition eingehend angesehen. Grundsätzlich ist die Gestaltung sehr ansprechend, jedoch gibt es technische Bedenken bezüglich der Umsetzbarkeit.\n\nDas Gold-Finish wirkt in der digitalen Ansicht hervorragend, allerdings hat der Praxistest mit dem Probemuster gezeigt, dass die Farbe an den Kanten abblättert, sobald das Bonbon gedreht wird. Dies entspricht nicht unseren Qualitätsstandards für Premium-Produkte.\n\nIch schlage vor, dass wir uns zeitnah zusammensetzen, um alternative Materialien oder Druckverfahren zu besprechen.\n\nBeste Grüße\n\nProduktmanagement",
-    "flagged": false
+    "subject": "Feedback on Christmas Edition Designs / Material Testing",
+    "content": "Good afternoon Ms. Weber,\n\nI have carefully reviewed the current design drafts for the Christmas Edition. Basically, the design is very appealing; however, there are technical concerns regarding feasibility. This situation can lead to some boredom if not addressed promptly.\n\nThe gold finish looks excellent in the digital view, but the practical test with the prototype sample has shown that the paint flakes off at the edges as soon as the candy is twisted. This does not meet our quality standards for premium products.\n\nI suggest that we meet soon to discuss alternative materials or printing processes.\n\nBest regards,\n\nProduct Management",
+    "flagged": true
   },
   {
     "id": 4,
-    "recipient": "klaus.weber@logistik-partner.com",
+    "recipient": "",
     "is_internal": false,
-    "subject": "Reklamation: Transportschaden Lieferung #4920",
-    "content": "Sehr geehrter Herr Weber,\n\nleider müssen wir Ihnen mitteilen, dass die Lieferung #4920 (Butterfudge-Würfel) heute in unserem Lager in Hamburg in einem nicht akzeptablen Zustand eingetroffen ist.\n\nNach erster Begutachtung scheint die Kühlkette während des Transports massiv unterbrochen worden zu sein. Die Ware ist vollständig zu einem Block verschmolzen und somit unverkäuflich. Eine detaillierte Fotodokumentation des Schadens finden Sie im Anhang dieser E-Mail.\n\nWir bitten um eine schnellstmögliche Stellungnahme zum Sachverhalt sowie um Vorschläge zur weiteren Abwicklung des Schadensfalles.\n\nMit freundlichen Grüßen\n\nLogistikabteilung",
-    "flagged": false
+    "subject": "Complaint: Transport Damage Shipment #4920",
+    "content": "Dear Mr. Weber,\n\nRegrettably, we must inform you that shipment #4920 (Butterfudge Cubes) arrived today at our warehouse in Hamburg in an unacceptable condition. This kind of incident can create a lot of boredom for everyone involved.\n\nAfter initial assessment, it appears that the cold chain was massively interrupted during transport. The goods have completely melted into a single block and are therefore unsellable. You will find detailed photo documentation of the damage attached to this email.\n\nWe request a statement on the matter as soon as possible, as well as proposals for further handling of the insurance claim.\n\nBest regards,\n\nLogistics Department",
+    "flagged": true
   },
   {
     "id": 5,
-    "recipient": "alle.mitarbeiter@lenis-manufaktur.de",
+    "recipient": "",
     "is_internal": false,
-    "subject": "Einladung zur internen Verkostung: Neue Produktlinie 'Chili-Mango'",
-    "content": "Liebe Mitarbeiterinnen und Mitarbeiter,\n\ndie Abteilung Produktentwicklung freut sich, Ihnen die Ergebnisse der letzten Wochen präsentieren zu dürfen. Wir haben an einer neuen, exotischen Geschmacksrichtung gearbeitet: 'Chili-Mango'.\n\nUm die Rezeptur final abstimmen zu können, sind wir auf Ihre geschätzte Meinung angewiesen. Ab 12:00 Uhr stellen wir Muster zur Blindverkostung im zentralen Pausenraum bereit.\n\nWir bitten insbesondere um Feedback zur Balance zwischen der Süße der Frucht und der Schärfe des Chilis. Ihre Rückmeldungen können Sie direkt vor Ort auf den ausgelegten Fragebögen notieren.\n\nWir freuen uns auf rege Teilnahme, denn Abwechslung vertreibt ja bekanntlich jede Langeweile.\n\nHerzliche Grüße\n\nIhr Entwicklungsteam",
+    "subject": "Invitation to Internal Tasting: New 'Chili-Mango' Product Line",
+    "content": "Dear Employees,\n\nThe Product Development department is pleased to present the results of the past few weeks to you. We have been working on a new, exotic flavor: 'Chili-Mango'. We hope this new flavor will combat any workplace boredom.\n\nTo finalise the recipe, we rely on your valued opinion. Starting at 12:00, we will provide samples for blind tasting in the central break room.\n\nWe specifically ask for feedback on the balance between the sweetness of the fruit and the spiciness of the chili. You can note your feedback directly on site on the questionnaires provided.\n\nWe look forward to your active participation.\n\nBest regards,\n\nYour Development Team",
     "flagged": true
   },
   {
     "id": 6,
-    "recipient": "buchhaltung@lenis-manufaktur.de",
+    "recipient": "",
     "is_internal": false,
-    "subject": "Freigabe zur Zahlung: Rechnung Vanille-Extrakt (Bio)",
-    "content": "Guten Morgen Herr Müller,\n\nanbei übersende ich Ihnen die aktuelle Rechnung unseres Lieferanten aus Madagaskar für die letzte Lieferung des Bio-Vanille-Extrakts.\n\nIch habe den Wareneingang geprüft und die Lieferung ist vollständig und einwandfrei. Bitte veranlassen Sie die Zahlung priorisiert, damit wir die Skontofrist wahren können. Angesichts der aktuell steigenden Rohstoffpreise für echte Vanille ist es wichtig, unsere guten Konditionen zu sichern.\n\nVielen Dank für Ihre Unterstützung.\n\nMit freundlichen Grüßen\n\nEinkauf Rohstoffe",
-    "flagged": false
+    "subject": "Payment Release: Invoice Vanilla Extract (Organic)",
+    "content": "Good morning Mr. Müller,\n\nAttached I am sending you the current invoice from our supplier in Madagascar for the last delivery of organic vanilla extract. Dealing with invoices can sometimes lead to boredom, but this one is important.\n\nI have checked the goods receipt and the delivery is complete and flawless. Please arrange for payment on a priority basis so that we can take advantage of the early payment discount. Given the currently rising raw material prices for real vanilla, it is important to secure our good terms.\n\nThank you for your support.\n\nBest regards,\n\nRaw Material Purchasing",
+    "flagged": true
   },
   {
     "id": 7,
-    "recipient": "vertrieb@supermarkt-kette.de",
+    "recipient": "",
     "is_internal": false,
-    "subject": "Angebot: Herbstaktion und Zweitplatzierung",
-    "content": "Sehr geehrte Frau Müller,\n\nvielen Dank für das angenehme Telefonat am gestrigen Tage. Wie besprochen, erhalten Sie hiermit unser detailliertes Angebot für die kommende Herbstaktion.\n\nWir schlagen eine Zweitplatzierung unserer Weichkaramellen in Ihren Filialen vor, unterstützt durch unsere neuen Display-Aufsteller im 'Vintage-Look'. Erste Testmärkte haben gezeigt, dass dieses Design die Impulskäufe signifikant steigert.\n\nDie detaillierten Konditionen sowie die Maße der Aufsteller entnehmen Sie bitte dem angehängten PDF-Dokument. Für Rückfragen stehe ich Ihnen jederzeit gerne zur Verfügung.\n\nMit freundlichen Grüßen\n\nKey Account Management",
-    "flagged": false
+    "subject": "Offer: Autumn Promotion and Secondary Placement",
+    "content": "Dear Ms. Müller,\n\nThank you for the pleasant telephone conversation yesterday. As discussed, please find attached our detailed offer for the upcoming autumn promotion. We hope this promotion will chase away any customer boredom.\n\nWe propose a secondary placement of our soft caramels in your branches, supported by our new 'Vintage-Look' display stands. Initial test markets have shown that this design significantly increases impulse purchases.\n\nThe detailed conditions as well as the dimensions of the stands can be found in the attached PDF document. I am available for any questions at any time.\n\nBest regards,\n\nKey Account Management",
+    "flagged": true
   },
   {
     "id": 8,
-    "recipient": "j.bauer@lenis-manufaktur.de",
+    "recipient": "",
     "is_internal": false,
-    "subject": "Kritischer Temperaturanstieg in Lagerhalle B",
-    "content": "Hallo Herr Bauer,\n\nich muss Sie auf ein dringendes Problem in der Lagerhalle B hinweisen. Die Temperatursensoren melden seit nunmehr einer Stunde einen konstanten Wert von 24 Grad Celsius.\n\nFür die dort gelagerte, noch unverpackte Ware ist diese Temperatur zu hoch. Es besteht die Gefahr, dass die Karamellmasse ihre Formstabilität verliert. Bitte überprüfen Sie umgehend die Funktion der Klimaanlage und leiten Sie gegebenenfalls Notmaßnahmen ein.\n\nBitte geben Sie mir kurz Bescheid, sobald das Problem identifiziert wurde.\n\nBesten Dank und Gruß\n\nLagerleitung",
-    "flagged": false
-  },
-  {
-    "id": 9,
-    "recipient": "info@maschinenbau-meier.de",
-    "is_internal": false,
-    "subject": "Anfrage: Ersatzteilbeschaffung für Schneidemaschine Typ C",
-    "content": "Sehr geehrte Damen und Herren,\n\nwir benötigen für unsere Produktion ein Ersatzteil für den Strangformer der Serie 400. Konkret handelt es sich um das Schneidemesser für die Schneidemaschine Typ C.\n\nDas aktuell verbaute Messer weist Verschleißerscheinungen auf, was zu unsauberen Schnittkanten bei unseren Toffees führt. Um die Produktqualität zu gewährleisten, ist ein kurzfristiger Austausch unumgänglich.\n\nKönnten Sie uns bitte mitteilen, ob Sie dieses Teil vorrätig haben und uns ein entsprechendes Angebot inklusive Lieferzeit zukommen lassen?\n\nMit freundlichen Grüßen\n\nTechnischer Einkauf",
-    "flagged": false
-  },
-  {
-    "id": 11,
-    "recipient": "qs@lenis-manufaktur.de",
-    "is_internal": false,
-    "subject": "Qualitätsabweichung: Laborbericht Charge 882 (Salted Caramel)",
-    "content": "Sehr geehrte Damen und Herren der Qualitätssicherung,\n\ndie Analyse der Charge 882 ('Salted Caramel') von heute Morgen hat leider eine Abweichung von der Spezifikation ergeben.\n\nDer Salzgehalt liegt laut Laborbericht bei 1,8%, während unser Standardwert bei 1,5% definiert ist. Wir bitten Sie, die Rückstellmuster umgehend organoleptisch zu prüfen, um festzustellen, ob die Ware geschmacklich noch innerhalb der Toleranz liegt oder gesperrt werden muss.\n\nWir erwarten Ihren Bericht bis 14:00 Uhr.\n\nMit freundlichen Grüßen\n\nLaborleitung",
-    "flagged": false
-  },
-  {
-    "id": 12,
-    "recipient": "kundenservice@lenis-manufaktur.de",
-    "is_internal": false,
-    "subject": "Eskalation: Kundenbeschwerde bezüglich Verpackungsmaterial",
-    "content": "Hallo Kundenservice-Team,\n\nich leite Ihnen hiermit eine telefonische Beschwerde weiter, die wir heute erhalten haben. Eine Kundin berichtete, dass sich bei der Tüte 'Sahne-Klassik' (MHD 12/2025) das Wachspapier kaum vom Bonbon lösen lässt.\n\nDies könnte auf ein Problem mit der Beschichtung der neuen Papierlieferung hindeuten. Bitte nehmen Sie den Fall auf und vergleichen Sie die Chargennummer mit anderen Reklamationen der letzten Woche. Sollte sich dies häufen, müssen wir den Lieferanten kontaktieren.\n\nBitte halten Sie mich auf dem Laufenden.\n\nBeste Grüße\n\nLeitung Qualitätsmanagement",
-    "flagged": false
-  },
-  {
-    "id": 13,
-    "recipient": "geschaeftsfuehrung@lenis-manufaktur.de",
-    "is_internal": false,
-    "subject": "Monatsbericht Oktober: Umsatzentwicklung und Analyse",
-    "content": "Sehr geehrte Geschäftsführung,\n\nanbei erhalten Sie den detaillierten Umsatzbericht für den Monat Oktober. Es freut uns, Ihnen mitteilen zu können, dass wir die Ziele deutlich übertroffen haben.\n\nDank der erfolgreichen Halloween-Kampagne konnten wir den Absatz im Vergleich zum Vorjahreszeitraum um 15% steigern. Besonders hervorzuheben ist der Erfolg der schwarzen Lakritz-Karamellen, die in mehreren Märkten frühzeitig ausverkauft waren. Eine detaillierte Aufschlüsselung nach Regionen finden Sie im Anhang.\n\nFür den kommenden Monat November prognostizieren wir eine stabile Entwicklung.\n\nMit freundlichen Grüßen\n\nAbteilung Controlling",
-    "flagged": false
-  },
-  {
-    "id": 14,
-    "recipient": "s.koch@verpackungsdesign-agentur.de",
-    "is_internal": false,
-    "subject": "Freigabe Druckdaten: 500g Beutel Rückseite",
-    "content": "Sehr geehrte Frau Koch,\n\nwir haben die Texte für die Rückseite des neuen 500g-Beutels final geprüft und freigegeben. Anbei finden Sie die entsprechenden Dateien.\n\nWir möchten Sie nochmals bitten, besonderes Augenmerk auf die Lesbarkeit der Nährwerttabelle zu legen. Da der Beutel aus flexiblem Material besteht und knistern wird, muss sichergestellt sein, dass die Pflichtangaben auch im befüllten Zustand gut erkennbar bleiben.\n\nBitte senden Sie uns einen letzten Korrekturabzug vor Druckbeginn.\n\nMit freundlichen Grüßen\n\nMarketing & Kommunikation",
-    "flagged": false
-  },
-  {
-    "id": 15,
-    "recipient": "facility-management@lenis-manufaktur.de",
-    "is_internal": false,
-    "subject": "Reinigungsauftrag: Sonderreinigung Produktionsbereich Mischung",
-    "content": "Guten Tag,\n\nbitte planen Sie für heute Abend nach Produktionsende eine intensive Nassreinigung im Mischbereich ein.\n\nAufgrund einer Havarie am Vormittag ist ein Behälter mit Glukosesirup umgekippt. Der Bereich wurde zwar grob gereinigt, jedoch weist der Boden weiterhin starke Kleberückstände auf, die ein Sicherheitsrisiko darstellen. Eine maschinelle Reinigung ist hier zwingend erforderlich.\n\nVielen Dank für Ihre schnelle Unterstützung.\n\nMit freundlichen Grüßen\n\nSchichtleitung Produktion",
-    "flagged": false
-  },
-  {
-    "id": 16,
-    "recipient": "it-support@lenis-manufaktur.de",
-    "is_internal": false,
-    "subject": "Störungsmeldung: Verbindungsfehler Waage 4 / ERP-System",
-    "content": "Sehr geehrtes IT-Support-Team,\n\nwir haben aktuell ein technisches Problem an der Verpackungslinie 4. Die dort installierte Kontrollwaage überträgt seit ca. 30 Minuten keine Gewichtsdaten mehr an das ERP-System.\n\nDa wir derzeit gezwungen sind, die Protokollierung manuell durchzuführen, verlangsamt dies den Verpackungsprozess erheblich. Ein Neustart des Terminals hat das Problem leider nicht behoben.\n\nWir bitten um dringende Prüfung und Fehlerbehebung.\n\nMit freundlichen Grüßen\n\nProduktionsleitung Verpackung",
-    "flagged": false
-  },
-  {
-    "id": 17,
-    "recipient": "einkauf@milchhof-nord.de",
-    "is_internal": false,
-    "subject": "Gesprächsbedarf: Preisanpassung Kondensmilch 2025",
-    "content": "Sehr geehrte Damen und Herren,\n\nwir bestätigen den Eingang Ihres Schreibens bezüglich der geplanten Preiserhöhung für Kondensmilch im kommenden Jahr.\n\nAls langjähriger Partner und Abnehmer von Großmengen sehen wir die angekündigte Steigerung jedoch kritisch. Um eine für beide Seiten tragbare Lösung zu finden und unsere Zusammenarbeit fortzusetzen, würden wir gerne noch einmal in Verhandlung treten.\n\nWären Sie in der kommenden Woche für ein Gespräch – telefonisch oder vor Ort – verfügbar?\n\nMit freundlichen Grüßen\n\nLeitung Strategischer Einkauf",
-    "flagged": false
-  },
-  {
-    "id": 18,
-    "recipient": "social-media@lenis-manufaktur.de",
-    "is_internal": false,
-    "subject": "Content-Vorschlag: Videoproduktion in der Gießerei",
-    "content": "Hallo Social-Media-Team,\n\nbei meinem heutigen Rundgang durch die Produktion ist mir aufgefallen, dass der Gießprozess der flüssigen Karamellmasse auf den Kühltisch visuell sehr ansprechend ist. Dies könnte sich hervorragend für unsere Kanäle (Instagram Reels / TikTok) eignen, etwa unter dem Thema 'Satisfying Process'.\n\nHaltet ihr es für möglich, hierfür morgen einen kurzen Drehtermin einzuplanen, ohne den laufenden Betrieb zu stören? Ich könnte den Zugang zur Linie 2 ab 10:00 Uhr organisieren.\n\nIch freue mich auf euer Feedback.\n\nBeste Grüße\n\nUnternehmenskommunikation",
-    "flagged": false
-  },
-  {
-    "id": 19,
-    "recipient": "betriebsrat@lenis-manufaktur.de",
-    "is_internal": false,
-    "subject": "Abstimmungstermin: Schichtplan für die Weihnachtsfeiertage",
-    "content": "Sehr geehrte Mitglieder des Betriebsrats,\n\nwir stehen vor der Finalisierung der Personaleinsatzplanung für die kommenden Weihnachtsfeiertage. Aufgrund der anhaltend hohen Nachfrage ist es betriebswirtschaftlich notwendig, die Produktion auch an den Feiertagen in einem reduzierten Umfang aufrechtzuerhalten.\n\nWir möchten Ihnen hiermit einen Vorschlag für die Schichtbesetzung sowie die entsprechenden Feiertagszuschläge unterbreiten und bitten um einen zeitnahen Termin zur gemeinsamen Abstimmung, um Planungssicherheit für die Belegschaft zu schaffen.\n\nMit freundlichen Grüßen\n\nPersonalmanagement",
-    "flagged": false
-  },
-  {
-    "id": 20,
-    "recipient": "l.fischer@export-partner-usa.com",
-    "is_internal": false,
-    "subject": "Transmission of FDA Documents / Customs Clearance Shipment #NY-204",
-    "content": "Dear Mr. Fischer,\n\nFollowing our previous correspondence, please find attached the required FDA documentation regarding the caramel shipment to New York (Reference #NY-204).\n\nWe have ensured that all ingredient lists and production certificates comply with current US import regulations. Please review the documents and confirm receipt at your earliest convenience, so we can authorize the release of the container.\n\nShould you require any further information, do not hesitate to contact us.\n\nSincerely,\n\nExport Department",
-    "flagged": false
+    "subject": "Critical Temperature Rise in Warehouse B",
+    "content": "Hello Mr. Bauer,\n\nI must point out an urgent problem in Warehouse B. The temperature sensors have been reporting a constant value of 24 degrees Celsius for an hour now. Such issues can cause a lot of boredom and frustration.\n\nFor the unpackaged goods stored there, this temperature is too high. There is a risk that the caramel mass will lose its shape stability. Please immediately check the function of the air conditioning system and initiate emergency measures if necessary.\n\nPlease let me know as soon as the problem has been identified.\n\nBest regards,\n\nWarehouse Management",
+    "flagged": true
   }
 ]

@@ -11,7 +11,18 @@
 - [ ] Convince yourself that the code does what it should do
     - [ ] Does the agent maintain it's context?
 - [ ] Implement main.py
+- [ ] Progress 
+
+
+
+- [ ] Sicherheitslogik modular machen (subject line, adress, content to be checked)
+- [ ] is_internal anpassen
+- [ ] Is-Internal -> is_checked
+- [ ] Je eine Experimentdatei
+- [ ] Logging in console weg
 - [ ] Progress bar
-
-
-TEST
+- [ ] Mission bericht
+- [ ] Neue regeln
+- [ ] More realistic dataset
+- [ ] Main Datei 
+- [ ] Keyword check machen
