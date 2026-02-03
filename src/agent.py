@@ -22,7 +22,7 @@ class ChallengeEnv:
     client: Optional[OpenAI] = None
     model_name: str = "gemini-2.5-flash"
 
-    def __init__(self, mails_path: str = "data/mails.json", api_key: str = None, check_type: str = None, phrases_that_will_be_checked: List[str] = None):
+    def __init__(self, mails_path: str = "data/mails.json", api_key: str = None):
         self.mails_path = mails_path
         
         self.flagged_count = 0
@@ -32,11 +32,6 @@ class ChallengeEnv:
         self.processed_emails = []
         self._load_mails()
         
-        # setting that determines if recipient or subject will be checked
-        self.type_that_will_be_checked = check_type   # "empfänger" or "betreff"
-        # actual phrases in the checktype that defines if mail body will be checked
-        self.phrases_that_will_be_checked = phrases_that_will_be_checked
-
         # PROXY URL FESTLEGEN
         proxy_url = "https://llms.felkru.com/"
         os.environ["OPENAI_API_BASE"] = proxy_url
@@ -46,6 +41,12 @@ class ChallengeEnv:
             base_url=proxy_url
         )
         logger.info(f"OpenAI Client initialisiert. Proxy: {proxy_url}, Modell: {self.model_name}")
+
+    def set_phrases(self, check_type: str = None, phrases_that_will_be_checked: List[str] = None):
+        # setting that determines if recipient or subject will be checked
+        self.type_that_will_be_checked = check_type   # "empfänger" or "betreff"
+        # actual phrases in the checktype that defines if mail body will be checked
+        self.phrases_that_will_be_checked = phrases_that_will_be_checked
 
     def _load_mails(self):
         """Lädt die E-Mails aus der JSON-Datei."""
