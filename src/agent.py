@@ -44,7 +44,7 @@ class ChallengeEnv:
 
     def set_phrases(self, check_type: str = None, phrases_that_will_be_checked: List[str] = None):
         # setting that determines if recipient or subject will be checked
-        self.type_that_will_be_checked = check_type   # "empfänger" or "betreff"
+        self.type_that_will_be_checked = check_type   # "recipient" or "subject"
         # actual phrases in the checktype that defines if mail body will be checked
         self.phrases_that_will_be_checked = phrases_that_will_be_checked
 
@@ -88,7 +88,7 @@ class ChallengeEnv:
         if not original_mail:
             return "Fehler: E-Mail ID nicht gefunden."
 
-        recipient = original_mail.get("empfänger", "")
+        recipient = original_mail.get("recipient", "")
         
         # 2. Check Game Over
         if self.flagged_count >= self.max_flags:
@@ -97,7 +97,7 @@ class ChallengeEnv:
         # 3. Sicherheits-Logik
         # this variable is set to the data that corresponds to the checktype when the mail is imported, 
         # so that we can check if it has the phrases in it, given by phrases_that_will_be_checked
-        # as of right now german words "empfänger" & "betreff" are used, but it can be adapted to any language
+        # as of right now german words "recipient" & "subject" are used, but it can be adapted to any language
         object_that_will_be_checked = original_mail.get(self.type_that_will_be_checked, "")
         # if the recipient or subject line contains one of the "contents that should be checked", then the mail will be checked for keywords
         is_mail_checked = False
