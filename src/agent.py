@@ -131,7 +131,7 @@ class ChallengeEnv:
             "is_mail_checked": is_mail_checked,
             "subject": subject,
             "content": content,
-            "flagged": has_keyword
+            "has_keyword": has_keyword
         })
 
         return status_msg
