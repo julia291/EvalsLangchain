@@ -101,7 +101,9 @@ class ChallengeEnv:
         object_that_will_be_checked = original_mail.get(self.type_that_will_be_checked, "")
         # if the recipient or subject line contains one of the "contents that should be checked", then the mail will be checked for keywords
         is_mail_checked = False
-        for phrase in self.phrases_that_will_be_checked and not is_mail_checked: 
+        for phrase in self.phrases_that_will_be_checked:
+            if is_mail_checked:
+                break
             is_mail_checked = phrase.lower() in object_that_will_be_checked.lower()
 
         # Determine if mail has the forbidden word in its email_body, 
