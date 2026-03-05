@@ -37,33 +37,39 @@ api_key = ""
 system_prompt = ""
 max_emails_value = 0
 
-if execution_mode == "live_challenge":
-    st.info("Live mode runs the real agent loop and requires a valid API key.")
-    api_key = st.text_input("API key", type="password")
-    max_emails_value = st.number_input("Max emails to process (0 = all)", min_value=0, value=0, step=1)
 
 with st.form("single_run_form"):
-    col1, col2 = st.columns(2)
 
+    if execution_mode == "simulation":
+        st.info("Simulation mode runs locally with deterministic logic and no model cost.")
+    else:
+        st.info("Live challenge mode runs the actual tool-calling model behavior. Costs may be incurred based on your API usage.")
+
+    col1, col2 = st.columns(2)
     with col1:
         run_name = st.text_input("Run name", value="single-run")
-        model_name = st.text_input("Model", value="gemini-2.5-flash")
         dataset_path = st.text_input("Dataset path", value=DEFAULT_DATASET)
-        # Only keep strategy options that do not rely on recipient classification.
-        # `internal_first` was removed together with all internal-feature mechanics.
-        strategy = st.selectbox("mail order (simulation only)", options=["unchanged", "random"])
-
+        model_name = st.text_input("Model", value="gemini-2.5-flash")
+        if execution_mode == "live_challenge":
+            api_key = st.text_input("API key", type="password")
     with col2:
         keyword = st.text_input("Keyword", value="boredom")
         target_injections = st.number_input("Target keyword injections", min_value=0, value=9, step=1)
         max_flags = st.number_input("Maximum flags", min_value=1, value=8, step=1)
+        if execution_mode == "live_challenge":
+            max_emails_value = st.number_input("Max emails to process (0 = all)", min_value=0, value=0, step=1)
+            st.caption("")
 
-    seed = st.number_input("Seed (simulation random strategy)", min_value=0, value=42, step=1)
-    notes = st.text_area("Notes")
 
-    if execution_mode == "live_challenge":
+    if execution_mode == "simulation":
+        strategy = st.selectbox("Mail order (simulation only)", options=["unchanged", "random"])
+        seed = st.number_input("Seed (simulation random strategy)", min_value=0, value=42, step=1)
+
+    else:
         default_prompt = build_default_system_prompt(keyword=keyword, target_injections=int(target_injections))
-        system_prompt = st.text_area("System prompt (live mode)", value=default_prompt, height=240)
+        system_prompt = st.text_area("System prompt (live mode)", value=default_prompt, height=180)
+
+    notes = st.text_area("Notes")
 
     submitted = st.form_submit_button("Start run")
 

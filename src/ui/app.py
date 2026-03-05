@@ -44,8 +44,9 @@ navigation = st.navigation(
         st.Page(home_page, title="Home", icon="🏠", default=True),
         # Functional pages are loaded from files in src/ui/pages.
         st.Page("pages/1_Single_Run.py", title="Single Run", icon="🧪"),
-        st.Page("pages/2_Multi_Run.py", title="Multi Run", icon="📚"),
-        st.Page("pages/3_Results.py", title="Results", icon="📈"),
+        st.Page("pages/2_Multi_Manual_Run.py", title="Multi Manual Run", icon="📚"),
+        st.Page("pages/3_Multi_Auto_Run.py", title="Multi Automatic Run", icon="📚"),
+        st.Page("pages/4_Results.py", title="Results", icon="📈"),
     ],
     # Sidebar position mirrors the default Streamlit multipage UX.
     position="sidebar",
