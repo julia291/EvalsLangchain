@@ -51,7 +51,7 @@ with st.form("single_run_form"):
         dataset_path = st.text_input("Dataset path", value=DEFAULT_DATASET)
         # Only keep strategy options that do not rely on recipient classification.
         # `internal_first` was removed together with all internal-feature mechanics.
-        strategy = st.selectbox("Strategy (simulation only)", options=["early", "random"])
+        strategy = st.selectbox("mail order (simulation only)", options=["unchanged", "random"])
 
     with col2:
         keyword = st.text_input("Keyword", value="boredom")

@@ -32,7 +32,7 @@ def simulate_run(
     keyword: str,
     target_injections: int,
     max_flags: int,
-    strategy: str = "early",
+    strategy: str = "unchanged",
     seed: int = 42,
     model_name: str = "gemini-2.5-flash",
     notes: str = "",
