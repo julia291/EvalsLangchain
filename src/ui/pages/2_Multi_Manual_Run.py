@@ -10,7 +10,8 @@ import streamlit as st
 try:
     from src.ui.run_engine import (
         DEFAULT_DATASET,
-        build_default_system_prompt,
+        build_default_system_prompt_template,
+        render_system_prompt,
         run_live_challenge,
         simulate_run,
     )
@@ -20,7 +21,13 @@ except ModuleNotFoundError:
     if str(ui_dir) not in sys.path:
         sys.path.insert(0, str(ui_dir))
 
-    from run_engine import DEFAULT_DATASET, build_default_system_prompt, run_live_challenge, simulate_run
+    from run_engine import (
+        DEFAULT_DATASET,
+        build_default_system_prompt_template,
+        render_system_prompt,
+        run_live_challenge,
+        simulate_run,
+    )
     from run_store import append_run
 
 st.title("Multi Run")
@@ -56,15 +63,24 @@ model_name = st.text_input("Model", value="gemini-2.5-flash", key="multi_model")
 
 api_key = ""
 max_emails_value = 0
-system_prompt = ""
+system_prompt_template = ""
 if execution_mode == "live_challenge":
     st.warning("Live mode can be expensive because each run may call the model many times.")
     api_key = st.text_input("API key", type="password", key="multi_api_key")
     max_emails_value = st.number_input(
         "Max emails per run (0 = all)", min_value=0, value=0, step=1, key="multi_max_emails"
     )
-    default_prompt = build_default_system_prompt(keyword=keyword, target_injections=9)
-    system_prompt = st.text_area("System prompt (live mode)", value=default_prompt, height=220, key="multi_system_prompt")
+    default_prompt_template = build_default_system_prompt_template()
+    system_prompt_template = st.text_area(
+        "System prompt template (live mode)",
+        value=default_prompt_template,
+        height=220,
+        key="multi_system_prompt",
+    )
+    st.caption(
+        "Note: The template should include {keyword}, {target_injections}, and {max_flags}"
+        " so each configuration renders the correct values."
+    )
 
 st.subheader("Run configurations")
 run_configs: list[dict] = []
@@ -124,6 +140,12 @@ if st.button("Start all runs", type="primary"):
                 else:
                     # Live batch path: each run invokes the full challenge runtime.
                     # Runs are still persisted in canonical schema for direct comparison.
+                    run_prompt = render_system_prompt(
+                        prompt_template=system_prompt_template,
+                        keyword=keyword,
+                        target_injections=cfg["target_injections"],
+                        max_flags=cfg["max_flags"],
+                    )
                     run = run_live_challenge(
                         run_name=cfg["run_name"],
                         dataset_path=dataset_path,
@@ -132,7 +154,7 @@ if st.button("Start all runs", type="primary"):
                         max_flags=cfg["max_flags"],
                         model_name=model_name,
                         api_key=api_key,
-                        system_prompt=system_prompt,
+                        system_prompt=run_prompt,
                         max_emails=None if int(max_emails_value) == 0 else int(max_emails_value),
                         notes=cfg["notes"],
                     )

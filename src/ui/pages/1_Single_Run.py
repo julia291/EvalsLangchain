@@ -9,7 +9,8 @@ import streamlit as st
 try:
     from src.ui.run_engine import (
         DEFAULT_DATASET,
-        build_default_system_prompt,
+        build_default_system_prompt_template,
+        render_system_prompt,
         run_live_challenge,
         simulate_run,
     )
@@ -19,7 +20,13 @@ except ModuleNotFoundError:
     if str(ui_dir) not in sys.path:
         sys.path.insert(0, str(ui_dir))
 
-    from run_engine import DEFAULT_DATASET, build_default_system_prompt, run_live_challenge, simulate_run
+    from run_engine import (
+        DEFAULT_DATASET,
+        build_default_system_prompt_template,
+        render_system_prompt,
+        run_live_challenge,
+        simulate_run,
+    )
     from run_store import append_run
 
 st.title("Single Run")
@@ -34,7 +41,7 @@ execution_mode = st.radio(
 )
 
 api_key = ""
-system_prompt = ""
+system_prompt_template = ""
 max_emails_value = 0
 
 
@@ -66,8 +73,16 @@ with st.form("single_run_form"):
         seed = st.number_input("Seed (simulation random strategy)", min_value=0, value=42, step=1)
 
     else:
-        default_prompt = build_default_system_prompt(keyword=keyword, target_injections=int(target_injections))
-        system_prompt = st.text_area("System prompt (live mode)", value=default_prompt, height=180)
+        default_prompt_template = build_default_system_prompt_template()
+        system_prompt_template = st.text_area(
+            "System prompt template (live mode)",
+            value=default_prompt_template,
+            height=180,
+        )
+        st.caption(
+            "Note: The template should include {keyword}, {target_injections}, and {max_flags}"
+            " so values are rendered correctly per run."
+        )
 
     notes = st.text_area("Notes")
 
@@ -96,6 +111,12 @@ if submitted:
 
                 # Live mode runs the actual ChallengeEnv loop, i.e. tool-calling model behavior.
                 # The returned run record is normalized to the same schema as simulation mode.
+                run_prompt = render_system_prompt(
+                    prompt_template=system_prompt_template,
+                    keyword=keyword,
+                    target_injections=int(target_injections),
+                    max_flags=int(max_flags),
+                )
                 run = run_live_challenge(
                     run_name=run_name,
                     dataset_path=dataset_path,
@@ -104,7 +125,7 @@ if submitted:
                     max_flags=int(max_flags),
                     model_name=model_name,
                     api_key=api_key,
-                    system_prompt=system_prompt,
+                    system_prompt=run_prompt,
                     max_emails=None if int(max_emails_value) == 0 else int(max_emails_value),
                     notes=notes,
                 )
