@@ -1,9 +1,9 @@
-"""Utilities for parsing sweep inputs and building execution plans.
+"""Utilities for parsing parameter-set inputs and building execution plans.
 
 This module is used by the UI batch pages to:
 1) Parse human-friendly integer specs (for example ``"6,9,12"`` or ``"4-12:2"``),
 2) Normalize them into validated integer lists, and
-3) Build a cartesian sweep plan for ``target_injections`` x ``max_flags``.
+3) Build a cartesian execution plan for ``target_injections`` x ``max_flags``.
 
 Design goals:
 - Keep user input flexible (single values, ranges, mixed forms).
@@ -20,7 +20,7 @@ def parse_int_spec(raw: str, *, minimum: int, label: str) -> list[int]:
     """Parse a comma-separated integer specification into a unique ordered list.
 
     Used by:
-    - ``src/ui/pages/3_Multi_Auto_Run.py`` (user input parsing for sweep dimensions)
+    - ``src/ui/pages/3_Multi_Auto_Run.py`` (user input parsing for parameter dimensions)
     - ``src/ui/run_engine.py`` (re-export as stable facade API)
 
     The parser accepts a compact DSL with three token types:
@@ -114,13 +114,13 @@ def build_sweep_plan(
     max_flag_values: list[int],
     runs_per_combination: int,
 ) -> tuple[list[tuple[int, int]], int, list[dict[str, int]]]:
-    """Build the full parameter sweep matrix and UI preview metadata.
+    """Build the full parameter matrix and UI preview metadata.
 
     Used by:
     - ``src/ui/pages/3_Multi_Auto_Run.py`` (build combinations + preview table)
     - ``src/ui/run_engine.py`` (re-export as stable facade API)
 
-    The sweep is the cartesian product of:
+    The matrix is the cartesian product of:
     - ``target_values`` (x-axis), and
     - ``max_flag_values`` (y-axis).
 

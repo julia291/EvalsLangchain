@@ -125,7 +125,7 @@ if st.button("Start all runs", type="primary"):
             try:
                 if execution_mode == "simulation":
                     # Simulation batch path: local deterministic execution, useful for
-                    # rapid parameter sweeps without external model calls.
+                    # rapid parameter-combination checks without external model calls.
                     run = simulate_run(
                         run_name=cfg["run_name"],
                         dataset_path=dataset_path,
