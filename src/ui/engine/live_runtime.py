@@ -99,6 +99,7 @@ def run_live_challenge(
     final_prompt = system_prompt or build_default_system_prompt(
         keyword=keyword,
         target_injections=target_injections,
+        max_flags=max_flags,
     )
     messages: list[dict[str, Any]] = [{"role": "system", "content": final_prompt}]
 
