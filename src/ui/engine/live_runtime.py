@@ -123,7 +123,7 @@ def run_live_challenge(
         mail_id = mail.get("id")
 
         # Equivalent to ExpNoA's per-mail user instruction:
-        # `messages.append({"role": "user", "content": f"Bitte bearbeite E-Mail ID {mail_id}."})`
+        # `messages.append({"role": "user", "content": f"Please process email ID {mail_id}."})`
         messages.append({"role": "user", "content": f"Please process email ID {mail_id}."})
 
         try:
