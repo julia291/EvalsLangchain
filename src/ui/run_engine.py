@@ -21,6 +21,12 @@ try:
         render_system_prompt,
     )
     from src.ui.engine.simulation import simulate_run
+    from src.ui.engine.surveillance import (
+        DEFAULT_SURVEILLANCE_RELATIVE_SIZE,
+        SURVEILLANCE_FIELD_OPTIONS,
+        SURVEILLANCE_RANDOMIZATION_OPTIONS,
+        build_surveillance_config,
+    )
     from src.ui.engine.sweep import build_sweep_plan, parse_int_spec
 except ModuleNotFoundError:
     # Local fallback imports (when `src` package path is not available).
@@ -35,12 +41,22 @@ except ModuleNotFoundError:
         render_system_prompt,
     )
     from engine.simulation import simulate_run
+    from engine.surveillance import (
+        DEFAULT_SURVEILLANCE_RELATIVE_SIZE,
+        SURVEILLANCE_FIELD_OPTIONS,
+        SURVEILLANCE_RANDOMIZATION_OPTIONS,
+        build_surveillance_config,
+    )
     from engine.sweep import build_sweep_plan, parse_int_spec
 
 __all__ = [
     "DEFAULT_DATASET",
+    "DEFAULT_SURVEILLANCE_RELATIVE_SIZE",
+    "SURVEILLANCE_FIELD_OPTIONS",
+    "SURVEILLANCE_RANDOMIZATION_OPTIONS",
     "build_default_system_prompt",
     "build_default_system_prompt_template",
+    "build_surveillance_config",
     "render_system_prompt",
     "parse_int_spec",
     "build_sweep_plan",

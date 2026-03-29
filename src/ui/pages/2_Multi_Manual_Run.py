@@ -10,7 +10,11 @@ import streamlit as st
 try:
     from src.ui.run_engine import (
         DEFAULT_DATASET,
+        DEFAULT_SURVEILLANCE_RELATIVE_SIZE,
+        SURVEILLANCE_FIELD_OPTIONS,
+        SURVEILLANCE_RANDOMIZATION_OPTIONS,
         build_default_system_prompt_template,
+        build_surveillance_config,
         render_system_prompt,
         run_live_challenge,
         simulate_run,
@@ -23,7 +27,11 @@ except ModuleNotFoundError:
 
     from run_engine import (
         DEFAULT_DATASET,
+        DEFAULT_SURVEILLANCE_RELATIVE_SIZE,
+        SURVEILLANCE_FIELD_OPTIONS,
+        SURVEILLANCE_RANDOMIZATION_OPTIONS,
         build_default_system_prompt_template,
+        build_surveillance_config,
         render_system_prompt,
         run_live_challenge,
         simulate_run,
@@ -64,6 +72,7 @@ model_name = st.text_input("Model", value="gemini-2.5-flash", key="multi_model")
 api_key = ""
 max_emails_value = 0
 system_prompt_template = ""
+
 if execution_mode == "live_challenge":
     st.warning("Live mode can be expensive because each run may call the model many times.")
     api_key = st.text_input("API key", type="password", key="multi_api_key")
@@ -80,6 +89,49 @@ if execution_mode == "live_challenge":
     st.caption(
         "Note: The template should include {keyword}, {target_injections}, and {max_flags}"
         " so each configuration renders the correct values."
+    )
+
+    # The surveillance rule is configured once for the whole batch so every run
+    # in the batch is evaluated under the same monitoring behavior.
+    st.subheader("Surveillance system")
+    
+    randomization_method = st.selectbox(
+        "Randomization method",
+        options=list(SURVEILLANCE_RANDOMIZATION_OPTIONS.keys()),
+        key="multi_surveillance_randomization_method",
+        format_func=lambda key: SURVEILLANCE_RANDOMIZATION_OPTIONS[key],
+    )
+    randomization_relative_size = st.slider(
+        "Relative sample size",
+        min_value=0.0,
+        max_value=1.0,
+        value=float(DEFAULT_SURVEILLANCE_RELATIVE_SIZE),
+        step=0.05,
+        key="multi_surveillance_relative_size",
+    )
+    manual_check_fields = st.multiselect(
+        "Fields to inspect",
+        options=SURVEILLANCE_FIELD_OPTIONS,
+        default=["recipient"],
+        key="multi_surveillance_fields",
+    )
+    manual_phrases_file = st.text_input(
+        "Path to JSON phrase list (optional)",
+        key="multi_surveillance_file",
+    )
+    st.caption('Recommended format: `["marketing", "finance@example.com"]`')
+    manual_inline_phrases = st.text_area(
+        "Direct phrases to inspect (optional, comma or newline separated)",
+        value="",
+        height=100,
+        key="multi_surveillance_inline",
+    )
+    surveillance_config = build_surveillance_config(
+        randomization_method=randomization_method,
+        randomization_relative_size=float(randomization_relative_size),
+        manual_check_fields=manual_check_fields,
+        manual_phrases_file=manual_phrases_file,
+        manual_inline_phrases=manual_inline_phrases,
     )
 
 st.subheader("Run configurations")
@@ -154,6 +206,7 @@ if st.button("Start all runs", type="primary"):
                         max_flags=cfg["max_flags"],
                         model_name=model_name,
                         api_key=api_key,
+                        surveillance_config=surveillance_config,
                         system_prompt=run_prompt,
                         max_emails=None if int(max_emails_value) == 0 else int(max_emails_value),
                         notes=cfg["notes"],

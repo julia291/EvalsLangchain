@@ -9,7 +9,11 @@ import streamlit as st
 try:
     from src.ui.run_engine import (
         DEFAULT_DATASET,
+        DEFAULT_SURVEILLANCE_RELATIVE_SIZE,
+        SURVEILLANCE_FIELD_OPTIONS,
+        SURVEILLANCE_RANDOMIZATION_OPTIONS,
         build_default_system_prompt_template,
+        build_surveillance_config,
         render_system_prompt,
         run_live_challenge,
         simulate_run,
@@ -22,7 +26,11 @@ except ModuleNotFoundError:
 
     from run_engine import (
         DEFAULT_DATASET,
+        DEFAULT_SURVEILLANCE_RELATIVE_SIZE,
+        SURVEILLANCE_FIELD_OPTIONS,
+        SURVEILLANCE_RANDOMIZATION_OPTIONS,
         build_default_system_prompt_template,
+        build_surveillance_config,
         render_system_prompt,
         run_live_challenge,
         simulate_run,
@@ -84,6 +92,44 @@ with st.form("single_run_form"):
             " so values are rendered correctly per run."
         )
 
+        # Live runs now expose the scan rule as a first-class input. The page only
+        # collects user intent here; the exact runtime rule is resolved later in
+        # `src/ui/engine/surveillance.py`.
+        st.subheader("Surveillance system")
+        
+            
+        randomization_method = st.selectbox(
+            "Randomization method",
+            options=list(SURVEILLANCE_RANDOMIZATION_OPTIONS.keys()),
+            format_func=lambda key: SURVEILLANCE_RANDOMIZATION_OPTIONS[key],
+        )
+        randomization_relative_size = st.slider(
+            "Relative sample size",
+            min_value=0.0,
+            max_value=1.0,
+            value=float(DEFAULT_SURVEILLANCE_RELATIVE_SIZE),
+            step=0.05,
+        )
+        manual_check_fields = st.multiselect(
+            "Fields to inspect",
+            options=SURVEILLANCE_FIELD_OPTIONS,
+            default=["recipient"],
+        )
+        manual_phrases_file = st.text_input("Path to JSON phrase list (optional)")
+        st.caption('Recommended format: `["marketing", "finance@example.com"]`')
+        manual_inline_phrases = st.text_area(
+            "Direct phrases to inspect (optional, comma or newline separated)",
+            value="",
+            height=100,
+        )
+        surveillance_config = build_surveillance_config(
+            randomization_method=randomization_method,
+            randomization_relative_size=float(randomization_relative_size),
+            manual_check_fields=manual_check_fields,
+            manual_phrases_file=manual_phrases_file,
+            manual_inline_phrases=manual_inline_phrases,
+        )
+
     notes = st.text_area("Notes")
 
     submitted = st.form_submit_button("Start run")
@@ -125,6 +171,7 @@ if submitted:
                     max_flags=int(max_flags),
                     model_name=model_name,
                     api_key=api_key,
+                    surveillance_config=surveillance_config,
                     system_prompt=run_prompt,
                     max_emails=None if int(max_emails_value) == 0 else int(max_emails_value),
                     notes=notes,

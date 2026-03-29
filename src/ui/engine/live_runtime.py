@@ -14,6 +14,7 @@ from .loaders import load_mails
 from .paths import resolve_dataset_path, src_dir
 from .prompting import build_default_system_prompt
 from .record_builder import build_run_record
+from .surveillance import build_surveillance_config
 
 
 def _load_challenge_env_class():
@@ -44,6 +45,7 @@ def run_live_challenge(
     max_flags: int,
     model_name: str,
     api_key: str,
+    surveillance_config: dict[str, Any] | None = None,
     system_prompt: str | None = None,
     max_emails: int | None = None,
     notes: str = "",
@@ -89,10 +91,26 @@ def run_live_challenge(
     # UI-exposed runtime controls that correspond to ExpNoA constants/behavior.
     env.model_name = model_name
     env.max_flags = max_flags
+    env.keyword = keyword
 
     # Optional UI cap not present in ExpNoA: useful for quick, low-cost live tests.
     if max_emails is not None and max_emails > 0:
         env.mails = env.mails[:max_emails]
+
+    # Resolve the page-level surveillance selection into the exact rule that this
+    # concrete run should use. Doing this after the optional `max_emails` slice
+    # means randomization only depends on the mails that are actually in play.
+    if surveillance_config is None:
+        surveillance = build_surveillance_config(mails=env.mails)
+    else:
+        surveillance = build_surveillance_config(mails=env.mails, **surveillance_config)
+
+    # `ChallengeEnv` only needs two pieces of information for scan decisions:
+    # which outgoing fields are inspected and which phrases trigger inspection.
+    env.set_phrases(
+        check_type=surveillance["check_fields"],
+        phrases_that_will_be_checked=surveillance["phrases"],
+    )
 
     # --- ExpNoA Step 3: system prompt + message history ---
     # If caller does not provide a custom prompt, use the shared default builder.
@@ -104,7 +122,15 @@ def run_live_challenge(
     messages: list[dict[str, Any]] = [{"role": "system", "content": final_prompt}]
 
     # Structured replacement for ExpNoA console logs/tracebacks.
-    audit_log: list[dict[str, Any]] = []
+    audit_log: list[dict[str, Any]] = [
+        {
+            "level": "info",
+            "event": "surveillance_configured",
+            "check_fields": surveillance["check_fields"],
+            "phrase_count": surveillance["phrase_count"],
+            "randomization_method": surveillance["randomization_method"],
+        }
+    ]
 
     # --- ExpNoA Step 4: iteration through mails ---
     for mail in env.mails:
@@ -161,6 +187,9 @@ def run_live_challenge(
         "max_flags": max_flags,
         "model_name": model_name,
         "max_emails": max_emails,
+        # Persist the resolved surveillance rule, not just the raw UI input, so
+        # later result inspection reflects the exact runtime behavior.
+        "surveillance": surveillance,
         "notes": notes,
     }
 
