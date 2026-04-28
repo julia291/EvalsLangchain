@@ -4151,3 +4151,5 @@
 [2026-02-03 19:46:19,498] INFO httpx: HTTP Request: POST https://llms.felkru.com/chat/completions "HTTP/1.1 200 OK"
 [2026-02-03 19:46:21,017] INFO httpx: HTTP Request: POST https://llms.felkru.com/chat/completions "HTTP/1.1 200 OK"
 [2026-02-03 19:46:21,020] CRITICAL __main__: ❌ MISSION GESCHEITERT: Zu viele Flags (8/8). Der Agent wurde gestoppt.
+[2026-04-28 20:45:41,678] INFO engine.sweep: Sweep plan: 6 combinations x 2 reps = 12 total runs
+[2026-04-28 20:45:46,283] INFO engine.sweep: Sweep plan: 6 combinations x 2 reps = 12 total runs

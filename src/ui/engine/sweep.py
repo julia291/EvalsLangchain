@@ -1,57 +1,23 @@
-"""Utilities for parsing parameter-set inputs and building execution plans.
-
-This module is used by the UI batch pages to:
-1) Parse human-friendly integer specs (for example ``"6,9,12"`` or ``"4-12:2"``),
-2) Normalize them into validated integer lists, and
-3) Build a cartesian execution plan for ``target_injections`` x ``max_flags``.
-
-Design goals:
-- Keep user input flexible (single values, ranges, mixed forms).
-- Fail early with actionable validation errors for invalid specs.
-- Preserve input order while removing duplicates.
-"""
+"""Parameter sweep: parse integer specs and build cartesian execution plans."""
 
 from __future__ import annotations
 
+import logging
 from itertools import product
+
+logger = logging.getLogger(__name__)
 
 
 def parse_int_spec(raw: str, *, minimum: int, label: str) -> list[int]:
-    """Parse a comma-separated integer specification into a unique ordered list.
+    """Parse a comma-separated integer spec into a unique ordered list.
 
-    Used by:
-    - ``src/ui/pages/3_Multi_Auto_Run.py`` (user input parsing for parameter dimensions)
-    - ``src/ui/run_engine.py`` (re-export as stable facade API)
-
-    The parser accepts a compact DSL with three token types:
+    Supports:
     - Single values: ``6,9,12``
-    - Closed ranges: ``4-10`` (inclusive bounds)
-    - Closed ranges with step: ``4-12:2`` (inclusive bounds, step >= 1)
+    - Closed ranges: ``4-10``
+    - Ranges with step: ``4-12:2``
+    - Mixed: ``3,5-8,10-20:2``
 
-    Mixed forms are allowed, for example: ``3,5-8,10-20:2``.
-
-    Parsing behavior:
-    - Values are validated against ``minimum``.
-    - Duplicate values are removed.
-    - First-seen order is preserved (stable de-duplication).
-    - Empty chunks caused by extra commas are ignored.
-
-    Args:
-        raw: Raw user input string to parse.
-        minimum: Minimum allowed value (inclusive) for every parsed integer.
-        label: Field label used in error messages (for user-facing context).
-
-    Returns:
-        A non-empty list of integers in first-seen order.
-
-    Raises:
-        ValueError: If input is empty, malformed, contains non-integers,
-            has invalid ranges/steps, or violates the minimum constraint.
-
-    Examples:
-        ``parse_int_spec("6,9,12", minimum=0, label="Target")`` -> ``[6, 9, 12]``
-        ``parse_int_spec("4-8:2", minimum=1, label="Flags")`` -> ``[4, 6, 8]``
-        ``parse_int_spec("3,3,2-4", minimum=0, label="X")`` -> ``[3, 2, 4]``
+    Raises ValueError for empty input, invalid syntax, or values below `minimum`.
     """
     values: list[int] = []
     seen: set[int] = set()
@@ -77,8 +43,7 @@ def parse_int_spec(raw: str, *, minimum: int, label: str) -> list[int]:
                 raise ValueError(f"{label}: invalid range '{part}'.")
 
             try:
-                start = int(bounds[0])
-                end = int(bounds[1])
+                start, end = int(bounds[0]), int(bounds[1])
             except ValueError as exc:
                 raise ValueError(f"{label}: invalid range '{part}'.") from exc
 
@@ -106,6 +71,8 @@ def parse_int_spec(raw: str, *, minimum: int, label: str) -> list[int]:
 
     if not values:
         raise ValueError(f"{label} must contain at least one value.")
+
+    logger.debug("Parsed spec '%s' for '%s': %d values", raw, label, len(values))
     return values
 
 
@@ -114,37 +81,11 @@ def build_sweep_plan(
     max_flag_values: list[int],
     runs_per_combination: int,
 ) -> tuple[list[tuple[int, int]], int, list[dict[str, int]]]:
-    """Build the full parameter matrix and UI preview metadata.
+    """Build the cartesian parameter matrix for a batch sweep.
 
-    Used by:
-    - ``src/ui/pages/3_Multi_Auto_Run.py`` (build combinations + preview table)
-    - ``src/ui/run_engine.py`` (re-export as stable facade API)
-
-    The matrix is the cartesian product of:
-    - ``target_values`` (x-axis), and
-    - ``max_flag_values`` (y-axis).
-
-    For each combination, ``runs_per_combination`` indicates how many repeated
-    executions the caller plans to run (for example to observe stochastic
-    variance in live runs).
-
-    Args:
-        target_values: Candidate values for ``target_injections``.
-        max_flag_values: Candidate values for ``max_flags``.
-        runs_per_combination: Planned repeat count per combination.
-
-    Returns:
-        A tuple of:
-        - combinations: List of ``(target_injections, max_flags)`` tuples.
-        - total_runs: ``len(combinations) * runs_per_combination``.
-        - preview_rows: Row dicts used directly by UI preview tables. Each row
-          includes ``target_injections``, ``max_flags``,
-          ``runs_per_combination``, and ``total_planned_runs``.
-
-    Notes:
-    - This helper assumes inputs are already validated.
-    - It does not enforce positivity of ``runs_per_combination``.
-      Validation should happen at the UI/input layer.
+    Returns (combinations, total_runs, preview_rows).
+    `combinations` is the list of (target_injections, max_flags) tuples.
+    `preview_rows` can be passed directly to st.dataframe.
     """
     combinations = list(product(target_values, max_flag_values))
     total_runs = len(combinations) * int(runs_per_combination)
@@ -157,4 +98,7 @@ def build_sweep_plan(
         }
         for target, max_flags in combinations
     ]
+
+    logger.info("Sweep plan: %d combinations x %d reps = %d total runs",
+                len(combinations), runs_per_combination, total_runs)
     return combinations, total_runs, preview_rows

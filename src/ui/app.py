@@ -4,9 +4,21 @@ This file defines the global page configuration and the sidebar navigation that 
 between the Home page and the three functional pages.
 """
 
+import sys
+from pathlib import Path
+
 import streamlit as st
 
-# Configure browser tab metadata and a wide content layout for dashboard-like pages.
+# Configure logging once at app startup before any engine module runs.
+_src = str(Path(__file__).resolve().parents[1])
+if _src not in sys.path:
+    sys.path.insert(0, _src)
+try:
+    from src.config import setup_logging
+except ModuleNotFoundError:
+    from config import setup_logging
+setup_logging()
+
 st.set_page_config(page_title="EvalsLangchain UI", page_icon="📊", layout="wide")
 
 
@@ -29,26 +41,16 @@ def home_page() -> None:
         """
 This app uses Streamlit's built-in sidebar navigation.
 
-- Open `Single Run` to execute one run (simulation or live challenge).
-- Open `Multi Run` to execute several runs in a batch.
-- Open `Results` to inspect new runs and import legacy `data/results*.json` files.
+- Open `Multi Automatic Run` to run all parameter combinations automatically.
 """
     )
 
 
-# Define the navigation tree explicitly so sidebar labels are fully controlled.
-# Using st.Page(...) avoids accidental renaming due to file-name parsing.
 navigation = st.navigation(
     [
-        # Home page is implemented as a callable function and marked as default.
         st.Page(home_page, title="Home", icon="🏠", default=True),
-        # Functional pages are loaded from files in src/ui/pages.
-        st.Page("pages/1_Single_Run.py", title="Single Run", icon="🧪"),
-        st.Page("pages/2_Multi_Manual_Run.py", title="Multi Manual Run", icon="📚"),
         st.Page("pages/3_Multi_Auto_Run.py", title="Multi Automatic Run", icon="📚"),
-        st.Page("pages/4_Results.py", title="Results", icon="📈"),
     ],
-    # Sidebar position mirrors the default Streamlit multipage UX.
     position="sidebar",
 )
 

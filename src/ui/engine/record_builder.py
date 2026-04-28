@@ -1,20 +1,19 @@
-"""Normalization and run-record assembly helpers."""
+"""Run record assembly and result normalization."""
 
 from __future__ import annotations
 
+import logging
 from datetime import datetime, timezone
 from typing import Any
 from uuid import uuid4
 
 from .loaders import mail_text, recipient
 
+logger = logging.getLogger(__name__)
+
 
 def normalize_result_row(row: dict[str, Any], keyword: str) -> dict[str, Any]:
-    """Normalize one result row into canonical schema.
-
-    Used by:
-    - `build_run_record` in this file
-    """
+    """Normalize one processed-email row into the canonical result schema."""
     rec = recipient(row)
     content = mail_text(row)
     subject = str(row.get("subject", ""))
@@ -39,14 +38,8 @@ def build_run_record(
     total_mails: int,
     source: str,
 ) -> dict[str, Any]:
-    """Build canonical run object persisted by run_store.
-
-    Used by:
-    - `src/ui/engine/simulation.py`
-    - `src/ui/engine/live_runtime.py`
-    - `src/ui/engine/importing_legacy_results.py`
-    """
-    keyword = str(parameters.get("keyword", "boredom"))
+    """Build the canonical run record persisted by the run store."""
+    keyword = str(parameters.get("keyword", ""))
     target_injections = int(parameters.get("target_injections", 0))
     max_flags = int(parameters.get("max_flags", 8))
 
@@ -67,6 +60,9 @@ def build_run_record(
         "success": (actual_injections >= target_injections) and (flagged_count < max_flags),
         "flag_rate": round((flagged_count / processed_mails) * 100, 2) if processed_mails else 0.0,
     }
+
+    logger.info("Run record built: '%s' — %d processed, %d injections, %d flagged (success=%s)",
+                run_name, processed_mails, actual_injections, flagged_count, summary["success"])
 
     return {
         "run_id": uuid4().hex[:8],
