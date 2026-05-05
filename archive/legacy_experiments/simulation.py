@@ -39,9 +39,8 @@ def simulate_run(
 ) -> dict[str, Any]:
     """Execute deterministic simulation mode.
 
-    Used by:
-    - `src/ui/pages/1_Single_Run.py`
-    - `src/ui/pages/2_Multi_Run.py`
+    Simulation is retained for tests and legacy experiments, but it is not
+    exposed in the simplified Streamlit navigation.
     """
     mails = load_mails(dataset_path)
     order = injection_order(mails, strategy=strategy, seed=seed)

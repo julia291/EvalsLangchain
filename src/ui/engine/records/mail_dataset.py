@@ -5,15 +5,15 @@ from __future__ import annotations
 import json
 from typing import Any
 
-from .paths import resolve_dataset_path
+from ..paths import resolve_dataset_path
 
 
 def load_mails(dataset_path: str) -> list[dict[str, Any]]:
     """Load mails from supported JSON shapes.
 
     Used by:
-    - `src/ui/engine/simulation.py`
-    - `src/ui/engine/live_runtime.py`
+    - archived simulation helpers
+    - `src/ui/engine/runs/live_challenge.py`
     """
     resolved = resolve_dataset_path(dataset_path)
     with resolved.open("r", encoding="utf-8") as f:
@@ -32,7 +32,7 @@ def recipient(mail: dict[str, Any]) -> str:
 
     Used by:
     - `src/ui/engine/normalization.py`
-    - `src/ui/engine/simulation.py`
+    - archived simulation helpers
     """
     return str(mail.get("recipient") or mail.get("empfänger") or "")
 
@@ -42,6 +42,6 @@ def mail_text(mail: dict[str, Any]) -> str:
 
     Used by:
     - `src/ui/engine/normalization.py`
-    - `src/ui/engine/simulation.py`
+    - archived simulation helpers
     """
     return str(mail.get("content") or mail.get("text") or "")

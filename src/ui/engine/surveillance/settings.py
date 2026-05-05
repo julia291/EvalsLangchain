@@ -9,8 +9,8 @@ from __future__ import annotations
 
 from typing import Any
 
-from .helpers import load_phrases_from_file, parse_inline_phrases, unique_non_empty
-from .randomization import _build_randomized_phrases
+from .phrase_sources import deduplicate_phrase_values, load_phrase_file, parse_inline_phrase_text
+from .random_phrases import build_randomized_phrase_sample
 
 DEFAULT_SURVEILLANCE_RELATIVE_SIZE = 0.3  # Default fraction of dataset-derived phrases used in randomization mode.
 SURVEILLANCE_FIELD_OPTIONS = ["recipient", "subject"]  # Outgoing fields that the surveillance rule can inspect.
@@ -23,29 +23,37 @@ SURVEILLANCE_RANDOMIZATION_OPTIONS = {  # User-facing mapping from UI option key
 }
 
 
-def build_surveillance_config(
+def build_surveillance_settings(
     *,
     randomization_method: str = "whole_recipient",
     randomization_relative_size: float = DEFAULT_SURVEILLANCE_RELATIVE_SIZE,
     manual_check_fields: list[str] | None = None,
     manual_phrases_file: str = "",
     manual_inline_phrases: str = "",
+    check_fields: str | list[str] | tuple[str, ...] | None = None,
+    phrases_file: str = "",
+    inline_phrases: str = "",
+    phrases: list[str] | None = None,
+    phrase_count: int | None = None,
     mails: list[dict[str, Any]] | None = None,
+    **extra: Any,
 ) -> dict[str, Any]:
     """Build a transport-friendly surveillance configuration from UI inputs.
 
     The returned dict is intentionally simple so pages can pass it directly to
-    `run_live_challenge(...)` without knowing how the live runtime will finally
+    `run_live_challenge_run(...)` without knowing how the live runtime will finally
     interpret the configuration.
 
     When `mails` is provided, the function also resolves the final runtime
     phrases and returns `phrases` plus `phrase_count`.
 
     Used by:
-    - `src/ui/pages/1_Single_Run.py`
-    - `src/ui/pages/2_Multi_Manual_Run.py`
-    - `src/ui/pages/3_Multi_Auto_Run.py`
+    - `src/ui/pages/multiple_runs.py`
     """
+    if extra:
+        unexpected = ", ".join(sorted(extra))
+        raise TypeError(f"Unexpected surveillance config field(s): {unexpected}")
+
     # This function does not yet decide what the final runtime rule is.
     # It simply captures what the user selected in the UI in a compact and
     # serializable form.
@@ -57,25 +65,33 @@ def build_surveillance_config(
     if not 0.0 <= relative_size <= 1.0:
         raise ValueError("Surveillance randomization size must be between 0.0 and 1.0.")
 
+    resolved_check_fields = manual_check_fields if manual_check_fields is not None else check_fields
+    resolved_phrases_file = manual_phrases_file.strip() or str(phrases_file).strip()
+    resolved_inline_phrases = manual_inline_phrases or inline_phrases
+
     base_config = {
-        "randomization_method": normalized_method,  # Selected helper from `src/ui/engine/randomization.py` for random phrase generation.
+        "randomization_method": normalized_method,  # Selected helper from `src/ui/engine/surveillance/random_phrases.py`.
         "randomization_relative_size": relative_size,  # Fraction of available phrases to sample in random mode.
-        "check_fields": normalize_check_fields(manual_check_fields),  # Which outgoing mail fields should be inspected.
-        "phrases_file": manual_phrases_file.strip(),  # Optional JSON file path with reusable phrases.
-        "inline_phrases": manual_inline_phrases,  # Optional raw text entered directly in the UI.
+        "check_fields": normalize_surveillance_fields(resolved_check_fields),  # Which outgoing mail fields should be inspected.
+        "phrases_file": resolved_phrases_file,  # Optional JSON file path with reusable phrases.
+        "inline_phrases": resolved_inline_phrases,  # Optional raw text entered directly in the UI.
     }
 
     if mails is None:
+        # `phrases` / `phrase_count` may be present when reusing a previously
+        # resolved runtime snapshot. We ignore them here because this branch only
+        # returns the transport-friendly base config.
+        _ = phrases, phrase_count
         return base_config
 
-    file_phrases = load_phrases_from_file(base_config["phrases_file"])
-    inline_phrases = parse_inline_phrases(base_config["inline_phrases"])
+    file_phrases = load_phrase_file(base_config["phrases_file"])
+    inline_phrases = parse_inline_phrase_text(base_config["inline_phrases"])
     generated_phrases = (
         []
         if normalized_method == "none"
-        else _build_randomized_phrases(mails=mails, method=normalized_method, relative_size=relative_size)
+        else build_randomized_phrase_sample(mails=mails, method=normalized_method, relative_size=relative_size)
     )
-    phrases = unique_non_empty([*file_phrases, *inline_phrases, *generated_phrases])
+    phrases = deduplicate_phrase_values([*file_phrases, *inline_phrases, *generated_phrases])
 
     return {
         **base_config,
@@ -84,7 +100,7 @@ def build_surveillance_config(
     }
 
 
-def normalize_check_fields(check_fields: str | list[str] | tuple[str, ...] | None) -> list[str]:
+def normalize_surveillance_fields(check_fields: str | list[str] | tuple[str, ...] | None) -> list[str]:
     """Normalize UI/runtime check-field settings to a deduplicated field list.
 
     Accepted forms:
@@ -127,7 +143,7 @@ def normalize_check_fields(check_fields: str | list[str] | tuple[str, ...] | Non
     return fields
 
 
-def should_scan_mail(*, mail: dict[str, Any], check_fields: list[str], phrases: list[str]) -> tuple[bool, str | None, str | None]:
+def find_surveillance_match(*, mail: dict[str, Any], check_fields: list[str], phrases: list[str]) -> tuple[bool, str | None, str | None]:
     """Return whether a mail should be scanned and which field/phrase matched.
 
     The decision stays in the surveillance module so `ChallengeEnv` does not

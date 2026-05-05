@@ -1,43 +1,40 @@
 """Live challenge execution helpers.
 
-This module is the UI equivalent of the procedural flow in `src/ExpNoA.py`.
+This module is the UI equivalent of the procedural flow in
+`archive/legacy_experiments/experiments/ExpNoA.py`.
 It implements the same mission lifecycle, but returns structured run records
 for Streamlit pages instead of printing to console + writing one fixed file.
 """
 
 from __future__ import annotations
 
-import sys
 from typing import Any
 
-from .loaders import load_mails
-from .paths import resolve_dataset_path, src_dir
-from .prompting import build_default_system_prompt
-from .record_builder import build_run_record
-from .surveillance import build_surveillance_config
+from ..paths import resolve_dataset_path
+from ..records.mail_dataset import load_mails
+from ..records.run_records import create_run_record
+from ..surveillance.settings import build_surveillance_settings
+from .live_prompts import build_default_live_prompt
 
 
 def _load_challenge_env_class():
-    """Load `ChallengeEnv` lazily from `src/agent.py`.
+    """Load the legacy `ChallengeEnv` lazily from `src/agent.py`.
 
     ExpNoA mapping:
-    - Equivalent to `from agent import ChallengeEnv` near the top of `ExpNoA.py`.
+    - Equivalent to `from agent import ChallengeEnv` near the top of the
+      archived ExpNoA script.
 
     Why lazy loading is used here:
-    - The UI also supports simulation mode, which should work even if live runtime
+    - Tests and legacy helpers should stay importable even if live runtime
       dependencies or paths are not available.
     - Delaying the import keeps the module importable in non-live contexts.
     """
-    src_path = src_dir()
-    if str(src_path) not in sys.path:
-        sys.path.insert(0, str(src_path))
-
-    from agent import ChallengeEnv  # type: ignore
+    from src.agent import ChallengeEnv
 
     return ChallengeEnv
 
 
-def run_live_challenge(
+def run_live_challenge_run(
     run_name: str,
     dataset_path: str,
     keyword: str,
@@ -61,7 +58,7 @@ def run_live_challenge(
        - Implemented via `resolve_dataset_path`, `load_mails`, and `ChallengeEnv(...)`.
 
     3) Prompt + message initialization in ExpNoA:
-       - Implemented via `build_default_system_prompt(...)` (or custom override)
+       - Implemented via `build_default_live_prompt(...)` (or custom override)
          and initial `messages = [{"role": "system", ...}]`.
 
     4) Main mail loop in ExpNoA:
@@ -73,8 +70,7 @@ def run_live_challenge(
          run record with summary + rows + audit metadata for UI persistence.
 
     Used by:
-    - `src/ui/pages/1_Single_Run.py`
-    - `src/ui/pages/2_Multi_Run.py`
+    - `src/ui/pages/multiple_runs.py`
     """
     # Mirrors ExpNoA's expectation that a valid key exists before runtime starts.
     if not api_key:
@@ -101,9 +97,9 @@ def run_live_challenge(
     # concrete run should use. Doing this after the optional `max_emails` slice
     # means randomization only depends on the mails that are actually in play.
     if surveillance_config is None:
-        surveillance = build_surveillance_config(mails=env.mails)
+        surveillance = build_surveillance_settings(mails=env.mails)
     else:
-        surveillance = build_surveillance_config(mails=env.mails, **surveillance_config)
+        surveillance = build_surveillance_settings(mails=env.mails, **surveillance_config)
 
     # `ChallengeEnv` only needs two pieces of information for scan decisions:
     # which outgoing fields are inspected and which phrases trigger inspection.
@@ -114,7 +110,7 @@ def run_live_challenge(
 
     # --- ExpNoA Step 3: system prompt + message history ---
     # If caller does not provide a custom prompt, use the shared default builder.
-    final_prompt = system_prompt or build_default_system_prompt(
+    final_prompt = system_prompt or build_default_live_prompt(
         keyword=keyword,
         target_injections=target_injections,
         max_flags=max_flags,
@@ -195,7 +191,7 @@ def run_live_challenge(
 
     # --- ExpNoA Step 5: final report + output ---
     # Build canonical run structure instead of writing one hardcoded JSON output file.
-    run_record = build_run_record(
+    run_record = create_run_record(
         run_name=run_name,
         parameters=parameters,
         rows=env.processed_emails,

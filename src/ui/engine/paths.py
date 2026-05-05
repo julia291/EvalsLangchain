@@ -10,27 +10,18 @@ def repo_root() -> Path:
 
     Used by:
     - `src/ui/engine/paths.py` (self utilities)
-    - `src/ui/engine/live_runtime.py`
+    - `src/ui/engine/runs/live_challenge.py`
     - `src/ui/engine/importing.py`
     """
     return Path(__file__).resolve().parents[3]
-
-
-def src_dir() -> Path:
-    """Resolve the `src` directory.
-
-    Used by:
-    - `src/ui/engine/live_runtime.py` for lazy `ChallengeEnv` import path injection.
-    """
-    return repo_root() / "src"
 
 
 def resolve_dataset_path(dataset_path: str) -> Path:
     """Normalize a dataset path (absolute or relative) to absolute path.
 
     Used by:
-    - `src/ui/engine/loaders.py`
-    - `src/ui/engine/live_runtime.py`
+    - `src/ui/engine/records/mail_dataset.py`
+    - `src/ui/engine/runs/live_challenge.py`
     """
     candidate = Path(dataset_path)
     if candidate.is_absolute():

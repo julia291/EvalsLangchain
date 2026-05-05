@@ -1,28 +1,16 @@
 """Results page for run inspection and comparison.
 
-This page now connects to:
-- newly executed UI runs (simulation/live)
-- legacy repository result files (import into canonical run format)
+This page connects to automatic live runs and imported legacy result files.
 """
 
 from __future__ import annotations
 
-import sys
 from pathlib import Path
 
 import streamlit as st
 
-# Import with fallback so this page works even if package path differs per launch.
-try:
-    from src.ui.run_engine import import_legacy_results_file
-    from src.ui.run_store import append_run, load_runs
-except ModuleNotFoundError:
-    ui_dir = Path(__file__).resolve().parents[1]
-    if str(ui_dir) not in sys.path:
-        sys.path.insert(0, str(ui_dir))
-
-    from run_engine import import_legacy_results_file
-    from run_store import append_run, load_runs
+from src.ui.engine.records.legacy_import import import_legacy_result_file
+from src.ui.store.repository import append_run, load_runs
 
 try:
     import pandas as pd
@@ -32,13 +20,13 @@ except ImportError:  # pragma: no cover
 # Page framing.
 st.title("Results")
 st.sidebar.header("Results")
-st.caption("Visualize and compare simulated, live, and imported runs.")
+st.caption("Visualize and compare automatic live runs and imported legacy runs.")
 
 # Load persisted run history.
 runs = load_runs()
 
 if not runs:
-    st.warning("No UI runs found yet. Start a single or multi run first.")
+    st.warning("No UI runs found yet. Start an automatic multiple-run batch first.")
 else:
     # Most recent runs first.
     runs_sorted = sorted(runs, key=lambda r: r.get("created_at", ""), reverse=True)
@@ -119,7 +107,7 @@ else:
     with col_preview:
         if st.button("Preview file"):
             try:
-                run = import_legacy_results_file(
+                run = import_legacy_result_file(
                     results_path=selected_file,
                     run_name=import_run_name,
                     keyword=import_keyword,
@@ -133,7 +121,7 @@ else:
     with col_import:
         if st.button("Import file as run"):
             try:
-                run = import_legacy_results_file(
+                run = import_legacy_result_file(
                     results_path=selected_file,
                     run_name=import_run_name,
                     keyword=import_keyword,

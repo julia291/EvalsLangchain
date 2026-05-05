@@ -4,8 +4,8 @@ import unittest
 from pathlib import Path
 from unittest.mock import patch
 
-from src.ui.engine.live_runtime import run_live_challenge
-from src.ui.engine.surveillance import build_surveillance_config, should_scan_mail
+from src.ui.engine.runs.live_challenge import run_live_challenge_run
+from src.ui.engine.surveillance.settings import build_surveillance_settings, find_surveillance_match
 
 
 class DummyChallengeEnv:
@@ -44,8 +44,8 @@ class DummyChallengeEnv:
 
 
 class SurveillanceRuntimeTests(unittest.TestCase):
-    def test_build_surveillance_config_without_mails_returns_transport_config(self) -> None:
-        config = build_surveillance_config(
+    def test_build_surveillance_settings_without_mails_returns_transport_config(self) -> None:
+        config = build_surveillance_settings(
             randomization_method="Recipient_Domain",
             randomization_relative_size=0.5,
             manual_check_fields=["subject", "recipient", "subject"],
@@ -61,7 +61,7 @@ class SurveillanceRuntimeTests(unittest.TestCase):
         self.assertNotIn("phrases", config)
         self.assertNotIn("phrase_count", config)
 
-    def test_build_surveillance_config_with_mails_merges_all_phrase_sources(self) -> None:
+    def test_build_surveillance_settings_with_mails_merges_all_phrase_sources(self) -> None:
         mails = [
             {"recipient": "alice@example.com"},
             {"recipient": "bob@example.org"},
@@ -69,7 +69,7 @@ class SurveillanceRuntimeTests(unittest.TestCase):
 
         phrase_file = Path(__file__).resolve().parent / "fixtures" / "surveillance_phrases.json"
 
-        config = build_surveillance_config(
+        config = build_surveillance_settings(
             randomization_method="whole_recipient",
             randomization_relative_size=1.0,
             manual_check_fields=["recipient"],
@@ -82,8 +82,8 @@ class SurveillanceRuntimeTests(unittest.TestCase):
         self.assertEqual(set(config["phrases"]), {"marketing", "security", "alice@example.com", "bob@example.org"})
         self.assertEqual(config["phrase_count"], 4)
 
-    def test_should_scan_mail_matches_case_insensitively(self) -> None:
-        should_scan, field, phrase = should_scan_mail(
+    def test_find_surveillance_match_matches_case_insensitively(self) -> None:
+        should_scan, field, phrase = find_surveillance_match(
             mail={"recipient": "team@example.com", "subject": "Urgent Budget Review"},
             check_fields=["subject"],
             phrases=["budget"],
@@ -111,7 +111,7 @@ class SurveillanceRuntimeTests(unittest.TestCase):
         DummyChallengeEnv.seed_mails = mails
         DummyChallengeEnv.last_instance = None
 
-        surveillance_config = build_surveillance_config(
+        surveillance_config = build_surveillance_settings(
             randomization_method="whole_recipient",
             randomization_relative_size=1.0,
             manual_check_fields=["recipient"],
@@ -119,11 +119,11 @@ class SurveillanceRuntimeTests(unittest.TestCase):
         )
 
         with (
-            patch("src.ui.engine.live_runtime.load_mails", return_value=mails),
-            patch("src.ui.engine.live_runtime.resolve_dataset_path", return_value=Path("dataset.json")),
-            patch("src.ui.engine.live_runtime._load_challenge_env_class", return_value=DummyChallengeEnv),
+            patch("src.ui.engine.runs.live_challenge.load_mails", return_value=mails),
+            patch("src.ui.engine.runs.live_challenge.resolve_dataset_path", return_value=Path("dataset.json")),
+            patch("src.ui.engine.runs.live_challenge._load_challenge_env_class", return_value=DummyChallengeEnv),
         ):
-            run = run_live_challenge(
+            run = run_live_challenge_run(
                 run_name="test-run",
                 dataset_path="data/dataset.json",
                 keyword="boredom",

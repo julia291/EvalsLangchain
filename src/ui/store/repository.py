@@ -12,7 +12,7 @@ def load_runs() -> list[dict[str, Any]]:
     """Load all persisted runs from disk.
 
     Used by:
-    - `src/ui/pages/3_Results.py`
+    - `src/ui/pages/results.py`
     - `append_run` in this file
     """
     ensure_data_dir()
@@ -47,9 +47,8 @@ def append_run(run: dict[str, Any]) -> None:
     """Append one run and save updated repository state.
 
     Used by:
-    - `src/ui/pages/1_Single_Run.py`
-    - `src/ui/pages/2_Multi_Run.py`
-    - `src/ui/pages/3_Results.py` (legacy import path)
+    - `src/ui/pages/multiple_runs.py`
+    - `src/ui/pages/results.py` (legacy import path)
     """
     runs = load_runs()
     runs.append(run)

@@ -47,6 +47,8 @@ chroma-embeddings.parquet
 *.log
 *.sqlite3
 *.db
+data/ui_runs.json
+tests/tmp*/
 
 # --- IDE & OS ---
 # VS Code

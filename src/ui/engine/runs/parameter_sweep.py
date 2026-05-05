@@ -16,12 +16,11 @@ from __future__ import annotations
 from itertools import product
 
 
-def parse_int_spec(raw: str, *, minimum: int, label: str) -> list[int]:
+def parse_integer_sweep_values(raw: str, *, minimum: int, label: str) -> list[int]:
     """Parse a comma-separated integer specification into a unique ordered list.
 
     Used by:
-    - ``src/ui/pages/3_Multi_Auto_Run.py`` (user input parsing for parameter dimensions)
-    - ``src/ui/run_engine.py`` (re-export as stable facade API)
+    - ``src/ui/pages/multiple_runs.py`` (user input parsing for parameter dimensions)
 
     The parser accepts a compact DSL with three token types:
     - Single values: ``6,9,12``
@@ -49,9 +48,9 @@ def parse_int_spec(raw: str, *, minimum: int, label: str) -> list[int]:
             has invalid ranges/steps, or violates the minimum constraint.
 
     Examples:
-        ``parse_int_spec("6,9,12", minimum=0, label="Target")`` -> ``[6, 9, 12]``
-        ``parse_int_spec("4-8:2", minimum=1, label="Flags")`` -> ``[4, 6, 8]``
-        ``parse_int_spec("3,3,2-4", minimum=0, label="X")`` -> ``[3, 2, 4]``
+        ``parse_integer_sweep_values("6,9,12", minimum=0, label="Target")`` -> ``[6, 9, 12]``
+        ``parse_integer_sweep_values("4-8:2", minimum=1, label="Flags")`` -> ``[4, 6, 8]``
+        ``parse_integer_sweep_values("3,3,2-4", minimum=0, label="X")`` -> ``[3, 2, 4]``
     """
     values: list[int] = []
     seen: set[int] = set()
@@ -109,7 +108,7 @@ def parse_int_spec(raw: str, *, minimum: int, label: str) -> list[int]:
     return values
 
 
-def build_sweep_plan(
+def build_parameter_sweep_plan(
     target_values: list[int],
     max_flag_values: list[int],
     runs_per_combination: int,
@@ -117,8 +116,7 @@ def build_sweep_plan(
     """Build the full parameter matrix and UI preview metadata.
 
     Used by:
-    - ``src/ui/pages/3_Multi_Auto_Run.py`` (build combinations + preview table)
-    - ``src/ui/run_engine.py`` (re-export as stable facade API)
+    - ``src/ui/pages/multiple_runs.py`` (build combinations + preview table)
 
     The matrix is the cartesian product of:
     - ``target_values`` (x-axis), and

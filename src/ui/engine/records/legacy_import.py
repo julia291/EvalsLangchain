@@ -5,11 +5,11 @@ from __future__ import annotations
 import json
 from pathlib import Path
 
-from .record_builder import build_run_record
-from .paths import repo_root
+from ..paths import repo_root
+from .run_records import create_run_record
 
 
-def import_legacy_results_file(
+def import_legacy_result_file(
     results_path: str,
     run_name: str | None = None,
     keyword: str = "boredom",
@@ -19,7 +19,7 @@ def import_legacy_results_file(
     """Convert legacy result JSON into canonical run schema.
 
     Used by:
-    - `src/ui/pages/3_Results.py`
+    - `src/ui/pages/results.py`
     """
     path = Path(results_path)
     if not path.is_absolute():
@@ -45,7 +45,7 @@ def import_legacy_results_file(
         "notes": "Imported from legacy results file.",
     }
 
-    return build_run_record(
+    return create_run_record(
         run_name=inferred_name,
         parameters=parameters,
         rows=rows,

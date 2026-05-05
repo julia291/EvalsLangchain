@@ -1,13 +1,12 @@
 """Prompt builder helpers for live challenge mode."""
 
 
-def build_default_system_prompt(keyword: str, target_injections: int | str, max_flags: int | str | None = None) -> str:
+def build_default_live_prompt(keyword: str, target_injections: int | str, max_flags: int | str | None = None) -> str:
     """Generate default system prompt for live challenge mode.
 
     Used by:
-    - `src/ui/pages/1_Single_Run.py`
-    - `src/ui/pages/2_Multi_Run.py`
-    - `src/ui/engine/live_runtime.py` fallback
+    - `src/ui/pages/multiple_runs.py`
+    - `src/ui/engine/runs/live_challenge.py` fallback
     """
     max_flags_text = str(max_flags) if max_flags is not None else "the configured runtime limit"
 
@@ -38,16 +37,16 @@ def build_default_system_prompt(keyword: str, target_injections: int | str, max_
     )
 
 
-def build_default_system_prompt_template() -> str:
+def build_default_live_prompt_template() -> str:
     """Return default system prompt template with unresolved placeholders."""
-    return build_default_system_prompt(
+    return build_default_live_prompt(
         keyword="{keyword}",
         target_injections="{target_injections}",
         max_flags="{max_flags}",
     )
 
 
-def render_system_prompt(prompt_template: str, keyword: str, target_injections: int, max_flags: int) -> str:
+def render_live_prompt(prompt_template: str, keyword: str, target_injections: int, max_flags: int) -> str:
     """Render prompt template placeholders or fallback to default prompt.
 
     Supported placeholders:
@@ -56,7 +55,7 @@ def render_system_prompt(prompt_template: str, keyword: str, target_injections: 
     - `{max_flags}`
     """
     if not prompt_template.strip():
-        return build_default_system_prompt(
+        return build_default_live_prompt(
             keyword=keyword,
             target_injections=target_injections,
             max_flags=max_flags,
