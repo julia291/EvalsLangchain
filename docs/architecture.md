@@ -12,6 +12,8 @@ EvalsLangchain/
 |   `-- one_mail.json
 |-- docs/
 |   `-- architecture.md
+|-- scripts/
+|   `-- validate_project.py
 |-- src/
 |   |-- __init__.py
 |   |-- agent.py
@@ -66,6 +68,8 @@ EvalsLangchain/
   - File and inline phrase loading.
 - `src/ui/engine/surveillance/random_phrases.py`
   - Recipient-derived phrase sampling.
+- `src/ui/engine/validation.py`
+  - Fast diagnostics for imports, datasets, and grouped run storage.
 - `src/ui/engine/records/mail_dataset.py`
   - Dataset loading and mail field accessors.
 - `src/ui/engine/records/run_records.py`
@@ -89,6 +93,8 @@ EvalsLangchain/
 - Each persisted run stores flattened `hyperparameters` for filtering and
   charting in the Results page.
 - `data/ui_runs.json` is runtime output and ignored by Git.
+- `scripts/validate_project.py` is the local validation entry point for
+  imports, datasets, run storage, compilation, and tests.
 
 ## Where To Change Things
 
@@ -102,6 +108,8 @@ EvalsLangchain/
 - Surveillance rules: `src/ui/engine/surveillance/settings.py`
 - Run records and result normalization: `src/ui/engine/records/run_records.py`
 - Run persistence: `src/ui/store/repository.py`
+- Project diagnostics: `src/ui/engine/validation.py` and
+  `scripts/validate_project.py`
 
 ## Testing Focus
 
@@ -113,3 +121,5 @@ EvalsLangchain/
 - `tests/test_surveillance_runtime.py`
   - Surveillance settings resolution and live-runtime wiring with a dummy
     environment.
+- `tests/test_validation.py`
+  - Dataset and grouped run-store validation behavior.

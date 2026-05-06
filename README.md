@@ -134,6 +134,25 @@ uv run python -m unittest discover -s tests
 
 The tests avoid live API calls by using dummy runners/environments.
 
+## Validation And Debugging
+
+Run the project validator when the UI looks empty, imports fail, or saved runs
+do not appear in the Results page:
+
+```powershell
+uv run python scripts/validate_project.py
+```
+
+It checks core imports, the live mail dataset, `data/ui_runs.json`, Python
+compilation, and the unit test suite. For faster checks while iterating:
+
+```powershell
+uv run python scripts/validate_project.py --skip-tests
+```
+
+The Home page also has a `Project diagnostics` expander that runs the fast
+import/data/run-store validation checks and shows issues in a table.
+
 ## Additional Documentation
 
 - `docs/architecture.md`
