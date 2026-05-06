@@ -11,7 +11,7 @@ def home_page() -> None:
     st.markdown(
         """
 Use `Multiple Runs` to execute automatic live sweeps over parameter combinations.
-Use `Results` to inspect saved runs and import legacy result files.
+Use `Results` to inspect and compare saved live runs.
 """
     )
 

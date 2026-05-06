@@ -1,4 +1,4 @@
-"""Legacy live challenge environment used by the Streamlit live runtime."""
+"""Live challenge environment used by the Streamlit runtime."""
 
 import json
 import logging

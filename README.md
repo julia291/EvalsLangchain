@@ -8,7 +8,7 @@ the surveillance system.
 This branch keeps the maintained UI deliberately simple:
 
 - one `Multiple Runs` page for automatic live sweeps
-- one `Results` page for saved runs and legacy imports
+- one `Results` page for saved live runs
 - testable engine modules for sweep planning, surveillance, live runtime, record
   building, persistence, and automatic batch orchestration
 
@@ -23,13 +23,9 @@ This branch keeps the maintained UI deliberately simple:
 - `src/ui/store/`
   - persisted run-history helpers
 - `data/`
-  - tracked datasets and bundled legacy results
+  - tracked datasets
 - `docs/`
   - maintained architecture notes
-- `scripts/`
-  - runnable helper scripts
-- `archive/`
-  - historical experiments, legacy helpers, and old generated notes
 
 See `docs/architecture.md` for the full tree and module map.
 
@@ -60,9 +56,32 @@ the cartesian product of:
 - maximum flag limits
 - repeated runs per combination
 
-Each successful run is persisted immediately in `data/ui_runs.json`. Failures are
-logged, displayed, and do not stop the remaining batch. `data/ui_runs.json` is
-runtime output and is ignored by Git.
+Each successful run is persisted immediately in `data/ui_runs.json` under its
+model name. Failures are logged, displayed, and do not stop the remaining batch.
+`data/ui_runs.json` is runtime output and is ignored by Git.
+
+Saved runs use a grouped JSON format:
+
+```json
+{
+  "schema_version": 2,
+  "models": {
+    "gemini-2.5-flash": {
+      "runs": [
+        {
+          "run_id": "abc12345",
+          "created_at": "2026-05-06T12:00:00+00:00",
+          "name": "auto-live-t2-f5-r1",
+          "parameters": {},
+          "hyperparameters": {},
+          "summary": {},
+          "results": []
+        }
+      ]
+    }
+  }
+}
+```
 
 ## Surveillance System
 
@@ -93,7 +112,7 @@ Recommended JSON format:
 - `src/ui/pages/multiple_runs.py`
   - automatic live multi-run page.
 - `src/ui/pages/results.py`
-  - result inspection and legacy imports.
+  - live result inspection and hyperparameter comparison.
 - `src/ui/engine/runs/automatic_batch.py`
   - automatic batch execution, persistence callbacks, failure capture, and logs.
 - `src/ui/engine/runs/parameter_sweep.py`
@@ -105,7 +124,7 @@ Recommended JSON format:
 - `src/ui/engine/records/run_records.py`
   - canonical run records and summary metrics.
 - `src/agent.py`
-  - legacy `ChallengeEnv` adapter used by live runs.
+  - `ChallengeEnv` adapter used by live runs.
 
 ## Tests
 

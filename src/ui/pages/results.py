@@ -1,134 +1,98 @@
-"""Results page for run inspection and comparison.
-
-This page connects to automatic live runs and imported legacy result files.
-"""
+"""Results page for live run inspection and comparison."""
 
 from __future__ import annotations
 
+import json
 from pathlib import Path
+import sys
+from typing import Any
 
 import streamlit as st
 
-from src.ui.engine.records.legacy_import import import_legacy_result_file
-from src.ui.store.repository import append_run, load_runs
+repo_root = Path(__file__).resolve().parents[3]
+if str(repo_root) not in sys.path:
+    sys.path.insert(0, str(repo_root))
+
+from src.ui.store.repository import load_runs
 
 try:
     import pandas as pd
 except ImportError:  # pragma: no cover
     pd = None
 
-# Page framing.
+
+def display_value(value: Any) -> Any:
+    """Return dataframe-friendly values for nested hyperparameters."""
+    if isinstance(value, (dict, list)):
+        return json.dumps(value, ensure_ascii=False, sort_keys=True)
+    return value
+
+
 st.title("Results")
 st.sidebar.header("Results")
-st.caption("Visualize and compare automatic live runs and imported legacy runs.")
+st.caption("Visualize and compare saved live runs.")
 
-# Load persisted run history.
-runs = load_runs()
+runs = sorted(load_runs(), key=lambda r: r.get("created_at", ""), reverse=True)
 
 if not runs:
-    st.warning("No UI runs found yet. Start an automatic multiple-run batch first.")
+    st.warning("No UI runs found yet. Start an automatic live batch first.")
 else:
-    # Most recent runs first.
-    runs_sorted = sorted(runs, key=lambda r: r.get("created_at", ""), reverse=True)
-    options = [f"{r['name']} ({r['run_id']})" for r in runs_sorted]
-
-    # User selects a run for deep inspection.
-    selected_label = st.selectbox("Select run", options=options)
-    selected_idx = options.index(selected_label)
-    selected_run = runs_sorted[selected_idx]
-
+    labels = [f"{run['name']} ({run['run_id']})" for run in runs]
+    selected_run = runs[labels.index(st.selectbox("Select run", options=labels))]
     summary = selected_run["summary"]
+
     c1, c2, c3, c4, c5 = st.columns(5)
     c1.metric("Processed", summary["processed_mails"])
     c2.metric("Injections", f"{summary['actual_injections']} / {summary['target_injections']}")
     c3.metric("Flags", f"{summary['flagged_count']} / {summary['max_flags']}")
     c4.metric("Flag rate", f"{summary['flag_rate']}%")
-    c5.metric("Mode", selected_run.get("parameters", {}).get("execution_mode", selected_run.get("source", "n/a")))
+    c5.metric("Model", selected_run["parameters"]["model_name"])
 
-    # Parameter payload clarifies how the run was configured.
-    st.subheader("Run parameters")
-    st.json(selected_run["parameters"])
+    st.subheader("Hyperparameters")
+    st.json(selected_run.get("hyperparameters", selected_run["parameters"]))
 
-    # Show normalized per-mail records.
     st.subheader("Mail results")
     st.dataframe(selected_run["results"], use_container_width=True)
 
-    # Live challenge runs include extra audit trail for debugging model behavior.
     if selected_run.get("audit_log"):
         st.subheader("Audit log")
         st.dataframe(selected_run["audit_log"], use_container_width=True)
 
     st.subheader("Run comparison")
-    comp_rows = [
-        {
-            "name": r["name"],
-            "run_id": r["run_id"],
-            "mode": r.get("parameters", {}).get("execution_mode", r.get("source", "n/a")),
-            "processed": r["summary"]["processed_mails"],
-            "injections": r["summary"]["actual_injections"],
-            "flags": r["summary"]["flagged_count"],
-            "flag_rate": r["summary"]["flag_rate"],
-            "success": r["summary"]["success"],
+    rows = []
+    for run in runs:
+        row = {
+            "name": run["name"],
+            "run_id": run["run_id"],
+            "model_name": run["parameters"]["model_name"],
+            "processed": run["summary"]["processed_mails"],
+            "injections": run["summary"]["actual_injections"],
+            "flags": run["summary"]["flagged_count"],
+            "flag_rate": run["summary"]["flag_rate"],
+            "success": run["summary"]["success"],
         }
-        for r in runs_sorted
-    ]
+        row.update({key: display_value(value) for key, value in run.get("hyperparameters", {}).items()})
+        rows.append(row)
 
-    if pd is not None:
-        df = pd.DataFrame(comp_rows)
-        st.dataframe(df, use_container_width=True)
-
-        # Keep chart simple and comparable across run modes.
-        st.bar_chart(df.set_index("name")[["injections", "flags"]])
+    if pd is None:
+        st.dataframe(rows, use_container_width=True)
     else:
-        st.dataframe(comp_rows, use_container_width=True)
+        df = pd.DataFrame(rows)
+        metric_columns = {"name", "run_id", "processed", "injections", "flags", "flag_rate", "success"}
+        hyperparameter_columns = sorted(
+            column for column in df.columns if column not in metric_columns
+        )
+        selected_filters = st.multiselect("Filter by hyperparameters", options=hyperparameter_columns)
+        filtered = df.copy()
 
-st.divider()
-st.subheader("Import legacy repository results")
+        for column in selected_filters:
+            choices = sorted(str(value) for value in filtered[column].dropna().unique())
+            selected = st.multiselect(column, options=choices, default=choices)
+            filtered = filtered[filtered[column].astype(str).isin(selected)]
 
-# Legacy files shipped with repository that users may want in the dashboard timeline.
-repo_root = Path(__file__).resolve().parents[3]
-candidate_files = [
-    repo_root / "data" / "results.json",
-    repo_root / "data" / "results_no_a.json",
-]
-existing = [p for p in candidate_files if p.exists()]
+        st.dataframe(filtered, use_container_width=True)
 
-if not existing:
-    st.info("No bundled legacy result files found in data/.")
-else:
-    selected_file = st.selectbox("Legacy file", options=[str(p) for p in existing])
-    import_run_name = st.text_input("Imported run name", value=f"import-{Path(selected_file).stem}")
-    import_keyword = st.text_input("Keyword for import analysis", value="boredom")
-    import_target = st.number_input("Target injections for import", min_value=0, value=0, step=1)
-    import_max_flags = st.number_input("Max flags for import", min_value=1, value=8, step=1)
-
-    col_preview, col_import = st.columns(2)
-
-    with col_preview:
-        if st.button("Preview file"):
-            try:
-                run = import_legacy_result_file(
-                    results_path=selected_file,
-                    run_name=import_run_name,
-                    keyword=import_keyword,
-                    target_injections=int(import_target),
-                    max_flags=int(import_max_flags),
-                )
-                st.dataframe(run["results"], use_container_width=True)
-            except Exception as exc:
-                st.error(f"Could not preview file: {exc}")
-
-    with col_import:
-        if st.button("Import file as run"):
-            try:
-                run = import_legacy_result_file(
-                    results_path=selected_file,
-                    run_name=import_run_name,
-                    keyword=import_keyword,
-                    target_injections=int(import_target),
-                    max_flags=int(import_max_flags),
-                )
-                append_run(run)
-                st.success(f"Imported run saved: {run['name']} ({run['run_id']})")
-            except Exception as exc:
-                st.error(f"Could not import file: {exc}")
+        if hyperparameter_columns:
+            group_by = st.selectbox("Chart by hyperparameter", options=hyperparameter_columns)
+            chart = filtered.groupby(group_by, dropna=False)[["injections", "flags"]].mean()
+            st.bar_chart(chart)

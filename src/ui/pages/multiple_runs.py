@@ -2,7 +2,14 @@
 
 from __future__ import annotations
 
+from pathlib import Path
+import sys
+
 import streamlit as st
+
+repo_root = Path(__file__).resolve().parents[3]
+if str(repo_root) not in sys.path:
+    sys.path.insert(0, str(repo_root))
 
 from src.ui.engine.config import DEFAULT_DATASET
 from src.ui.engine.runs.automatic_batch import build_run_summary_table, run_automatic_live_batch

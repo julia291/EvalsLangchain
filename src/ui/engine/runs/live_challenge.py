@@ -1,10 +1,4 @@
-"""Live challenge execution helpers.
-
-This module is the UI equivalent of the procedural flow in
-`archive/legacy_experiments/experiments/ExpNoA.py`.
-It implements the same mission lifecycle, but returns structured run records
-for Streamlit pages instead of printing to console + writing one fixed file.
-"""
+"""Live challenge execution helpers."""
 
 from __future__ import annotations
 
@@ -18,17 +12,7 @@ from .live_prompts import build_default_live_prompt
 
 
 def _load_challenge_env_class():
-    """Load the legacy `ChallengeEnv` lazily from `src/agent.py`.
-
-    ExpNoA mapping:
-    - Equivalent to `from agent import ChallengeEnv` near the top of the
-      archived ExpNoA script.
-
-    Why lazy loading is used here:
-    - Tests and legacy helpers should stay importable even if live runtime
-      dependencies or paths are not available.
-    - Delaying the import keeps the module importable in non-live contexts.
-    """
+    """Load `ChallengeEnv` lazily so tests can patch the live runtime."""
     from src.agent import ChallengeEnv
 
     return ChallengeEnv
@@ -47,49 +31,20 @@ def run_live_challenge_run(
     max_emails: int | None = None,
     notes: str = "",
 ) -> dict[str, Any]:
-    """Execute real challenge runtime with model tool loop.
-
-    ExpNoA mapping overview:
-    1) Logging setup in ExpNoA:
-       - Not replicated one-to-one here; Streamlit handles UX, and we capture
-         structured `audit_log` events instead of console logging.
-
-    2) Environment initialization in ExpNoA (`ChallengeEnv(...)` + mail path logic):
-       - Implemented via `resolve_dataset_path`, `load_mails`, and `ChallengeEnv(...)`.
-
-    3) Prompt + message initialization in ExpNoA:
-       - Implemented via `build_default_live_prompt(...)` (or custom override)
-         and initial `messages = [{"role": "system", ...}]`.
-
-    4) Main mail loop in ExpNoA:
-       - Implemented by iterating over `env.mails`, checking max flags, appending
-         per-mail user instruction, and calling `env.run_agent_loop(...)`.
-
-    5) Final report/output in ExpNoA:
-       - Instead of printing and writing a fixed JSON file, we return a canonical
-         run record with summary + rows + audit metadata for UI persistence.
-
-    Used by:
-    - `src/ui/pages/multiple_runs.py`
-    """
-    # Mirrors ExpNoA's expectation that a valid key exists before runtime starts.
+    """Execute one live challenge run and return a persistable run record."""
     if not api_key:
         raise ValueError("API key is required for live challenge runs.")
 
-    # --- ExpNoA Step 2: "Umgebung initialisieren" ---
-    # Resolve and preload dataset, both for environment setup and final metadata.
     resolved_dataset = resolve_dataset_path(dataset_path)
     mails = load_mails(dataset_path)
 
     ChallengeEnv = _load_challenge_env_class()
     env = ChallengeEnv(mails_path=str(resolved_dataset), api_key=api_key)
 
-    # UI-exposed runtime controls that correspond to ExpNoA constants/behavior.
     env.model_name = model_name
     env.max_flags = max_flags
     env.keyword = keyword
 
-    # Optional UI cap not present in ExpNoA: useful for quick, low-cost live tests.
     if max_emails is not None and max_emails > 0:
         env.mails = env.mails[:max_emails]
 
@@ -108,8 +63,6 @@ def run_live_challenge_run(
         phrases_that_will_be_checked=surveillance["phrases"],
     )
 
-    # --- ExpNoA Step 3: system prompt + message history ---
-    # If caller does not provide a custom prompt, use the shared default builder.
     final_prompt = system_prompt or build_default_live_prompt(
         keyword=keyword,
         target_injections=target_injections,
@@ -117,7 +70,6 @@ def run_live_challenge_run(
     )
     messages: list[dict[str, Any]] = [{"role": "system", "content": final_prompt}]
 
-    # Structured replacement for ExpNoA console logs/tracebacks.
     audit_log: list[dict[str, Any]] = [
         {
             "level": "info",
@@ -128,9 +80,7 @@ def run_live_challenge_run(
         }
     ]
 
-    # --- ExpNoA Step 4: iteration through mails ---
     for mail in env.mails:
-        # Same game-over guard as ExpNoA (`if env.flagged_count >= env.max_flags: break`).
         if env.flagged_count >= env.max_flags:
             audit_log.append(
                 {
@@ -143,16 +93,10 @@ def run_live_challenge_run(
             break
 
         mail_id = mail.get("id")
-
-        # Equivalent to ExpNoA's per-mail user instruction:
-        # `messages.append({"role": "user", "content": f"Please process email ID {mail_id}."})`
         messages.append({"role": "user", "content": f"Please process email ID {mail_id}."})
 
         try:
-            # Equivalent to ExpNoA's `messages = env.run_agent_loop(messages)`.
             messages = env.run_agent_loop(messages)
-
-            # UI-oriented progress event replacing line-by-line console prints.
             audit_log.append(
                 {
                     "level": "info",
@@ -163,7 +107,6 @@ def run_live_challenge_run(
                 }
             )
         except Exception as exc:
-            # Equivalent to ExpNoA traceback + error log + loop break.
             audit_log.append(
                 {
                     "level": "error",
@@ -174,9 +117,7 @@ def run_live_challenge_run(
             )
             break
 
-    # Parameters snapshot that makes this run reproducible in the UI.
     parameters = {
-        "execution_mode": "live_challenge",
         "dataset_path": str(resolved_dataset),
         "keyword": keyword,
         "target_injections": target_injections,
@@ -189,17 +130,13 @@ def run_live_challenge_run(
         "notes": notes,
     }
 
-    # --- ExpNoA Step 5: final report + output ---
-    # Build canonical run structure instead of writing one hardcoded JSON output file.
     run_record = create_run_record(
         run_name=run_name,
         parameters=parameters,
         rows=env.processed_emails,
         total_mails=len(env.mails),
-        source="live_challenge",
     )
 
-    # Attach execution trace and lightweight telemetry used by Results page.
     run_record["audit_log"] = audit_log
     run_record["meta"] = {
         "message_count": len(messages),

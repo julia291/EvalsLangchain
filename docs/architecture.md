@@ -1,26 +1,17 @@
 # Architecture
 
 This repository is organized around one maintained Streamlit workflow: automatic
-live multi-runs plus result inspection/import.
+live multi-runs plus result inspection.
 
 ## Project Tree
 
 ```text
 EvalsLangchain/
-|-- archive/
-|   |-- legacy_digest.txt
-|   |-- legacy_todo.md
-|   `-- legacy_experiments/
-|       |-- config.py
-|       `-- simulation.py
 |-- data/
 |   |-- mails.json
-|   |-- results.json
-|   `-- results_no_a.json
+|   `-- one_mail.json
 |-- docs/
 |   `-- architecture.md
-|-- scripts/
-|   `-- run_expnoa.sh
 |-- src/
 |   |-- __init__.py
 |   |-- agent.py
@@ -50,10 +41,11 @@ EvalsLangchain/
    the cartesian plan for `target_injections x max_flags`.
 4. `src/ui/engine/runs/automatic_batch.py` executes each planned live run,
    persists successful runs immediately, records failures, and emits logs.
-5. `src/ui/engine/runs/live_challenge.py` runs the model/tool loop against the
-   legacy `ChallengeEnv`.
+5. `src/ui/engine/runs/live_challenge.py` runs the model/tool loop against
+   `ChallengeEnv`.
 6. `src/ui/engine/records/run_records.py` normalizes rows and summary metrics.
-7. `src/ui/store/repository.py` persists runs for the Results page.
+7. `src/ui/store/repository.py` persists live runs by model name for the
+   Results page.
 
 ## Module Responsibilities
 
@@ -75,18 +67,15 @@ EvalsLangchain/
 - `src/ui/engine/surveillance/random_phrases.py`
   - Recipient-derived phrase sampling.
 - `src/ui/engine/records/mail_dataset.py`
-  - Dataset loading and compatibility accessors.
+  - Dataset loading and mail field accessors.
 - `src/ui/engine/records/run_records.py`
   - Canonical run schema and summary metrics.
-- `src/ui/engine/records/legacy_import.py`
-  - Import of bundled legacy result files.
 - `src/ui/store/repository.py`
   - Run-history persistence.
 
 ## Important Invariants
 
 - The maintained run UI is live-only.
-- Offline simulation code lives in `archive/legacy_experiments/simulation.py`.
 - Prompt templates support `{keyword}`, `{target_injections}`, and `{max_flags}`.
 - Automatic run names encode their dimensions:
   `prefix-t{target_injections}-f{max_flags}-r{repetition}`.
@@ -95,27 +84,21 @@ EvalsLangchain/
 - Batch failures are logged and shown in the UI while remaining runs continue.
 - The resolved surveillance rule is stored in each run record for reproducible
   result inspection.
+- Persisted runs use schema version 2 and are grouped under
+  `models.{model_name}.runs`.
+- Each persisted run stores flattened `hyperparameters` for filtering and
+  charting in the Results page.
 - `data/ui_runs.json` is runtime output and ignored by Git.
-
-## Legacy Boundary
-
-- `src/agent.py`
-  - Legacy `ChallengeEnv` adapter still used by live runs.
-  - New UI behavior should generally live in `src/ui/engine/`, not inside this
-    file unless the tool-loop contract itself changes.
-- `archive/legacy_experiments/`
-  - Historical scripts, notebooks, and helpers.
-  - Not part of the maintained UI path.
 
 ## Where To Change Things
 
 - UI navigation: `src/ui/app.py`
 - Automatic batch controls: `src/ui/pages/multiple_runs.py`
-- Result display/imports: `src/ui/pages/results.py`
+- Result display: `src/ui/pages/results.py`
 - Batch orchestration and logging: `src/ui/engine/runs/automatic_batch.py`
 - Sweep parsing: `src/ui/engine/runs/parameter_sweep.py`
 - Live model loop: `src/ui/engine/runs/live_challenge.py`
-- Legacy live tool environment: `src/agent.py`
+- Live tool environment: `src/agent.py`
 - Surveillance rules: `src/ui/engine/surveillance/settings.py`
 - Run records and result normalization: `src/ui/engine/records/run_records.py`
 - Run persistence: `src/ui/store/repository.py`

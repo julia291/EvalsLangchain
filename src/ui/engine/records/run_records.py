@@ -37,15 +37,8 @@ def create_run_record(
     parameters: dict[str, Any],
     rows: list[dict[str, Any]],
     total_mails: int,
-    source: str,
 ) -> dict[str, Any]:
-    """Build canonical run object persisted by the UI store.
-
-    Used by:
-    - archived simulation helpers
-    - `src/ui/engine/runs/live_challenge.py`
-    - `src/ui/engine/records/legacy_import.py`
-    """
+    """Build canonical live-run object persisted by the UI store."""
     keyword = str(parameters.get("keyword", "boredom"))
     target_injections = int(parameters.get("target_injections", 0))
     max_flags = int(parameters.get("max_flags", 8))
@@ -72,7 +65,6 @@ def create_run_record(
         "run_id": uuid4().hex[:8],
         "created_at": datetime.now(timezone.utc).isoformat(),
         "name": run_name,
-        "source": source,
         "parameters": parameters,
         "summary": summary,
         "results": normalized_rows,
