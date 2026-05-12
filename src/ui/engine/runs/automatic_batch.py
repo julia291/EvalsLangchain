@@ -122,14 +122,16 @@ def run_automatic_live_batch(
 ) -> AutomaticBatchResult:
     """Execute and persist every run in an automatic live sweep.
 
-    Failures are logged and captured, then the batch continues. Each successful
-    run is persisted immediately through ``save_run``.
-    """
-    if not api_key:
-        raise ValueError("API key is required for automatic live runs.")
-    if runs_per_combination < 1:
-        raise ValueError("runs_per_combination must be at least 1.")
+    Inputs are expected to be pre-validated by the caller. The
+    Streamlit "Multiple Runs" page calls
+    :func:`src.ui.engine.preflight.validate_run_inputs` before invoking
+    this function; direct callers (scripts, tests) should do the same
+    if they want a clean failure on bad inputs.
 
+    Failures during individual runs are logged and captured but do not
+    stop the batch. Each successful run is persisted immediately
+    through ``save_run``.
+    """
     total_runs = len(combinations) * runs_per_combination
     logger.info(
         "automatic_batch_started",

@@ -9,9 +9,9 @@ def repo_root() -> Path:
     """Resolve repository root from this module location.
 
     Used by:
-    - `src/ui/engine/paths.py` (self utilities)
-    - `src/ui/engine/runs/live_challenge.py`
-    - `src/ui/engine/importing.py`
+    - :func:`resolve_dataset_path` below.
+    - ``src/ui/engine/surveillance/phrase_sources.py`` to resolve relative
+      JSON phrase-file paths against the project root.
     """
     return Path(__file__).resolve().parents[3]
 

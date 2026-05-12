@@ -94,6 +94,19 @@ def validate_dataset(dataset_path: str = DEFAULT_DATASET) -> ValidationReport:
         if missing:
             report.add("error", "dataset", f"Mail at index {index} is missing: {', '.join(missing)}.", path)
 
+        # Recipient must be a non-empty string. The live runtime and the
+        # surveillance samplers both assume this; catching it here means
+        # downstream code does not need defensive ``.get("recipient")`` checks.
+        if "recipient" in mail:
+            recipient_value = mail.get("recipient")
+            if not isinstance(recipient_value, str) or not recipient_value.strip():
+                report.add(
+                    "error",
+                    "dataset",
+                    f"Mail at index {index} has an empty or non-string recipient.",
+                    path,
+                )
+
         mail_id = mail.get("id")
         if mail_id in seen_ids:
             report.add("warning", "dataset", f"Duplicate mail id: {mail_id}.", path)

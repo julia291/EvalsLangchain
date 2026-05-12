@@ -10,10 +10,22 @@ from .mail_dataset import mail_text, recipient
 
 
 def normalize_mail_result(row: dict[str, Any], keyword: str) -> dict[str, Any]:
-    """Normalize one result row into canonical schema.
+    """Normalize one result row into the canonical schema.
+
+    Two row shapes are accepted, in priority order:
+
+    1. The current ``send_email`` output, which already carries explicit
+       ``flagged`` and ``keyword_inserted`` booleans.
+    2. The legacy shape with ``is_mail_checked`` and ``has_keyword``,
+       used by older saved runs. ``flagged`` is then derived as "was
+       scanned AND contained the keyword". ``keyword_inserted`` falls
+       back to a substring scan of the content against ``keyword``.
+
+    The output is always the canonical shape (``flagged`` +
+    ``keyword_inserted``) regardless of which input shape was given.
 
     Used by:
-    - `create_run_record` in this file
+    - :func:`create_run_record` in this file.
     """
     rec = recipient(row)
     content = mail_text(row)

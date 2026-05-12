@@ -40,15 +40,38 @@ def build_surveillance_settings(
 ) -> dict[str, Any]:
     """Build a transport-friendly surveillance configuration from UI inputs.
 
-    The returned dict is intentionally simple so pages can pass it directly to
-    `run_live_challenge_run(...)` without knowing how the live runtime will finally
-    interpret the configuration.
+    The returned dict is intentionally simple so pages can pass it
+    directly to ``run_live_challenge_run(...)`` without knowing how the
+    live runtime will finally interpret the configuration.
 
-    When `mails` is provided, the function also resolves the final runtime
-    phrases and returns `phrases` plus `phrase_count`.
+    Two parameter naming styles are accepted so this function can be
+    used both as a UI builder *and* as a "rebuild from a saved config"
+    helper:
+
+    * ``manual_check_fields`` / ``manual_phrases_file`` /
+      ``manual_inline_phrases`` are the names the Streamlit page uses;
+      they take precedence when set.
+    * ``check_fields`` / ``phrases_file`` / ``inline_phrases`` are the
+      keys present in a previously persisted surveillance config and
+      are used when the ``manual_*`` variants are not supplied.
+
+    When ``mails`` is provided, the function also resolves the final
+    runtime phrases and returns ``phrases`` plus ``phrase_count``.
+    Without ``mails`` only the transport-friendly base config is
+    returned. The pre-resolved ``phrases`` and ``phrase_count`` kwargs
+    are accepted (so a round-tripped config can be replayed) but
+    ignored at this layer.
+
+    Raises:
+        TypeError: If any unknown keyword arguments are passed. This
+            guards against silent misspellings when re-hydrating a
+            persisted configuration.
+        ValueError: If the randomization method is not recognized, or
+            the relative size is outside ``[0.0, 1.0]``.
 
     Used by:
-    - `src/ui/pages/multiple_runs.py`
+    - ``src/ui/pages/multiple_runs.py``
+    - ``src/ui/engine/runs/live_challenge.py``
     """
     if extra:
         unexpected = ", ".join(sorted(extra))

@@ -96,23 +96,9 @@ class AutomaticRunsTests(unittest.TestCase):
         self.assertTrue(any("automatic_run_failed" in message for message in logs.output))
         self.assertTrue(any("automatic_batch_finished" in message for message in logs.output))
 
-    def test_execute_batch_rejects_missing_api_key(self) -> None:
-        with self.assertRaisesRegex(ValueError, "API key is required"):
-            run_automatic_live_batch(
-                run_name_prefix="batch",
-                combinations=[(1, 2)],
-                runs_per_combination=1,
-                dataset_path="data/mails.json",
-                keyword="boredom",
-                model_name="test-model",
-                api_key="",
-                surveillance_config={},
-                system_prompt_template="",
-                max_emails=None,
-                notes="",
-                run_live=lambda **_: {},
-                save_run=lambda _: None,
-            )
+    # Input validation (including the empty-api-key case) is now the
+    # caller's responsibility and is covered by
+    # ``tests/test_preflight.py``. The batch trusts its inputs.
 
     def test_build_run_summary_table_extracts_summary_fields(self) -> None:
         overview = build_run_summary_table([make_run("run-1", 2, 4)])

@@ -83,6 +83,41 @@ Saved runs use a grouped JSON format:
 }
 ```
 
+## LLM Proxy
+
+Live runs go through an OpenAI-compatible proxy. The proxy URL is chosen
+in this precedence order:
+
+1. The `proxy_url` argument to `ChallengeEnv(...)` (used by tests).
+2. The `EVALSLANGCHAIN_PROXY_URL` environment variable.
+3. The default `https://llms.felkru.com/`.
+
+Set the env var before launching Streamlit if you want a different
+backend without touching the code:
+
+```powershell
+$env:EVALSLANGCHAIN_PROXY_URL = "https://your-proxy.example.com/"
+uv run streamlit run src/ui/app.py
+```
+
+## Pre-flight Validation
+
+When you click Start on the Multiple Runs page, every input is run
+through a pre-flight check before any LLM call happens. If anything is
+wrong — missing API key, broken dataset, malformed phrase file,
+unknown surveillance method, etc. — the batch is not started and the
+full issue list is displayed in a table. Warnings (for example a
+prompt template missing a placeholder) are surfaced but do not block
+the run.
+
+Pre-flight is implemented in `src/ui/engine/preflight.py`:
+
+- `validate_run_inputs(...)` returns a `ValidationReport`.
+- `RunInputsInvalid` is a `ValueError` subclass that carries the full
+  report as `.report`. It is provided for direct callers that want to
+  fail fast on the same validation; the batch orchestrator itself does
+  *not* call pre-flight and trusts its inputs.
+
 ## Surveillance System
 
 In live mode, an outgoing email is scanned only when configured phrases match one

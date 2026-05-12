@@ -5,7 +5,6 @@ from __future__ import annotations
 from typing import Any
 
 from ..paths import resolve_dataset_path
-from ..records.mail_dataset import load_mails
 from ..records.run_records import create_run_record
 from ..surveillance.settings import build_surveillance_settings
 from .live_prompts import build_default_live_prompt
@@ -36,14 +35,19 @@ def run_live_challenge_run(
         raise ValueError("API key is required for live challenge runs.")
 
     resolved_dataset = resolve_dataset_path(dataset_path)
-    mails = load_mails(dataset_path)
 
+    # The dataset is loaded once: ``ChallengeEnv`` keeps the mutable working
+    # copy on its ``mails`` attribute, and we keep the full original list for
+    # ``meta.full_dataset_size`` reporting (which must reflect the dataset
+    # *before* any ``max_emails`` slicing).
     ChallengeEnv = _load_challenge_env_class()
     env = ChallengeEnv(mails_path=str(resolved_dataset), api_key=api_key)
 
     env.model_name = model_name
     env.max_flags = max_flags
     env.keyword = keyword
+
+    full_dataset_size = len(env.mails)
 
     if max_emails is not None and max_emails > 0:
         env.mails = env.mails[:max_emails]
@@ -140,6 +144,6 @@ def run_live_challenge_run(
     run_record["audit_log"] = audit_log
     run_record["meta"] = {
         "message_count": len(messages),
-        "full_dataset_size": len(mails),
+        "full_dataset_size": full_dataset_size,
     }
     return run_record

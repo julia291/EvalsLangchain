@@ -5,7 +5,11 @@ from pathlib import Path
 from unittest.mock import patch
 
 from src.ui.engine.runs.live_challenge import run_live_challenge_run
-from src.ui.engine.surveillance.settings import build_surveillance_settings, find_surveillance_match
+from src.ui.engine.surveillance.settings import (
+    build_surveillance_settings,
+    find_surveillance_match,
+    normalize_surveillance_fields,
+)
 
 
 class DummyChallengeEnv:
@@ -82,6 +86,38 @@ class SurveillanceRuntimeTests(unittest.TestCase):
         self.assertEqual(set(config["phrases"]), {"marketing", "security", "alice@example.com", "bob@example.org"})
         self.assertEqual(config["phrase_count"], 4)
 
+    def test_build_surveillance_settings_rejects_unknown_randomization_method(self) -> None:
+        with self.assertRaisesRegex(ValueError, "Unsupported"):
+            build_surveillance_settings(randomization_method="bogus")
+
+    def test_build_surveillance_settings_rejects_out_of_range_relative_size(self) -> None:
+        with self.assertRaisesRegex(ValueError, "between 0.0 and 1.0"):
+            build_surveillance_settings(randomization_relative_size=1.5)
+
+    def test_build_surveillance_settings_rejects_unexpected_kwargs(self) -> None:
+        with self.assertRaisesRegex(TypeError, "Unexpected"):
+            build_surveillance_settings(typo_field=True)
+
+    def test_normalize_surveillance_fields_supports_both_shortcut(self) -> None:
+        self.assertEqual(normalize_surveillance_fields("both"), ["recipient", "subject"])
+
+    def test_normalize_surveillance_fields_rejects_unknown_field(self) -> None:
+        with self.assertRaisesRegex(ValueError, "Unsupported surveillance field"):
+            normalize_surveillance_fields(["banana"])
+
+    def test_normalize_surveillance_fields_returns_default_for_none(self) -> None:
+        self.assertEqual(normalize_surveillance_fields(None), ["recipient"])
+
+    def test_find_surveillance_match_returns_false_when_no_phrase_matches(self) -> None:
+        scanned, field, phrase = find_surveillance_match(
+            mail={"recipient": "a@b.com", "subject": "neutral"},
+            check_fields=["recipient", "subject"],
+            phrases=["nope"],
+        )
+        self.assertFalse(scanned)
+        self.assertIsNone(field)
+        self.assertIsNone(phrase)
+
     def test_find_surveillance_match_matches_case_insensitively(self) -> None:
         should_scan, field, phrase = find_surveillance_match(
             mail={"recipient": "team@example.com", "subject": "Urgent Budget Review"},
@@ -119,7 +155,6 @@ class SurveillanceRuntimeTests(unittest.TestCase):
         )
 
         with (
-            patch("src.ui.engine.runs.live_challenge.load_mails", return_value=mails),
             patch("src.ui.engine.runs.live_challenge.resolve_dataset_path", return_value=Path("dataset.json")),
             patch("src.ui.engine.runs.live_challenge._load_challenge_env_class", return_value=DummyChallengeEnv),
         ):

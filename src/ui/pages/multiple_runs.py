@@ -12,6 +12,7 @@ if str(repo_root) not in sys.path:
     sys.path.insert(0, str(repo_root))
 
 from src.ui.engine.config import DEFAULT_DATASET
+from src.ui.engine.preflight import validate_run_inputs
 from src.ui.engine.runs.automatic_batch import build_run_summary_table, run_automatic_live_batch
 from src.ui.engine.runs.live_challenge import run_live_challenge_run
 from src.ui.engine.runs.live_prompts import build_default_live_prompt_template
@@ -138,35 +139,58 @@ def update_progress(done: int, total: int, run_name: str) -> None:
 
 start_disabled = bool(input_error) or len(combinations) == 0
 if st.button("Start automatic live runs", type="primary", disabled=start_disabled):
-    if not api_key:
-        st.error("API key is required for live runs.")
-    else:
-        progress_bar = st.progress(0)
-        status_text = st.empty()
+    # Pre-flight: validate every input once, here, before the batch
+    # starts. This is the single validation entry point — the batch
+    # orchestrator trusts whatever it is given.
+    preflight_max_emails = None if int(max_emails_value) == 0 else int(max_emails_value)
+    preflight_report = validate_run_inputs(
+        combinations=combinations,
+        dataset_path=dataset_path,
+        keyword=keyword,
+        model_name=model_name,
+        api_key=api_key,
+        max_emails=preflight_max_emails,
+        runs_per_combination=int(runs_per_combination),
+        surveillance_config=surveillance_config,
+        system_prompt_template=system_prompt_template,
+    )
 
-        batch_result = run_automatic_live_batch(
-            run_name_prefix=run_name_prefix,
-            combinations=combinations,
-            runs_per_combination=int(runs_per_combination),
-            dataset_path=dataset_path,
-            keyword=keyword,
-            model_name=model_name,
-            api_key=api_key,
-            surveillance_config=surveillance_config,
-            system_prompt_template=system_prompt_template,
-            max_emails=None if int(max_emails_value) == 0 else int(max_emails_value),
-            notes=notes,
-            run_live=run_live_challenge_run,
-            save_run=append_run,
-            progress_callback=update_progress,
-        )
+    if preflight_report.issues:
+        if preflight_report.ok:
+            st.warning("Pre-flight checks finished with warnings.")
+        else:
+            st.error("Pre-flight checks failed. Batch was not started.")
+        st.dataframe(preflight_report.as_rows(), use_container_width=True)
 
-        status_text.success("Automatic live batch finished.")
-        st.success(f"{len(batch_result.created)} run(s) saved successfully.")
+    if not preflight_report.ok:
+        st.stop()
 
-        if batch_result.failures:
-            st.error(f"{len(batch_result.failures)} run(s) failed.")
-            st.dataframe(batch_result.failure_rows, use_container_width=True)
+    progress_bar = st.progress(0)
+    status_text = st.empty()
 
-        if batch_result.created:
-            st.dataframe(build_run_summary_table(batch_result.created), use_container_width=True)
+    batch_result = run_automatic_live_batch(
+        run_name_prefix=run_name_prefix,
+        combinations=combinations,
+        runs_per_combination=int(runs_per_combination),
+        dataset_path=dataset_path,
+        keyword=keyword,
+        model_name=model_name,
+        api_key=api_key,
+        surveillance_config=surveillance_config,
+        system_prompt_template=system_prompt_template,
+        max_emails=preflight_max_emails,
+        notes=notes,
+        run_live=run_live_challenge_run,
+        save_run=append_run,
+        progress_callback=update_progress,
+    )
+
+    status_text.success("Automatic live batch finished.")
+    st.success(f"{len(batch_result.created)} run(s) saved successfully.")
+
+    if batch_result.failures:
+        st.error(f"{len(batch_result.failures)} run(s) failed.")
+        st.dataframe(batch_result.failure_rows, use_container_width=True)
+
+    if batch_result.created:
+        st.dataframe(build_run_summary_table(batch_result.created), use_container_width=True)

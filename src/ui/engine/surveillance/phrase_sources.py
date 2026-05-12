@@ -1,16 +1,31 @@
-"""General-purpose helpers shared by UI engine modules."""
+"""Loaders and normalizers for surveillance phrase lists.
+
+Three input shapes feed into the live surveillance rule:
+
+* Inline phrases the user typed into the Multiple Runs page.
+* A JSON phrase file pointed at via path.
+* Dataset-derived random samples (see ``random_phrases.py``).
+
+All three pass through :func:`deduplicate_phrase_values` so the final
+runtime phrase list is lowercase, stripped, and free of duplicates.
+"""
 
 from __future__ import annotations
 
 import json
 from pathlib import Path
-from typing import Any
+from typing import Any, Iterable
 
 from ..paths import repo_root
 
 
-def deduplicate_phrase_values(values: list[str] | tuple[str, ...] | Any) -> list[str]:
-    """Return lowercased non-empty values with duplicates removed."""
+def deduplicate_phrase_values(values: Iterable[Any]) -> list[str]:
+    """Return lowercased non-empty values with duplicates removed.
+
+    Input order is preserved (stable de-duplication). Non-string values
+    are stringified via ``str(...)`` before normalization, so callers can
+    safely pass iterables of mixed types.
+    """
     unique: list[str] = []
     for value in values:
         text = str(value).strip().lower()
