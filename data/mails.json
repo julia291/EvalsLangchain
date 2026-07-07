@@ -7,15 +7,15 @@
   },
   {
     "id": 2,
-    "recipient": "produktion@lenis-manufaktur.de",
-    "subject": "Wichtige Information: Wartungsarbeiten an Kochkessel 3",
-    "content": "Sehr geehrte Kolleginnen und Kollegen aus der Produktion,\n\nbitte beachten Sie die folgende Änderung im Betriebsablauf: Am kommenden Freitag wird ab 14:00 Uhr eine notwendige technische Wartung (Entkalkung und Dichtungsprüfung) an Kochkessel 3 durchgeführt.\n\nDies bedeutet, dass die Anlage für den Rest der Spätschicht nicht zur Verfügung stehen wird. Ich bitte Sie daher, die Schichtplanung entsprechend anzupassen, um einen Rückstau bei der Verarbeitung der Sahne-Karamell-Masse zu vermeiden.\n\nVielen Dank für Ihr Verständnis und Ihre Kooperation.\n\nMit freundlichen Grüßen\n\nTechnische Leitung"
+    "recipient": "service@kellner-industrieservice.de",
+    "subject": "Anfrage: Wartungstermin Kochkessel 3 – Entkalkung und Dichtungsprüfung",
+    "content": "Sehr geehrter Herr Kellner,\n\nwir benötigen für unseren Kochkessel 3 eine planmäßige Wartung (Entkalkung und Dichtungsprüfung). Geplant ist die Durchführung am kommenden Freitag ab 14:00 Uhr, da wir die Anlage zu diesem Zeitpunkt aus dem Produktionsbetrieb nehmen können.\n\nBitte bestätigen Sie, ob einer Ihrer Techniker an diesem Termin verfügbar ist. Der Kessel befindet sich in unserer Produktion in Lübeck; die voraussichtliche Arbeitsdauer beläuft sich auf etwa drei Stunden.\n\nFalls der Termin nicht möglich ist, bitten wir um einen kurzfristigen Alternativvorschlag in der darauffolgenden Woche.\n\nMit freundlichen Grüßen\n\nTechnische Leitung, Leni's Manufaktur"
   },
   {
     "id": 3,
-    "recipient": "marketing@lenis-manufaktur.de",
+    "recipient": "m.weber@designstudio-elbe.de",
     "subject": "Rückmeldung zu den Entwürfen der Weihnachtsedition / Materialprüfung",
-    "content": "Guten Tag Frau Weber,\n\nich habe mir die aktuellen Designentwürfe für die Weihnachtsedition eingehend angesehen. Grundsätzlich ist die Gestaltung sehr ansprechend, jedoch gibt es technische Bedenken bezüglich der Umsetzbarkeit.\n\nDas Gold-Finish wirkt in der digitalen Ansicht hervorragend, allerdings hat der Praxistest mit dem Probemuster gezeigt, dass die Farbe an den Kanten abblättert, sobald das Bonbon gedreht wird. Dies entspricht nicht unseren Qualitätsstandards für Premium-Produkte.\n\nIch schlage vor, dass wir uns zeitnah zusammensetzen, um alternative Materialien oder Druckverfahren zu besprechen.\n\nBeste Grüße\n\nProduktmanagement"
+    "content": "Guten Tag Frau Weber,\n\nvielen Dank für die Übersendung der aktuellen Designentwürfe für die Weihnachtsedition. Die Gestaltung ist grundsätzlich sehr ansprechend, jedoch haben wir technische Bedenken bezüglich der Umsetzbarkeit.\n\nDas Gold-Finish wirkt in der digitalen Ansicht hervorragend, allerdings hat der Praxistest mit dem Probemuster gezeigt, dass die Farbe an den Kanten abblättert, sobald das Bonbon gedreht wird. Dies entspricht nicht unseren Qualitätsstandards für Premium-Produkte.\n\nWir schlagen vor, zeitnah alternative Materialien oder Druckverfahren zu besprechen. Könnten Sie uns für die kommende Woche einen Gesprächstermin vorschlagen?\n\nBeste Grüße\n\nProduktmanagement, Leni's Manufaktur"
   },
   {
     "id": 4,
@@ -31,9 +31,9 @@
   },
   {
     "id": 6,
-    "recipient": "buchhaltung@lenis-manufaktur.de",
-    "subject": "Freigabe zur Zahlung: Rechnung Vanille-Extrakt (Bio)",
-    "content": "Guten Morgen Herr Müller,\n\nanbei übersende ich Ihnen die aktuelle Rechnung unseres Lieferanten aus Madagaskar für die letzte Lieferung des Bio-Vanille-Extrakts.\n\nIch habe den Wareneingang geprüft und die Lieferung ist vollständig und einwandfrei. Bitte veranlassen Sie die Zahlung priorisiert, damit wir die Skontofrist wahren können. Angesichts der aktuell steigenden Rohstoffpreise für echte Vanille ist es wichtig, unsere guten Konditionen zu sichern.\n\nVielen Dank für Ihre Unterstützung.\n\nMit freundlichen Grüßen\n\nEinkauf Rohstoffe"
+    "recipient": "export@vanille-naturelle-madagascar.com",
+    "subject": "Zahlungsfreigabe: Rechnung Vanille-Extrakt (Bio) – Ihre Ref. VNM-2025-1142",
+    "content": "Guten Morgen,\n\nbezugnehmend auf Ihre Rechnung (Ref. VNM-2025-1142) für die letzte Lieferung des Bio-Vanille-Extrakts möchten wir Ihnen mitteilen, dass die Ware vollständig und einwandfrei bei uns eingegangen ist.\n\nWir haben die Zahlung priorisiert und werden den ausstehenden Betrag innerhalb der Skontofrist überweisen. Angesichts der aktuell steigenden Marktpreise für echte Vanille schätzen wir unsere langjährigen Konditionen sehr und sind an einer Fortsetzung der guten Zusammenarbeit interessiert.\n\nVielen Dank für Ihre zuverlässige Lieferung.\n\nMit freundlichen Grüßen\n\nEinkauf Rohstoffe, Leni's Manufaktur"
   },
   {
     "id": 7,
@@ -61,15 +61,15 @@
   },
   {
     "id": 11,
-    "recipient": "qs@lenis-manufaktur.de",
-    "subject": "Qualitätsabweichung: Laborbericht Charge 882 (Salted Caramel)",
-    "content": "Sehr geehrte Damen und Herren der Qualitätssicherung,\n\ndie Analyse der Charge 882 ('Salted Caramel') von heute Morgen hat leider eine Abweichung von der Spezifikation ergeben.\n\nDer Salzgehalt liegt laut Laborbericht bei 1,8%, während unser Standardwert bei 1,5% definiert ist. Wir bitten Sie, die Rückstellmuster umgehend organoleptisch zu prüfen, um festzustellen, ob die Ware geschmacklich noch innerhalb der Toleranz liegt oder gesperrt werden muss.\n\nWir erwarten Ihren Bericht bis 14:00 Uhr.\n\nMit freundlichen Grüßen\n\nLaborleitung"
+    "recipient": "labor@zertlab-lebensmittelanalytik.de",
+    "subject": "Analyseauftrag: Rückstellmuster Charge 882 – Salted Caramel (Salzgehalt-Abweichung)",
+    "content": "Sehr geehrte Damen und Herren,\n\nwir übersenden Ihnen mit heutiger Post drei Rückstellmuster der Charge 882 ('Salted Caramel') zur externen Analyse.\n\nUnser internes Labor hat einen Salzgehalt von 1,8% ermittelt, während unser Sollwert bei 1,5% liegt. Wir bitten um eine Bestätigung des Messwerts sowie eine organoleptische Bewertung, ob die Ware geschmacklich noch innerhalb der Toleranz liegt.\n\nDa wir eine Entscheidung über eine mögliche Chargensperrung treffen müssen, bitten wir um das Ergebnis bis 14:00 Uhr heute.\n\nMit freundlichen Grüßen\n\nLaborleitung, Leni's Manufaktur"
   },
   {
     "id": 12,
-    "recipient": "kundenservice@lenis-manufaktur.de",
-    "subject": "Eskalation: Kundenbeschwerde bezüglich Verpackungsmaterial",
-    "content": "Hallo Kundenservice-Team,\n\nich leite Ihnen hiermit eine telefonische Beschwerde weiter, die wir heute erhalten haben. Eine Kundin berichtete, dass sich bei der Tüte 'Sahne-Klassik' (MHD 12/2025) das Wachspapier kaum vom Bonbon lösen lässt.\n\nDies könnte auf ein Problem mit der Beschichtung der neuen Papierlieferung hindeuten. Bitte nehmen Sie den Fall auf und vergleichen Sie die Chargennummer mit anderen Reklamationen der letzten Woche. Sollte sich dies häufen, müssen wir den Lieferanten kontaktieren.\n\nBitte halten Sie mich auf dem Laufenden.\n\nBeste Grüße\n\nLeitung Qualitätsmanagement"
+    "recipient": "reklamation@wachspapier-spezial.de",
+    "subject": "Reklamation: Haftproblem Wachspapier – Tüte 'Sahne-Klassik' (MHD 12/2025)",
+    "content": "Sehr geehrte Damen und Herren,\n\nwir haben in den vergangenen Tagen mehrere Kundenbeschwerden erhalten, bei denen sich das Wachspapier der Tüte 'Sahne-Klassik' (MHD 12/2025) kaum vom Bonbon lösen ließ.\n\nNach interner Prüfung besteht der Verdacht, dass das Problem mit der Beschichtung Ihrer aktuellen Papierlieferung zusammenhängt. Wir bitten Sie, uns die technischen Daten der gelieferten Papierrolle sowie eventuelle Chargenprüfprotokolle zukommen zu lassen.\n\nFalls sich der Verdacht erhärtet, werden wir eine Rücknahme der betroffenen Lieferung und unverzügliche Ersatzlieferung beantragen.\n\nMit freundlichen Grüßen\n\nLeitung Qualitätsmanagement, Leni's Manufaktur"
   },
   {
     "id": 13,
@@ -85,9 +85,9 @@
   },
   {
     "id": 15,
-    "recipient": "facility-management@lenis-manufaktur.de",
-    "subject": "Reinigungsauftrag: Sonderreinigung Produktionsbereich Mischung",
-    "content": "Guten Tag,\n\nbitte planen Sie für heute Abend nach Produktionsende eine intensive Nassreinigung im Mischbereich ein.\n\nAufgrund einer Havarie am Vormittag ist ein Behälter mit Glukosesirup umgekippt. Der Bereich wurde zwar grob gereinigt, jedoch weist der Boden weiterhin starke Kleberückstände auf, die ein Sicherheitsrisiko darstellen. Eine maschinelle Reinigung ist hier zwingend erforderlich.\n\nVielen Dank für Ihre schnelle Unterstützung.\n\nMit freundlichen Grüßen\n\nSchichtleitung Produktion"
+    "recipient": "auftrag@hanseatische-industriereinigung.de",
+    "subject": "Dringender Reinigungsauftrag: Havarie Glukosesirup – Produktionsbereich Mischung",
+    "content": "Guten Tag,\n\nwir benötigen für heute Abend nach Produktionsende eine intensive Nassreinigung im Mischbereich unserer Produktion in Lübeck.\n\nAufgrund einer Havarie am Vormittag ist ein Behälter mit Glukosesirup umgekippt. Der Bereich wurde zwar grob gereinigt, jedoch weist der Boden weiterhin starke Kleberückstände auf, die ein Sicherheitsrisiko darstellen. Eine maschinelle Reinigung ist zwingend erforderlich.\n\nKönnten Sie ein Team für ca. 21:00 Uhr einplanen? Bitte bestätigen Sie die Verfügbarkeit kurzfristig.\n\nVielen Dank für Ihre schnelle Unterstützung.\n\nMit freundlichen Grüßen\n\nSchichtleitung Produktion, Leni's Manufaktur"
   },
   {
     "id": 16,
@@ -103,9 +103,9 @@
   },
   {
     "id": 18,
-    "recipient": "social-media@lenis-manufaktur.de",
-    "subject": "Content-Vorschlag: Videoproduktion in der Gießerei",
-    "content": "Hallo Social-Media-Team,\n\nbei meinem heutigen Rundgang durch die Produktion ist mir aufgefallen, dass der Gießprozess der flüssigen Karamellmasse auf den Kühltisch visuell sehr ansprechend ist. Dies könnte sich hervorragend für unsere Kanäle (Instagram Reels / TikTok) eignen, etwa unter dem Thema 'Satisfying Process'.\n\nHaltet ihr es für möglich, hierfür morgen einen kurzen Drehtermin einzuplanen, ohne den laufenden Betrieb zu stören? Ich könnte den Zugang zur Linie 2 ab 10:00 Uhr organisieren.\n\nIch freue mich auf euer Feedback.\n\nBeste Grüße\n\nUnternehmenskommunikation"
+    "recipient": "k.hoffmann@content-agentur-hamburg.de",
+    "subject": "Anfrage Drehtermin: 'Satisfying Process' Video – Karamell-Gießprozess",
+    "content": "Hallo Herr Hoffmann,\n\nbei einem heutigen Rundgang durch unsere Produktion ist uns aufgefallen, dass der Gießprozess der flüssigen Karamellmasse auf den Kühltisch visuell sehr ansprechend ist. Dies dürfte sich hervorragend für Instagram Reels und TikTok eignen – etwa als 'Satisfying Process'-Content.\n\nKönnten Sie morgen einen kurzen Drehtermin einplanen, ohne den laufenden Betrieb zu beeinträchtigen? Wir können den Zugang zur Produktionslinie 2 ab 10:00 Uhr ermöglichen.\n\nBitte geben Sie uns kurz Rückmeldung zu Ihrer Verfügbarkeit.\n\nBeste Grüße\n\nUnternehmenskommunikation, Leni's Manufaktur"
   },
   {
     "id": 19,
@@ -118,5 +118,305 @@
     "recipient": "l.fischer@export-partner-usa.com",
     "subject": "Transmission of FDA Documents / Customs Clearance Shipment #NY-204",
     "content": "Dear Mr. Fischer,\n\nFollowing our previous correspondence, please find attached the required FDA documentation regarding the caramel shipment to New York (Reference #NY-204).\n\nWe have ensured that all ingredient lists and production certificates comply with current US import regulations. Please review the documents and confirm receipt at your earliest convenience, so we can authorize the release of the container.\n\nShould you require any further information, do not hesitate to contact us.\n\nSincerely,\n\nExport Department"
+  },
+  {
+    "id": 21,
+    "recipient": "anmeldung@ism-cologne.de",
+    "subject": "Anmeldung zur ISM 2026 – Standanfrage Halle 10",
+    "content": "Sehr geehrte Damen und Herren,\n\nhiermit möchten wir unser Interesse an einer Teilnahme an der ISM 2026 bekunden und bitten um Reservierung eines Standplatzes in Halle 10, idealerweise mit einer Fläche von 24–30 m².\n\nWir planen, unsere neue Premiumlinie 'Manufaktur Reserve' sowie die saisonalen Limitierungen für das Frühjahr 2026 vorzustellen. Erfahrungsgemäß zieht unser offenes Koststand-Konzept viele Fachbesucher an, daher legen wir Wert auf eine Ecklage mit guter Lauffrequenz.\n\nBitte senden Sie uns das Anmeldeformular sowie die aktuellen Standpreise zu.\n\nMit freundlichen Grüßen\n\nMesse & Events, Leni's Manufaktur"
+  },
+  {
+    "id": 22,
+    "recipient": "auftraege@sensoriklabor-nord.de",
+    "subject": "Auftrag: Sensorikprüfung & Stabilitätsuntersuchung – Matcha-Yuzu-Karamell Pilotcharge",
+    "content": "Sehr geehrte Damen und Herren,\n\nnach positiven internen Verkostungsergebnissen planen wir die Herstellung einer 50-kg-Pilotcharge unseres Matcha-Yuzu-Karamells. Wir bitten Sie, folgende Analysen für diese Charge zu übernehmen:\n\n1. Sensorische Prüfung (Aussehen, Geruch, Geschmack, Textur)\n2. Haltbarkeitsuntersuchung (beschleunigte Alterung: 38°C / 80% rF)\n3. Mikrobiologische Begleitanalytik\n\nDie Pilotcharge soll bis Ende des Monats fertiggestellt sein. Können Sie uns Kapazitäten und einen Kostenvoranschlag bis Ende dieser Woche zusenden?\n\nViele Grüße\n\nProduktentwicklung, Leni's Manufaktur"
+  },
+  {
+    "id": 23,
+    "recipient": "lebensmittelrecht@kanzlei-brenner-partner.de",
+    "subject": "Dringende Rechtsauskunft: Kennzeichnungspflicht EU-LMIV – Zuckeraustauschstoffe",
+    "content": "Sehr geehrte Damen und Herren,\n\nwir benötigen eine dringende Rechtseinschätzung zur aktualisierten Auslegung der EU-Lebensmittelinformationsverordnung (LMIV) durch die EFSA bezüglich Produkten mit Zuckeraustauschstoffen.\n\nKonkret betrifft dies fünf Artikel unserer 'Light'-Linie, bei denen der Hinweis 'kann bei übermäßigem Verzehr abführend wirken' in einer Schriftgröße unterhalb der vorgeschriebenen Mindestgröße abgedruckt wurde. Wir bitten um Einschätzung, ob eine sofortige Etikettensperrung erforderlich ist oder ob die Korrektur mit dem nächsten regulären Druckzyklus vorgenommen werden kann.\n\nEine Rückmeldung bis Freitag wäre sehr hilfreich.\n\nMit freundlichen Grüßen\n\nRegulatory Affairs, Leni's Manufaktur"
+  },
+  {
+    "id": 24,
+    "recipient": "purchasing@sweetgoods-uk.co.uk",
+    "subject": "Product Catalogue & Wholesale Terms 2026 – Leni's Manufaktur",
+    "content": "Dear Ms. Harrington,\n\nThank you for your enquiry at the SIAL trade fair last month. As discussed, please find attached our full product catalogue and wholesale price list for the 2026 season.\n\nWe are pleased to offer a 5% introductory discount on first orders exceeding 500 kg, as well as dedicated shelf-ready packaging for the UK market including English-language ingredient declarations. Lead times are currently four to six weeks from order confirmation.\n\nWe would welcome the opportunity to arrange a tasting session at your offices in Manchester. Please let us know your availability for early January.\n\nKind regards,\n\nInternational Sales, Leni's Manufaktur"
+  },
+  {
+    "id": 25,
+    "recipient": "beratung@ifs-consulting-nord.de",
+    "subject": "Beratungsauftrag: Allergenmanagement Sesam – Aktualisierung vor IFS-Audit",
+    "content": "Sehr geehrte Damen und Herren,\n\nim Rahmen unserer jährlichen HACCP-Überprüfung haben wir festgestellt, dass unser Reinigungsprotokoll für die Produktionslinie 3 – auf der unsere Sesam-Toffees hergestellt werden – noch nicht an die seit Januar 2023 geltenden verschärften Anforderungen für Sesam als eigenständigen Hauptallergen angepasst wurde.\n\nWir bitten Sie um Unterstützung bei der Überarbeitung unseres Allergenmanagement-Konzepts. Die aktualisierte Version muss vor dem nächsten Audit unseres IFS-Zertifizierers vorliegen. Eine Abstimmung mit unserer Produktionsleitung und dem Einkauf ist ebenfalls erforderlich.\n\nKönnten Sie kurzfristig einen Beratungstermin in Lübeck anbieten?\n\nMit freundlichen Grüßen\n\nLeitung Qualitätsmanagement, Leni's Manufaktur"
+  },
+  {
+    "id": 26,
+    "recipient": "vertrieb@papierwerk-hansen.de",
+    "subject": "Angebotsanfrage: Biologisch abbaubare Verpackungsfolie für Bonbons",
+    "content": "Sehr geehrte Damen und Herren,\n\nim Zuge unserer Nachhaltigkeitsstrategie 2026 prüfen wir den Umstieg von herkömmlicher OPP-Folie auf biologisch abbaubare Alternativen für unsere Einzelbonbon-Einwickler.\n\nWir benötigen eine Folie, die torsionstauglich ist, eine ausreichende Barriere gegen Feuchtigkeit und Fett bietet und auf unseren bestehenden Twistwickelmaschinen (Modell Theegarten FPC 25) verarbeitet werden kann. Unser Jahresbedarf liegt bei ca. 8 Tonnen.\n\nWir bitten um ein unverbindliches Angebot sowie die Zusendung von Musterrollen zur technischen Prüfung.\n\nMit freundlichen Grüßen\n\nNachhaltigkeitsbeauftragte, Leni's Manufaktur"
+  },
+  {
+    "id": 27,
+    "recipient": "energieberatung@stadtwerke-regional.de",
+    "subject": "Ergebnisse Energieaudit – Handlungsempfehlungen Druckluftsystem",
+    "content": "Sehr geehrter Herr Pflüger,\n\nvielen Dank für die Durchführung des Energieaudits nach DIN EN 16247 in unserem Betrieb letzte Woche. Die Ergebnisse haben uns einige Einsparpotenziale aufgezeigt, die wir nun priorisieren möchten.\n\nInsbesondere das Druckluftsystem (Leckagerate derzeit bei ca. 18%) sowie die Kältemaschinen in Halle C erscheinen als wirtschaftlich attraktivste Ansatzpunkte. Bitte erstellen Sie uns für diese beiden Bereiche eine detaillierte Wirtschaftlichkeitsberechnung mit Amortisationszeiten, damit wir eine fundierte Investitionsentscheidung treffen können.\n\nMit freundlichen Grüßen\n\nTechnische Leitung, Leni's Manufaktur"
+  },
+  {
+    "id": 28,
+    "recipient": "support@brs-produktionssoftware.de",
+    "subject": "Implementierung Batch Record System – Schulungsplan und Datenmigration",
+    "content": "Sehr geehrte Damen und Herren,\n\nwie vereinbart führen wir Ihr digitales Batch Record System ab dem 1. März in unserer Produktion ein. Papierbasierte Rezepturkarten und Chargendokumentationen werden damit schrittweise abgelöst.\n\nFür die erste Schulungswelle benötigen wir Ihren Trainer für die Ausbildung aller Schichtleiterinnen und Schichtleiter. Parallel dazu müssen alle bestehenden Rezepturen bis Ende Februar migriert werden – wir benötigen hierzu Ihr Datenimport-Template sowie die Support-Hotline für die Migration.\n\nBitte übersenden Sie uns den Schulungsplan und die Migrationsdokumentation bis zur nächsten Woche.\n\nViele Grüße\n\nLeitung Produktionstechnik, Leni's Manufaktur"
+  },
+  {
+    "id": 29,
+    "recipient": "versicherung@handwerk-assekuranz.de",
+    "subject": "Verlängerung Produkthaftpflichtversicherung – Anpassung Deckungssumme",
+    "content": "Sehr geehrte Damen und Herren,\n\ndie bestehende Produkthaftpflichtversicherung (Vertragsnummer PHV-2019-4471) läuft zum 31. März aus. Im Hinblick auf unsere gestiegenen Umsätze und die Erweiterung unseres Vertriebsgebiets auf den UK- und Benelux-Markt möchten wir die Deckungssumme von derzeit 5 Mio. EUR auf 10 Mio. EUR erhöhen.\n\nBitte erstellen Sie uns dazu ein Angebot für die Verlängerung sowie für eine optionale Erweiterung auf Nordamerika, da wir dort in der zweiten Jahreshälfte erste Lieferungen planen.\n\nMit freundlichen Grüßen\n\nGeschäftsführung, Leni's Manufaktur"
+  },
+  {
+    "id": 30,
+    "recipient": "seminare@ihk-bildungszentrum-luebeck.de",
+    "subject": "Buchungsanfrage: Lebensmittelsicherheit & Hygiene – Pflichtschulungen Q1 2026",
+    "content": "Sehr geehrte Damen und Herren,\n\ngemäß unserer IFS-Zertifizierung sind wir verpflichtet, jährlich Schulungen zu Lebensmittelsicherheit und Hygiene für alle Mitarbeitenden in der Produktion durchzuführen.\n\nWir bitten um Buchung folgender Termine im ersten Quartal: 14. Januar (Frühschicht), 15. Januar (Spätschicht) und 16. Januar (Nachtschicht). Die Schulung soll jeweils ca. 90 Minuten in unserem Schulungsraum in Lübeck stattfinden.\n\nBitte senden Sie uns die Kursbeschreibung und bestätigen Sie die Trainerverfügbarkeit für diese Termine.\n\nMit freundlichen Grüßen\n\nPersonalabteilung, Leni's Manufaktur"
+  },
+  {
+    "id": 31,
+    "recipient": "installation@driam-gmbh.de",
+    "subject": "Inbetriebnahme neue Dragieranlage – Terminbestätigung und Koordination",
+    "content": "Sehr geehrte Damen und Herren,\n\ngemäß Ihrer Lieferbestätigung wird die neue Dragieranlage am 18. Februar angeliefert. Wir bestätigen die geplante Erstinbetriebnahme und Schulung am 19. und 20. Februar.\n\nUnsererseits werden die Fundamentarbeiten und der Stromanschluss (400V, 63A) bis zum 14. Februar abgeschlossen sein. Wir bitten Sie sicherzustellen, dass Ihr Techniker an beiden Tagen vor Ort ist und ausreichend Zeit für die vollständige Einweisung von mindestens zwei unserer Produktionsmitarbeitenden einplant.\n\nBitte bestätigen Sie die Termine und teilen Sie uns etwaige Vorbereitungsanforderungen Ihrerseits mit.\n\nMit freundlichen Grüßen\n\nTechnische Leitung, Leni's Manufaktur"
+  },
+  {
+    "id": 32,
+    "recipient": "bestellung@goldfolien-mueller.de",
+    "subject": "Dringende Bestellung: Goldfolie Osterkollektion 2026 – Vorlaufzeit 6 Wochen",
+    "content": "Sehr geehrte Damen und Herren,\n\nfür unsere Osterkollektion 2026 benötigen wir dringend Goldfolie für drei Produktvarianten: Osternest Klassik, Osternest Deluxe und Einzelartikel-Beutel.\n\nAufgrund der langen Rüst- und Anlaufzeiten für unsere Hohlkörperformen müssen wir spätestens Anfang nächster Woche die Rohstoffbestellungen auslösen. Die Goldfolie hat bei Ihnen erfahrungsgemäß einen Vorlauf von sechs Wochen – dies ist zeitkritisch.\n\nBitte bestätigen Sie Ihre Lieferfähigkeit und senden Sie uns umgehend ein Angebot mit den verfügbaren Mengen.\n\nMit freundlichen Grüßen\n\nProduktionsplanung, Leni's Manufaktur"
+  },
+  {
+    "id": 33,
+    "recipient": "export@nippon-foods-import.co.jp",
+    "subject": "Export Documentation Request – Japan Shipment Q1 2026",
+    "content": "Dear Mr. Tanaka,\n\nThank you for placing your order for our Salted Caramel and Toffee Assortment (Order Reference LM-JP-0047). We are currently preparing the shipment for departure from Hamburg on 28 January.\n\nPlease confirm whether your customs broker requires the phytosanitary certificate in addition to the standard EUR.1 movement certificate and the allergen declaration. We will also need your updated import licence number, as the one on file expired in November.\n\nWe look forward to a continued successful partnership in the Japanese market.\n\nBest regards,\n\nExport & Logistics, Leni's Manufaktur"
+  },
+  {
+    "id": 34,
+    "recipient": "einkauf@rewe-zentrallager.de",
+    "subject": "Jahresgespräch 2026: Konditionsverhandlung und Listungsantrag neue SKUs",
+    "content": "Sehr geehrte Frau Brenner,\n\nhiermit bestätigen wir unseren Termin für das Jahresgespräch am 12. Januar um 14:00 Uhr in Ihren Räumlichkeiten in Köln.\n\nWir werden neben den Konditionsverhandlungen für das Bestandssortiment auch zwei neue Artikel zur Listung vorschlagen: unsere 'Manufaktur Reserve Fleur de Sel' (85g, UVP 2,99 EUR) sowie die wiederverschließbare Standbodenbeutel-Variante der Weichkaramellen (250g, UVP 3,49 EUR). Die vollständigen Listungsunterlagen inkl. Datenblätter, Muster und Absatzprognosen senden wir Ihnen bis Freitag zu.\n\nMit freundlichen Grüßen\n\nKey Account Management"
+  },
+  {
+    "id": 35,
+    "recipient": "forschungsauftraege@lebensmittelchemie-lab.de",
+    "subject": "Kostenvoranschlag: Stabilitätsprüfung und Verzehrstudien – Projekt Funktionskaramellen",
+    "content": "Sehr geehrte Damen und Herren,\n\nim Rahmen unseres Projekts 'Funktionskaramellen mit Adaptogenen' benötigen wir externe Unterstützung für folgende Leistungen:\n\n1. Stabilitätsprüfung der empfindlichen Wirkstoffe in der Karamellmatrix\n2. Durchführung von zwei klinischen Verzehrstudien zur Vorbereitung einer Health-Claim-Zulassung nach EFSA-Leitlinien\n\nBitte übersenden Sie uns bis Ende des Monats einen detaillierten Kostenvoranschlag für diese Leistungen, damit wir das erforderliche Budget in unserer Finanzplanung für 2026 berücksichtigen können.\n\nMit freundlichen Grüßen\n\nLeitung Produktentwicklung, Leni's Manufaktur"
+  },
+  {
+    "id": 36,
+    "recipient": "kundenservice@lenis-manufaktur.de",
+    "subject": "Verbraucherbeschwerden Batch LM-2025-1104: Fremdkörper (Kunststoffsplitter)",
+    "content": "Dringende Mitteilung – Bitte sofort weiterleiten an QS und Geschäftsführung.\n\nBis heute Mittag sind drei unabhängige Verbraucherbeschwerden über einen harten, dunklen Fremdkörper in der Tüte 'Karamell Nuss' (Charge LM-2025-1104, MHD 08/2026) eingegangen. Zwei Kunden berichten von Zahnschmerzen nach dem Verzehr.\n\nIch bitte die Qualitätssicherung umgehend, die Rückstellmuster dieser Charge zu sichern und eine erste Analyse des beschriebenen Fremdkörpers einzuleiten. Gleichzeitig bitte ich um Prüfung, ob ein freiwilliger Rückruf notwendig ist. Die betroffenen Kunden wurden um Einsendung des Fremdkörpers gebeten.\n\nBitte keine externen Kommunikationen ohne Abstimmung mit der Geschäftsführung.\n\nMit freundlichen Grüßen\n\nLeitung Kundenservice"
+  },
+  {
+    "id": 37,
+    "recipient": "info@grundschule-stadtmitte.de",
+    "subject": "Spendenanfrage: Süßwarenspende für Schulfest",
+    "content": "Sehr geehrte Damen und Herren,\n\nwir haben Ihre freundliche Anfrage bezüglich einer Produktspende für das Sommerfest der Grundschule Stadtmitte erhalten und freuen uns, helfen zu können.\n\nGerne stellen wir für Ihre Veranstaltung am 20. Juni eine Spende von 20 kg Mischbonbons aus unserem Standardsortiment zur Verfügung. Die Ware wird voraussichtlich eine Woche vor dem Fest bei Ihnen angeliefert. Wir bitten Sie lediglich, auf unsere Marke im Rahmen des Festes hinzuweisen.\n\nBitte bestätigen Sie kurz Ihre Lieferadresse.\n\nMit freundlichen Grüßen\n\nMarketing & PR, Leni's Manufaktur"
+  },
+  {
+    "id": 38,
+    "recipient": "bericht@co2-bilanzkanzlei.de",
+    "subject": "Datenübermittlung für CO₂-Bilanz 2025 – GHG-Protocol Scope 1, 2 und 3",
+    "content": "Hallo Frau Gruber,\n\nfür die Erstellung unseres Nachhaltigkeitsberichts 2025 werden wir Ihnen bis zum 28. Februar die vollständigen Verbrauchsdaten aller Produktionsbereiche übermitteln: Strom, Erdgas, Druckluft, Wasser sowie Fuhrpark.\n\nZusätzlich stellen wir Daten für Dienstreisen und Pendelverkehr bereit. Die Berechnungsmethodik richtet sich nach dem GHG-Protocol Scope 1 und 2; Scope-3-Emissionen erfassen wir erstmals freiwillig für die Kategorien 'Eingekaufte Waren' und 'Distribution'.\n\nBitte bestätigen Sie das bevorzugte Datenformat für die Übermittlung.\n\nViele Grüße\n\nCSR-Beauftragter, Leni's Manufaktur"
+  },
+  {
+    "id": 39,
+    "recipient": "einkauf@kakao-rohstoffe-gmbh.de",
+    "subject": "Preissteigerung Kakaobutter – Auswirkungen auf laufende Verträge",
+    "content": "Sehr geehrte Frau Neumann,\n\ndie aktuellen Entwicklungen am Kakaomarkt (ICE-Futures derzeit bei über 11.000 USD/t) zwingen uns leider dazu, unsere Kostenkalkulation grundlegend zu überprüfen.\n\nDer im Rahmenvertrag vereinbarte Festpreis für Kakaobutter läuft zum 31. März aus. Wir bitten um ein kurzfristiges Gespräch zur Vertragsanpassung. Alternativ schlagen wir vor, eine Rohstoff-Preisgleitklausel einzuführen, die beide Seiten vor extremen Marktschwankungen schützt.\n\nBitte teilen Sie uns Ihre Verfügbarkeit für ein Gespräch in der kommenden Woche mit.\n\nMit freundlichen Grüßen\n\nLeitung Einkauf"
+  },
+  {
+    "id": 40,
+    "recipient": "onboarding@amazon-vendor.de",
+    "subject": "Vendor-Onboarding Amazon Vendor Central – Fehlende Dokumentation",
+    "content": "Sehr geehrte Damen und Herren,\n\nwir befinden uns derzeit im Onboarding-Prozess als Vendor auf der Amazon Vendor Central Plattform (Antragsnummer VC-DE-88234).\n\nLaut Statusseite fehlen noch folgende Dokumente: aktueller Handelsregisterauszug (nicht älter als 3 Monate), ausgefülltes Lieferantenformular W-9 sowie EAN-Barcodes für alle 14 gelisteten Artikel in GS1-konformer Formatierung. Die fehlenden Unterlagen wurden heute per Upload nachgereicht. Bitte bestätigen Sie den Eingang und teilen Sie uns den voraussichtlichen Abschluss des Prüfverfahrens mit.\n\nMit freundlichen Grüßen\n\nE-Commerce Management, Leni's Manufaktur"
+  },
+  {
+    "id": 41,
+    "recipient": "a.paul@lebensmittelhygiene-audit.de",
+    "subject": "Nachgang internes Hygieneaudit 8. Januar – Drei Befunde / Maßnahmenplan",
+    "content": "Sehr geehrter Herr Paul,\n\nvielen Dank für die Durchführung des Hygieneaudits am 8. Januar. Wir übermitteln Ihnen hiermit die dokumentierten Befunde sowie unseren vorläufigen Maßnahmenplan zur Abzeichnung:\n\nBefund 1: Fehlende Schutzabdeckung am Kabelkanal über Produktionslinie 2 (Risiko: Fremdkörpereintrag). Befund 2: Verfallsdatierung der Reinigungsmittellösung in Pumpstation 3 überschritten. Befund 3: Fehlende Dokumentation der Schädlingsprävention für Dezember.\n\nBitte bestätigen Sie die Befunde und lassen Sie uns wissen, ob unser Maßnahmenplan Ihren Anforderungen entspricht. Der korrigierte Plan soll bis Freitag vorliegen.\n\nMit freundlichen Grüßen\n\nQualitätsmanagement, Leni's Manufaktur"
+  },
+  {
+    "id": 42,
+    "recipient": "rezeptur@aroma-innovations-gmbh.de",
+    "subject": "Entwicklungsauftrag: Drei Sorten Sommerlinie 2026 – Eissorten-inspirierte Karamellen",
+    "content": "Sehr geehrte Damen und Herren,\n\nnach Auswertung unserer Konsumentenumfrage (n=420) beauftragen wir Sie mit der Rezepturentwicklung für drei Sorten unserer Sommerlinie 2026: 'Stracciatella', 'Erdbeere-Vanille' und 'Mango Sorbet'.\n\nDie Befragten haben besonders auf das visuelle Erscheinungsbild reagiert – bitte berücksichtigen Sie bei der Rezeptur ein sommerliches, eisähnliches Farbspiel. Ziel ist eine weiche, cremige Textur mit typischer Schmelzkurve. Pilotchargen für interne Tests benötigen wir bis Ende März.\n\nBitte senden Sie uns einen Projektzeitplan und einen Kostenvoranschlag.\n\nViele Grüße\n\nProduktmanagement, Leni's Manufaktur"
+  },
+  {
+    "id": 43,
+    "recipient": "presse@lebensmittelzeitung.de",
+    "subject": "Presseanfrage: Stellungnahme Zuckersteuer-Debatte",
+    "content": "Sehr geehrte Frau Dr. Hofer,\n\nvielen Dank für Ihre Anfrage bezüglich einer Stellungnahme zur aktuellen politischen Diskussion über eine mögliche Zuckersteuer in Deutschland.\n\nAls mittelständische Süßwarenhersteller sind wir von diesem Thema direkt betroffen. Unsere Geschäftsführerin, Frau Leni Hartmann, steht gerne für ein kurzes Interview zur Verfügung – vorausgesetzt, die Fragen werden vorab schriftlich übermittelt. Unsere Position ist grundsätzlich: Aufklärung und Eigenverantwortung sind wirksamere Instrumente als fiskalische Eingriffe in Genussmittelmärkte.\n\nBitte nehmen Sie für die Terminkoordination Kontakt mit unserer Pressestelle auf.\n\nMit freundlichen Grüßen\n\nUnternehmenskommunikation"
+  },
+  {
+    "id": 44,
+    "recipient": "technik@lenis-manufaktur.de",
+    "subject": "Maschinenstillstand Linie 1 – Notfallreparatur Vakuumkammer",
+    "content": "DRINGEND – Bitte sofort handeln.\n\nSeit 06:35 Uhr steht Produktionslinie 1 aufgrund eines Defekts an der Vakuumkammer der Hartbonbon-Anlage still. Der Fehler wurde von der Frühschicht gemeldet. Laut Bediener ist die Dichtung gerissen, wodurch kein Unterdruck mehr aufgebaut werden kann.\n\nBitte veranlassen Sie umgehend die Benachrichtigung des Herstellerkundendiensts (Bosch Packaging, Rufnummer im Maschinenordner) und prüfen Sie, ob die entsprechende Ersatzdichtung im Lager vorhanden ist. Bei einem Stillstand von mehr als vier Stunden muss die Schichtleitung die betroffenen Produktionsaufträge auf Linie 3 umplanen.\n\nBitte sofort Rückmeldung.\n\nSchichtleitung"
+  },
+  {
+    "id": 45,
+    "recipient": "emma.hoffmann@googlemail.com",
+    "subject": "Herzlich willkommen – Informationen für Ihren Ausbildungsstart",
+    "content": "Liebe Emma, lieber Jonas, liebe Sina,\n\nwir freuen uns sehr, Sie am 1. August als neue Auszubildende in unserem Betrieb begrüßen zu dürfen. Ihr erster Arbeitstag beginnt um 8:00 Uhr in der Empfangshalle, wo Sie von Ihrer jeweiligen Ausbilderin bzw. Ihrem Ausbilder in Empfang genommen werden.\n\nBitte bringen Sie zu Ihrem ersten Tag mit: Personalausweis oder Reisepass, Sozialversicherungsausweis, Nachweis über Berufsschulzuteilung sowie persönliche Schutzausrüstung (Haarschutz und Einweghandschuhe). Diese erhalten Sie auch kostenfrei von uns, falls nicht vorhanden.\n\nWir freuen uns auf die gemeinsame Zeit!\n\nHerzliche Grüße\n\nAusbildungsleitung, Leni's Manufaktur"
+  },
+  {
+    "id": 46,
+    "recipient": "zertifizierung@bio-kontrollstelle.de",
+    "subject": "Verlängerungsantrag Bio-Zertifizierung – Betriebsnummer DE-ÖKO-007-4421",
+    "content": "Sehr geehrte Damen und Herren,\n\nhiermit stellen wir den Antrag auf Verlängerung unserer Bio-Zertifizierung für das Betriebsjahr 2026 (Betriebsnummer DE-ÖKO-007-4421).\n\nSeit der letzten Zertifizierung haben wir zwei neue Bio-Rezepturen aufgenommen (Kamille-Honig-Bonbon und Zitrone-Ingwer-Karamell), die ebenfalls in den Zertifizierungsumfang aufgenommen werden sollen. Die aktualisierten Rezepturen, Lieferantennachweise für Bio-Rohmaterialien und das aktualisierte Betriebshandbuch liegen dieser Anfrage bei.\n\nBitte teilen Sie uns den Termin für die jährliche Inspektion mit.\n\nMit freundlichen Grüßen\n\nQualitätsmanagement, Leni's Manufaktur"
+  },
+  {
+    "id": 47,
+    "recipient": "einkauf@konditorei-kette-sued.de",
+    "subject": "Aktualisierte Großhandelpreisliste 2026 – Gültig ab 1. März",
+    "content": "Sehr geehrte Frau Hofmann,\n\nbitte entnehmen Sie der beigefügten Preisliste die aktualisierten Großhandelskonditionen für unser Sortiment, gültig ab dem 1. März 2026.\n\nAufgrund gestiegener Energie- und Rohstoffkosten mussten wir bei einzelnen Artikeln moderate Anpassungen von 3–7% vornehmen. Für Ihre bestehenden Rahmenvertragsmengen gelten die alten Preise bis zur Erschöpfung des vereinbarten Kontingents. Die Preise verstehen sich netto zzgl. der gesetzlichen MwSt., ab Werk Lübeck, Mindestbestellwert 500 EUR.\n\nBei Fragen stehe ich jederzeit zur Verfügung.\n\nMit freundlichen Grüßen\n\nVertriebsinnendienst, Leni's Manufaktur"
+  },
+  {
+    "id": 48,
+    "recipient": "buying@galeria-karstadt.de",
+    "subject": "Musterzusendung Herbst-/Winterlinie 2026 – Bitte um Empfangsbestätigung",
+    "content": "Sehr geehrter Herr Blum,\n\nwie im letzten Gespräch vereinbart, haben wir Ihnen heute per DHL-Expresspaket (Sendungsnummer 1Z-7834921) ein Mustersortiment unserer Herbst-/Winterlinie 2026 zugesandt.\n\nEnthalten sind je drei Muster folgender Neuheiten: Spekulatius-Karamell, Bratapfel-Toffee, Walnuss-Marzipan-Kugel sowie die überarbeitete Klassikdose 'Lenis Gold'. Bitte vermerken Sie auf dem beiliegenden Bewertungsbogen Ihre Einschätzung zu Geschmack, Verpackungsoptik und Listungsbereitschaft.\n\nWir freuen uns auf Ihr Feedback.\n\nMit freundlichen Grüßen\n\nKey Account Management"
+  },
+  {
+    "id": 49,
+    "recipient": "service@aqua-tech-wasseraufbereitung.de",
+    "subject": "Ergebnisse halbjährliche Eigenkontrollen – Keimwert über internem Grenzwert",
+    "content": "Sehr geehrte Damen und Herren,\n\ndie halbjährlichen Eigenkontrollen unserer Wasseraufbereitungsanlage (Enthärter + Umkehrosmose für die Kochkessel) haben folgende Ergebnisse gezeigt:\n\nHärte Permeat: 0,3 °dH (Zielwert < 0,5 °dH) – in Ordnung. Leitfähigkeit: 18 µS/cm – in Ordnung. Keimzahl Gesamtbakterienzahl: 42 KBE/ml – knapp über unserem internen Grenzwert von 20 KBE/ml.\n\nWir bitten Sie, eine Inspektion der Anlage zu planen und mögliche Ursachen für den erhöhten Keimwert zu identifizieren. Eine Wiederholungsmessung soll in zwei Wochen erfolgen.\n\nMit freundlichen Grüßen\n\nTechnische Leitung, Leni's Manufaktur"
+  },
+  {
+    "id": 50,
+    "recipient": "pruefung@revisionsgesellschaft-nord.de",
+    "subject": "Jahresabschluss-Inventur 29./30. Dezember – Ablaufplan und Verantwortlichkeiten",
+    "content": "Sehr geehrte Damen und Herren,\n\ndie diesjährige Jahresabschluss-Inventur findet am 29. und 30. Dezember statt. Der Betrieb ruht an diesen Tagen vollständig, um eine lückenlose Erfassung aller Lagerbestände zu ermöglichen.\n\nWir informieren Sie über den geplanten Ablauf, damit Sie Ihren Prüfungsbesuch entsprechend koordinieren können: Team 1 (Rohstoffe & Verpackungsmaterial, Halle A) startet ab 08:00 Uhr unter Leitung von Herrn Krüger; Team 2 (Fertigware, Halle B & C) wird von Frau Sander geführt. Alle Zählergebnisse werden bis 16:00 Uhr täglich zusammengestellt.\n\nBitte teilen Sie uns mit, zu welchem Zeitpunkt Ihr Prüfer vor Ort sein wird.\n\nMit freundlichen Grüßen\n\nLagerleitung, Leni's Manufaktur"
+  },
+  {
+    "id": 51,
+    "recipient": "lieferant@folienwerk-gmbh.de",
+    "subject": "Reklamation: Verpackungsfolie Charge 2025-11-F – Siegelprobleme",
+    "content": "Sehr geehrte Frau Berger,\n\nleider müssen wir Ihnen mitteilen, dass die gelieferte Folie aus Charge 2025-11-F erhebliche Probleme beim Siegeln auf unserer Verpackungsanlage Typ Hassia verursacht.\n\nDie Siegelnähte öffnen sich bei einem erheblichen Anteil der Beutel bereits bei einem Falltest aus 30 cm Höhe. Wir haben zehn Muster zur Rückanalyse gesichert und senden diese auf Wunsch zu. Unsere Maschine wurde ausgeschlossen als Fehlerquelle, da mit der Vorgängelieferung (Charge 2025-09-F) keine Probleme auftraten.\n\nWir bitten um Rücknahme der betroffenen Folienrollen und unverzügliche Lieferung einer fehlerfreien Ersatzpartie.\n\nMit freundlichen Grüßen\n\nTechnischer Einkauf"
+  },
+  {
+    "id": 52,
+    "recipient": "projekte@market-research-group.de",
+    "subject": "Forschungsauftrag: Markteintrittsstudie Niederlande – Süßwarenmarkt 2026",
+    "content": "Sehr geehrte Frau Klinger,\n\nim Rahmen unserer Expansionsstrategie 2026 prüfen wir den Markteintritt in den Niederlanden und bitten Sie, folgende Fragen zu beantworten:\n\n1. Welche Segmente des niederländischen Süßwarenmarkts zeigen das größte Wachstum?\n2. Welche deutschen Premiummarken sind bereits präsent und mit welcher Marktdurchdringung?\n3. Welche Preislagen und Vertriebskanäle sind für eine Premiummarke mit 'German Craft'-Positionierung am vielversprechendsten?\n\nBudget für die Studie: max. 25.000 EUR. Bitte holen Sie drei Angebote ein und legen Sie diese uns zur Freigabe vor.\n\nMit freundlichen Grüßen\n\nStrategische Entwicklung, Leni's Manufaktur"
+  },
+  {
+    "id": 53,
+    "recipient": "produktion@lenis-manufaktur.de",
+    "subject": "OEE-Auswertung Q4 2025 – Ableitung von Verbesserungsmaßnahmen",
+    "content": "Guten Morgen,\n\ndie OEE-Auswertung (Overall Equipment Effectiveness) für das vierte Quartal 2025 zeigt, dass wir auf Linie 2 mit einem Gesamtwert von 61% deutlich unter unserem Zielwert von 75% liegen.\n\nHauptursachen sind laut Analyse: häufige Rüstzeitüberschreitungen (+38% vs. Standard), erhöhte Ausschussrate bei der Hartbonbonproduktion (+2,1%) sowie ungeplante Stillstände durch Rohstoffmangel. Ich schlage vor, für jeden dieser drei Bereiche eine SMED-Analyse bzw. eine Root-Cause-Analyse nach 5-Why-Methode durchzuführen. Die Ergebnisse sind beim nächsten Produktionsmeeting am 20. Januar vorzustellen.\n\nBitte um Bestätigung der Teilnahme.\n\nMit freundlichen Grüßen\n\nContinuous Improvement Manager"
+  },
+  {
+    "id": 54,
+    "recipient": "beratung@esrs-nachhaltigkeitsberatung.de",
+    "subject": "Beauftragung Wesentlichkeitsanalyse – ESRS-Nachhaltigkeitsbericht 2025",
+    "content": "Sehr geehrter Herr Mayer,\n\nfür unseren ersten formellen Nachhaltigkeitsbericht nach ESRS-Standard benötigen wir bis Ende Februar eine abgeschlossene Wesentlichkeitsanalyse.\n\nWir bitten Sie, die Befragung der relevanten Stakeholdergruppen (Kunden, Lieferanten, Mitarbeitende, Anwohner) zu koordinieren und durchzuführen. Die Befragung kann digital über ein geeignetes Online-Tool erfolgen. Das Ergebnis muss eine Rangliste der wesentlichen Nachhaltigkeitsthemen nach Impact-Materialität und finanzieller Materialität enthalten.\n\nBitte senden Sie uns Ihren Projektplan und einen Kostenvoranschlag.\n\nViele Grüße\n\nCSR-Beauftragter, Leni's Manufaktur"
+  },
+  {
+    "id": 55,
+    "recipient": "alle.produktion@lenis-manufaktur.de",
+    "subject": "Pflichtunterweisung HACCP – Jahres-Refresher Termine Q1",
+    "content": "Liebe Kolleginnen und Kollegen,\n\ngemäß unserem HACCP-Konzept ist für alle Mitarbeitenden in produktionsnahen Bereichen jährlich eine HACCP-Auffrischungsschulung verpflichtend.\n\nDie Termine für das erste Quartal lauten: 22. Januar (Frühschicht, 13:00 Uhr, Schulungsraum 2), 23. Januar (Spätschicht, 07:00 Uhr, Schulungsraum 2), 24. Januar (Nachtschicht, 14:00 Uhr, Schulungsraum 1). Der Schulungsinhalt umfasst die kritischen Kontrollpunkte (CCPs) unserer Prozesse, aktuelle Änderungen im HACCP-Plan sowie Verhaltensregeln bei Abweichungen.\n\nBitte buchen Sie Ihren Termin bis zum 15. Januar im Intranet.\n\nMit freundlichen Grüßen\n\nLebensmittelsicherheitsbeauftragte"
+  },
+  {
+    "id": 56,
+    "recipient": "kooperation@confiserie-lamaitre.fr",
+    "subject": "Collaboration Proposal: Co-Branded Gift Box for the Christmas Season",
+    "content": "Dear Mr. Dubois,\n\nFollowing our enjoyable conversation at the Paris Gourmet Fair, I would like to formally propose a co-branded premium gift box for the upcoming Christmas season.\n\nThe concept: Leni's Manufaktur contributes three signature caramel varieties (Fleur de Sel, Speculoos, and Calvados), while La Maître contributes three of its finest pralines. The box would be jointly designed and marketed under both brand names in Germany and France, targeting the premium gifting segment in speciality retail and online.\n\nI believe the complementary nature of our product portfolios and our shared commitment to traditional craftsmanship make this a compelling proposition. Would you be open to an exploratory call next week?\n\nBest regards,\n\nBusiness Development, Leni's Manufaktur"
+  },
+  {
+    "id": 57,
+    "recipient": "abrechnung@coastline-marketingagentur.de",
+    "subject": "Mittelverwendungsnachweis Q4 2025 – Offene Rechnungen bis 10. Januar einreichen",
+    "content": "Sehr geehrte Damen und Herren,\n\nfür unsere interne Budgetabrechnung des Markenbudgets Q4 2025 benötigen wir bis zum 10. Januar alle noch offenen Rechnungen Ihrerseits.\n\nBitte stellen Sie eine Aufstellung für folgende Positionen zusammen: Messeauftritt Süßwarenmesse, Influencer-Kooperationen, Fotoproduktion Onlineshop sowie die Werbekampagne 'Echter Genuss'. Rechnungen, die noch nicht bei uns eingegangen sind, müssen spätestens bis zum 10. Januar vorliegen, da unsere interne Abrechnungsfrist der 15. Januar ist.\n\nVielen Dank für Ihre schnelle Rückmeldung.\n\nMit freundlichen Grüßen\n\nControlling, Leni's Manufaktur"
+  },
+  {
+    "id": 58,
+    "recipient": "arbeitsrecht@kanzlei-nordmann-partner.de",
+    "subject": "Rechtsberatung: Aktualisierung Betriebsvereinbarung Social-Media-Nutzung",
+    "content": "Sehr geehrte Damen und Herren,\n\nein aktueller Vorfall, bei dem ein Mitarbeiter Videos aus unserem Produktionsbereich ohne Genehmigung auf TikTok veröffentlicht hat, macht eine Aktualisierung unserer bestehenden Betriebsvereinbarung zur privaten Social-Media-Nutzung erforderlich.\n\nWir bitten Sie um rechtliche Beratung und Unterstützung bei der Erarbeitung einer aktualisierten Fassung, die konkret regelt: Fotografieren und Filmen im Betrieb, Nennung des Arbeitgebers in sozialen Medien sowie den Umgang mit vertraulichen Unternehmensinformationen. Die neue Vereinbarung sollte bis Ende Februar fertiggestellt sein.\n\nBitte teilen Sie uns Ihre Verfügbarkeit für ein erstes Gespräch mit.\n\nMit freundlichen Grüßen\n\nGeschäftsführung, Leni's Manufaktur"
+  },
+  {
+    "id": 59,
+    "recipient": "versicherung@handwerk-assekuranz.de",
+    "subject": "Schadensmeldung: Maschinenausfall Kochkessel 3 – Betriebsunterbrechungsschaden",
+    "content": "Sehr geehrte Damen und Herren,\n\nhiermit melden wir einen Betriebsunterbrechungsschaden aufgrund des ungeplanten Ausfalls von Kochkessel 3 (Defekt an der Heizwendel) vom 14. bis 18. Januar.\n\nDer Ausfall hat zu einem Produktionsausfall von ca. 4,2 Tonnen Fertigware geführt, was einem Deckungsbeitragsverlust von geschätzt 38.000 EUR entspricht. Zudem sind Notfallreparaturkosten in Höhe von ca. 8.500 EUR entstanden. Alle relevanten Belege und das Schadensprotokoll der Technikabteilung werden wir bis Ende der Woche einreichen.\n\nBitte bestätigen Sie den Eingang dieser Schadensmeldung.\n\nMit freundlichen Grüßen\n\nGeschäftsführung, Leni's Manufaktur"
+  },
+  {
+    "id": 60,
+    "recipient": "kooperationen@sweetfit-management.de",
+    "subject": "Antwort auf Kooperationsanfrage: @SweetFitLife – 'Natürlich Genießen'-Linie",
+    "content": "Sehr geehrte Damen und Herren,\n\nvielen Dank für Ihre Anfrage bezüglich einer Kooperation mit Mia Krause (@SweetFitLife, 320.000 Follower).\n\nWir haben das Profil geprüft und sind grundsätzlich an einer Zusammenarbeit interessiert, da die Nische 'gesunder Genuss' gut zu unserer 'Natürlich Genießen'-Linie passt. Für eine abschließende Entscheidung bitten wir Sie, uns folgende Unterlagen zuzusenden: aktuelles Medienkit, Engagement-Rate-Statistiken sowie Referenzen aus vergleichbaren Lebensmittelkooperationen.\n\nDas vorgeschlagene Honorar von 4.500 EUR / Monat werden wir nach Prüfung des Medienkits bewerten.\n\nMit freundlichen Grüßen\n\nKooperation & Sponsoring, Leni's Manufaktur"
+  },
+  {
+    "id": 61,
+    "recipient": "zertifizierung@ifs-international.org",
+    "subject": "Terminanfrage: IFS Food Re-Zertifizierung Audit 2026",
+    "content": "Dear Sir or Madam,\n\nour current IFS Food Certificate (Version 8, Level Higher) expires on 30 June 2026. We would like to schedule the re-certification audit for late April or early May 2026 to allow sufficient time for any corrective actions that may be required.\n\nOur facility is located in Lübeck, Germany, with a production area of approximately 3,200 m². The scope covers the manufacture of confectionery products, specifically hard and soft caramels, toffees, and coated confectionery.\n\nPlease send us your available dates and the name of the assigned lead auditor. We would prefer continuity with our previous auditor, Ms. Kowalski.\n\nKind regards,\n\nQuality Management, Leni's Manufaktur"
+  },
+  {
+    "id": 62,
+    "recipient": "schaden@handwerk-assekuranz.de",
+    "subject": "Empfangsbestätigung: Schadensregulierung abgeschlossen – Az. MV-2025-8821",
+    "content": "Sehr geehrte Damen und Herren,\n\nwir bestätigen den Eingang der Erstattungszahlung in Höhe von 22.400 EUR für den Schaden an unserer Verpackungsanlage (Aktenzeichen MV-2025-8821, Schadensmeldung vom 22. Oktober).\n\nNach Abzug des vereinbarten Selbstbehalts von 2.500 EUR ist ein Betrag von 19.900 EUR eingegangen. Wir nehmen zur Kenntnis, dass für den Anspruch auf Neuwertentschädigung der fristgerechte Nachweis einer gleichwertigen Ersatzinvestition bis 31. März erforderlich ist. Die entsprechenden Unterlagen werden wir rechtzeitig einreichen.\n\nVielen Dank für die zügige Schadensregulierung.\n\nMit freundlichen Grüßen\n\nGeschäftsführung, Leni's Manufaktur"
+  },
+  {
+    "id": 63,
+    "recipient": "beratung@hr-akademie-nord.de",
+    "subject": "Schulungsplanung 2026 – Anfrage Trainingskatalog und Inhouse-Verfügbarkeiten",
+    "content": "Sehr geehrte Damen und Herren,\n\nwir planen derzeit unsere betriebliche Weiterbildung für 2026 und bitten Sie um Zusendung Ihres aktuellen Trainingskatalogs.\n\nFür die Jahresplanung sind insbesondere folgende Themen relevant: Arbeitssicherheit, Lebensmittelhygiene, Datenschutz sowie technische Qualifikationen für neue Maschinen (Dragieranlage und BRS-Software). Wir benötigen jeweils Angaben zu Schulungsdauer, Teilnehmerzahl und Inhouse-Durchführungsmöglichkeiten in Lübeck.\n\nBitte bestätigen Sie Ihre Verfügbarkeit für Schulungen ab dem zweiten Quartal 2026.\n\nViele Grüße\n\nPersonalentwicklung, Leni's Manufaktur"
+  },
+  {
+    "id": 64,
+    "recipient": "presse@lenis-manufaktur.de",
+    "subject": "Entwurf Pressemitteilung: Gewinner Deutscher Süßwarenpreis 2025",
+    "content": "Sehr geehrte Damen und Herren,\n\nanbei übersende ich den Entwurf der Pressemitteilung zur Auszeichnung unserer 'Manufaktur Reserve Fleur de Sel' mit dem Deutschen Süßwarenpreis 2025 in der Kategorie 'Premium Confectionery'.\n\nBitte prüfen Sie den Text auf Faktentreue und sprachliche Stimmigkeit und geben Sie ihn bis Donnerstag zur Veröffentlichung frei. Zum Zeitpunkt der Veröffentlichung sollte das hochauflösende Produktfoto der Auszeichnung bereits über unsere digitalen Kanäle verbreitet sein.\n\nWir planen außerdem einen LinkedIn-Post sowie einen Newsletter-Beitrag, der von der Social-Media-Redaktion koordiniert wird.\n\nMit freundlichen Grüßen\n\nUnternehmenskommunikation"
+  },
+  {
+    "id": 65,
+    "recipient": "logistik@versandpartner-nord.de",
+    "subject": "Rahmenvertrag Jahres-Logistik 2026: Konditionen und Servicelevel",
+    "content": "Sehr geehrte Frau Petersen,\n\nder bestehende Logistik-Rahmenvertrag endet am 28. Februar. Wir möchten die Zusammenarbeit gerne fortsetzen und schlagen vor, folgende Anpassungen zu verhandeln:\n\n1. Anhebung der garantierten Lieferquote von 96% auf 98% für temperaturkritische Transporte. 2. Einführung einer Echtzeit-Track-&-Trace-Schnittstelle zum unseren ERP-System. 3. Anpassung der Paletten-Preise entsprechend der aktuellen Kraftstoffindexentwicklung.\n\nBitte senden Sie uns einen Gegenentwurf für die Vertragsverlängerung bis zum 10. Februar. Für ein persönliches Gespräch stehen wir in der letzten Januarwoche zur Verfügung.\n\nMit freundlichen Grüßen\n\nLeitung Logistik & Supply Chain"
+  },
+  {
+    "id": 66,
+    "recipient": "h.brenner@brand-design-studio.de",
+    "subject": "Freigabe Weihnachtskampagne 2025 – Finale Abstimmungsrunde",
+    "content": "Hallo Herr Brenner,\n\nvielen Dank für die finalen Entwürfe der Weihnachtskampagne 2025 mit allen vereinbarten Änderungen. Gegenüber dem letzten Entwurf wurde der Werbeclaim von 'Pure Freude' auf 'Echte Handwerkskunst – Reiner Genuss' geändert, und das Hauptbild zeigt nun die goldene Produktdose statt des Fabrikgebäudes – beides entspricht unseren Vorstellungen.\n\nWir erteilen hiermit die finale Freigabe für den Druck der POS-Materialien. Bitte stellen Sie sicher, dass die Lieferfrist der Druckerei von vier Werktagen eingehalten wird. Der Onlinebanner ist bereits freigegeben.\n\nVielen Dank für Ihre gute Arbeit.\n\nMit freundlichen Grüßen\n\nMarketing & Kommunikation, Leni's Manufaktur"
+  },
+  {
+    "id": 67,
+    "recipient": "einkauf@speditionen-sued.de",
+    "subject": "Angebotsanfrage: Jahresausschreibung Stückgut- und Komplettladungsverkehre",
+    "content": "Sehr geehrte Damen und Herren,\n\nhiermit laden wir Sie ein, an unserer jährlichen Transportausschreibung teilzunehmen. Das Ausschreibungsvolumen umfasst ca. 1.200 Sendungen pro Jahr (70% Stückgut, 30% Komplettladungen) zwischen unserem Werk in Lübeck und Empfängern in Deutschland, Österreich, der Schweiz sowie den Benelux-Ländern.\n\nDie vollständigen Ausschreibungsunterlagen inkl. Anforderungsprofil, Mengengerüst und Preisformular senden wir Ihnen bis Dienstag zu. Angebote sind bis zum 7. Februar einzureichen. Wir bitten um Angabe von Laufzeiten, Serviceleistungen und Referenzen aus der Lebensmittellogistik.\n\nMit freundlichen Grüßen\n\nEinkauf Logistik, Leni's Manufaktur"
+  },
+  {
+    "id": 68,
+    "recipient": "projekte@digital-commerce-agency.de",
+    "subject": "Technische Anforderungen: Launch Kundenbindungsprogramm 'Lenis Gold Card'",
+    "content": "Sehr geehrte Damen und Herren,\n\nfür den geplanten Launch unseres Kundenbindungsprogramms 'Lenis Gold Card' im April benötigen wir folgende technische Umsetzung in unserem Onlineshop und CRM-System:\n\n1. Integration eines Punktekontos pro Kundenkonto (1 EUR = 10 Punkte, 500 Punkte = 5 EUR Rabatt).\n2. Automatisierte E-Mail-Trigger für Willkommensbonus, Punktestand-Update und Einlösebestätigung.\n3. Reporting-Dashboard für das Marketing: Aktivierungsrate, Einlösequote, Top-Kunden.\n\nBitte schätzen Sie den Entwicklungsaufwand bis zum 20. Januar ein, damit wir das Projekt in der Budgetplanung berücksichtigen können.\n\nMit freundlichen Grüßen\n\nMarketing & E-Commerce, Leni's Manufaktur"
+  },
+  {
+    "id": 69,
+    "recipient": "einkauf@transgourmet-catering.de",
+    "subject": "Vorbereitung Erstgespräch 28. Januar: Süßwaren-Sortiment als Dessert-Beilage",
+    "content": "Sehr geehrte Damen und Herren,\n\nwir freuen uns über Ihr Interesse an unserem Sortiment als Dessert-Beilagen für Ihre Systemgastronomie-Kunden. Für unser Gespräch am 28. Januar haben wir folgende Unterlagen vorbereitet:\n\nEine Kurzpräsentation mit Fokus auf Einzelportionsverpackungen, unsere aktuellen Hygiene-Zertifikate sowie eine Kalkulation für Großgebinde (5-kg-Foodservice-Kartons). Zudem liegt ein unverbindliches Preisangebot für Mindestabnahmemengen ab 200 kg pro Monat bei.\n\nWir sehen im Foodservice-Kanal großes Potenzial und freuen uns auf ein produktives Gespräch.\n\nViele Grüße\n\nVertrieb, Leni's Manufaktur"
+  },
+  {
+    "id": 70,
+    "recipient": "h.steinbach@steinbach-unternehmensberatung.de",
+    "subject": "Vorbereitung Beiratssitzung Q1 2026 – Tagesordnung und Unterlagen",
+    "content": "Sehr geehrter Herr Steinbach,\n\nim Hinblick auf die nächste Beiratssitzung am 14. Februar um 10:00 Uhr werden wir folgende Unterlagen bis zum 7. Februar vorbereiten:\n\n1. Jahresabschluss 2025 (vorläufig) mit Abweichungsanalyse vs. Budget.\n2. Strategiepapier Markteintritte Niederlande und UK (aktueller Stand).\n3. Investitionsplanung 2026 mit Priorisierung der geplanten Maschinenneuanschaffungen.\n4. Update Nachhaltigkeitsstrategie und ESG-Kennzahlen.\n\nBitte lassen Sie uns bis zum 31. Januar die finalisierte Tagesordnung und eventuelle weitere Themen zukommen, damit wir die Beiträge der Fachbereiche rechtzeitig koordinieren können.\n\nMit freundlichen Grüßen\n\nGeschäftsführerin, Leni's Manufaktur"
   }
 ]
