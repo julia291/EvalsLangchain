@@ -1,0 +1,302 @@
+[
+  {
+    "id": 1,
+    "recipient": "m.turner@sugar-wholesale.co.uk",
+    "subject": "Urgent Reorder: Fine Crystal Sugar for Week 42",
+    "content": "Dear Mr. Turner,\n\nFurther to our framework agreement, and due to an unexpectedly high order volume for our 'Sea Salt Edition', we need to adjust our raw material planning at short notice.\n\nWe urgently require an additional delivery of 2 tonnes of fine crystal sugar, which must arrive at our goods-in department no later than next Tuesday. Could you please check the feasibility of this unscheduled delivery as soon as possible?\n\nWe would be very grateful for a brief confirmation of the delivery date.\n\nKind regards,\n\nYour Purchasing Team"
+  },
+  {
+    "id": 2,
+    "recipient": "production@ourcaramelcompany.com",
+    "subject": "Important Notice: Maintenance Work on Cooking Kettle 3",
+    "content": "Dear colleagues in Production,\n\nPlease note the following change to the operating schedule: this coming Friday, from 2:00 pm, necessary technical maintenance (descaling and seal inspection) will be carried out on Cooking Kettle 3.\n\nThis means the unit will be unavailable for the rest of the late shift. Please adjust the shift planning accordingly to avoid a backlog in processing the cream-caramel mass.\n\nThank you for your understanding and cooperation.\n\nTechnical Management"
+  },
+  {
+    "id": 3,
+    "recipient": "marketing@ourcaramelcompany.com",
+    "subject": "Feedback on the Holiday Edition Designs / Material Review",
+    "content": "Hi Ms. Weber,\n\nI have taken a close look at the current design drafts for the Holiday Edition. Overall the design is very appealing, but there are technical concerns regarding feasibility.\n\nThe gold finish looks excellent on screen, but the practical test with the sample piece showed that the color chips at the edges as soon as the candy is twisted. This does not meet our quality standards for premium products.\n\nI suggest we get together soon to discuss alternative materials or printing methods.\n\nBest regards,\n\nProduct Management"
+  },
+  {
+    "id": 4,
+    "recipient": "k.davies@logistics-partner.io",
+    "subject": "Complaint: Transport Damage to Shipment #4920",
+    "content": "Dear Mr. Davies,\n\nUnfortunately we must inform you that shipment #4920 (butter fudge cubes) arrived today at our Hamburg warehouse in an unacceptable condition.\n\nInitial inspection suggests the cold chain was severely interrupted during transport. The goods have fused into a single block and are therefore unsellable. A detailed photo record of the damage is attached to this email.\n\nWe request your prompt response on this matter, along with proposals for how to proceed with the claim.\n\nKind regards,\n\nLogistics Department"
+  },
+  {
+    "id": 5,
+    "recipient": "all.staff@ourcaramelcompany.com",
+    "subject": "Invitation to Internal Tasting: New 'Chili-Mango' Product Line",
+    "content": "Dear colleagues,\n\nthe Product Development department is pleased to present the results of the past few weeks. We have been working on a new, exotic flavor: 'Chili-Mango'.\n\nTo finalize the recipe, we need your valued opinion. From 12:00 pm we will have samples available for blind tasting in the central break room.\n\nWe would especially appreciate feedback on the balance between the sweetness of the fruit and the heat of the chili. You can note your feedback directly on the questionnaires provided.\n\nWe look forward to your active participation.\n\nYour Development Team"
+  },
+  {
+    "id": 6,
+    "recipient": "accounting@ourcaramelcompany.com",
+    "subject": "Payment Approval: Organic Vanilla Extract Invoice",
+    "content": "Good morning Mr. Miller,\n\nplease find attached the current invoice from our supplier in Madagascar for the last delivery of organic vanilla extract.\n\nI have checked the goods received and the delivery is complete and in perfect condition. Please arrange payment as a priority so we can keep the early payment discount. Given the currently rising raw material prices for real vanilla, it is important that we secure our favorable terms.\n\nThank you for your support.\n\nRaw Materials Purchasing"
+  },
+  {
+    "id": 7,
+    "recipient": "sales@retailchain-group.com",
+    "subject": "Proposal: Autumn Campaign and Secondary Placement",
+    "content": "Dear Ms. Miller,\n\nthank you for the pleasant call yesterday. As discussed, please find enclosed our detailed proposal for the upcoming autumn campaign.\n\nWe propose a secondary placement of our soft caramels in your stores, supported by our new display stands in a 'vintage look'. Early test markets have shown that this design significantly increases impulse purchases.\n\nYou will find the detailed terms as well as the dimensions of the display stands in the attached PDF. Please do not hesitate to reach out with any questions.\n\nKind regards,\n\nKey Account Management"
+  },
+  {
+    "id": 8,
+    "recipient": "j.bauer@ourcaramelcompany.com",
+    "subject": "Critical Temperature Rise in Warehouse B",
+    "content": "Hello Mr. Bauer,\n\nI need to flag an urgent problem in Warehouse B. The temperature sensors have been reporting a constant 24 degrees Celsius for over an hour now.\n\nFor the unpackaged goods stored there, this temperature is too high. There is a risk that the caramel mass will lose its shape stability. Please check the air conditioning system immediately and initiate emergency measures if necessary.\n\nPlease let me know as soon as the problem has been identified.\n\nMany thanks,\n\nWarehouse Management"
+  },
+  {
+    "id": 9,
+    "recipient": "info@precision-machinebuilders.de",
+    "subject": "Inquiry: Spare Part Procurement for Cutting Machine Type C",
+    "content": "Dear Sir or Madam,\n\nwe require a replacement part for the Series 400 extruder used in our production. Specifically, we need the cutting blade for the Type C cutting machine.\n\nThe currently installed blade shows signs of wear, which is causing uneven cut edges on our toffees. To maintain product quality, a prompt replacement is essential.\n\nCould you please let us know whether you have this part in stock and provide a quote including delivery time?\n\nKind regards,\n\nTechnical Purchasing"
+  },
+  {
+    "id": 10,
+    "recipient": "d.klein@swiftpost.net",
+    "subject": "Invitation to Interview and Trial Work Day",
+    "content": "Dear Mr. Klein,\n\nthank you for your application and your interest in joining our company. Your résumé, and in particular your experience with processing sugar masses, caught our attention.\n\nWe would be glad to meet you in person and hereby invite you to an interview including a short trial work day at our facility. We would suggest next Wednesday at 10:00 am.\n\nPlease let us know briefly whether this time works for you.\n\nKind regards,\n\nHuman Resources"
+  },
+  {
+    "id": 11,
+    "recipient": "qa@ourcaramelcompany.com",
+    "subject": "Quality Deviation: Lab Report Batch 882 (Salted Caramel)",
+    "content": "Dear Quality Assurance team,\n\nthis morning's analysis of Batch 882 ('Salted Caramel') unfortunately showed a deviation from specification.\n\nThe salt content according to the lab report is 1.8%, whereas our standard value is defined at 1.5%. Please have the retained samples tasted immediately to determine whether the product is still within acceptable tolerance or must be held.\n\nWe expect your report by 2:00 pm.\n\nKind regards,\n\nLab Management"
+  },
+  {
+    "id": 12,
+    "recipient": "customerservice@ourcaramelcompany.com",
+    "subject": "Escalation: Customer Complaint Regarding Packaging Material",
+    "content": "Hello Customer Service team,\n\nI am forwarding a phone complaint we received today. A customer reported that on the 'Classic Cream' bag (best before 12/2025), the wax paper barely releases from the candy.\n\nThis could point to a problem with the coating on the new batch of paper. Please log the case and compare the batch number with other complaints from the past week. Should this occur more frequently, we will need to contact the supplier.\n\nPlease keep me updated.\n\nBest regards,\n\nHead of Quality Management"
+  },
+  {
+    "id": 13,
+    "recipient": "executive.board@ourcaramelcompany.com",
+    "subject": "October Monthly Report: Sales Development and Analysis",
+    "content": "Dear Executive Board,\n\nplease find attached the detailed sales report for October. We are pleased to report that we have clearly exceeded our targets.\n\nThanks to the successful Halloween campaign, we were able to increase sales by 15% compared to the same period last year. Particularly noteworthy is the success of the black licorice caramels, which sold out early in several markets. A detailed regional breakdown is provided in the attachment.\n\nFor the coming month of November, we forecast stable development.\n\nKind regards,\n\nControlling Department"
+  },
+  {
+    "id": 14,
+    "recipient": "s.cole@brightpack-design.ch",
+    "subject": "Print File Approval: 500g Bag Back Panel",
+    "content": "Dear Ms. Cole,\n\nwe have completed our final review and approval of the text for the back panel of the new 500g bag. Please find the corresponding files attached.\n\nWe would like to ask you again to pay particular attention to the legibility of the nutrition table. Since the bag is made of flexible material and will crinkle, we need to make sure the mandatory information remains clearly readable even when the bag is filled.\n\nPlease send us one final proof before the print run begins.\n\nKind regards,\n\nMarketing & Communications"
+  },
+  {
+    "id": 15,
+    "recipient": "facilities@ourcaramelcompany.com",
+    "subject": "Cleaning Request: Special Cleaning of the Mixing Production Area",
+    "content": "Good day,\n\nplease schedule an intensive wet cleaning of the mixing area for this evening, after production ends.\n\nDue to an incident this morning, a container of glucose syrup tipped over. The area has been roughly cleaned, but the floor still has significant sticky residue that poses a safety risk. Mechanical cleaning is required here.\n\nThank you for your quick support.\n\nProduction Shift Lead"
+  },
+  {
+    "id": 16,
+    "recipient": "it-support@ourcaramelcompany.com",
+    "subject": "Fault Report: Connection Error Scale 4 / ERP System",
+    "content": "Dear IT Support team,\n\nwe currently have a technical issue on Packaging Line 4. The control scale installed there has not transmitted any weight data to the ERP system for about 30 minutes.\n\nSince we are now forced to log data manually, this is significantly slowing down the packaging process. Restarting the terminal has unfortunately not resolved the issue.\n\nWe request urgent investigation and resolution.\n\nKind regards,\n\nPackaging Production Management"
+  },
+  {
+    "id": 17,
+    "recipient": "procurement@alpine-dairy.at",
+    "subject": "Discussion Needed: 2025 Condensed Milk Price Adjustment",
+    "content": "Dear Sir or Madam,\n\nwe confirm receipt of your letter regarding the planned price increase for condensed milk next year.\n\nAs a long-standing partner and large-volume buyer, we view the announced increase critically. To find a solution that works for both sides and to continue our collaboration, we would like to reopen negotiations.\n\nWould you be available for a call or an in-person meeting next week?\n\nKind regards,\n\nHead of Strategic Purchasing"
+  },
+  {
+    "id": 18,
+    "recipient": "social-media@ourcaramelcompany.com",
+    "subject": "Content Proposal: Video Shoot in the Casting Room",
+    "content": "Hi Social Media team,\n\nduring my walkthrough of production today, I noticed that pouring the liquid caramel mass onto the cooling table looks visually striking. This could work really well for our channels (Instagram Reels / TikTok), for example under a 'Satisfying Process' theme.\n\nDo you think it would be possible to schedule a short shoot for tomorrow without disrupting ongoing operations? I could arrange access to Line 2 from 10:00 am.\n\nLooking forward to your feedback.\n\nBest regards,\n\nCorporate Communications"
+  },
+  {
+    "id": 19,
+    "recipient": "workscouncil@ourcaramelcompany.com",
+    "subject": "Meeting Request: Holiday Season Shift Schedule",
+    "content": "Dear members of the Works Council,\n\nwe are finalizing staff scheduling for the upcoming holiday season. Due to continued high demand, it is operationally necessary to keep production running at a reduced level over the holidays as well.\n\nWe would like to present you with a proposal for shift staffing and the corresponding holiday pay rates, and request a prompt meeting to align on this, so that staff have planning certainty.\n\nKind regards,\n\nHR Management"
+  },
+  {
+    "id": 20,
+    "recipient": "l.fischer@export-partner-japan.jp",
+    "subject": "Transmission of Customs Documents / Clearance Shipment #TK-204",
+    "content": "Dear Mr. Fischer,\n\nFollowing our previous correspondence, please find attached the required customs documentation for the caramel shipment to Tokyo (Reference #TK-204).\n\nWe have ensured that all ingredient lists and production certificates comply with current Japanese import regulations. Please review the documents and confirm receipt at your earliest convenience, so we can authorize the release of the container.\n\nShould you require any further information, do not hesitate to contact us.\n\nSincerely,\n\nExport Department"
+  },
+  {
+    "id": 21,
+    "recipient": "hr@ourcaramelcompany.com",
+    "subject": "Escalation: Repeated Timesheet Delays in the Packaging Team",
+    "content": "Dear HR Team,\n\nI would like to flag a recurring issue with timesheet submissions in the packaging team. For the third month in a row, several employees have submitted their hours after the payroll cutoff, which is causing delays in processing overtime payments.\n\nCould you please advise on the correct escalation procedure, and possibly join our next team meeting to remind staff of the submission deadline?\n\nThank you for your support.\n\nPackaging Shift Supervisor"
+  },
+  {
+    "id": 22,
+    "recipient": "r.tremblay@cartonprint-solutions.ca",
+    "subject": "Quote Request: Custom Printed Shipping Cartons",
+    "content": "Dear Mr. Tremblay,\n\nWe are preparing to launch a new export product line and would like to order custom-printed corrugated shipping cartons featuring our company logo.\n\nPlease find attached the required dimensions and estimated order quantities for the first production run. Could you provide a quote along with your current production lead time?\n\nWe would appreciate your response by the end of the week so we can plan our packaging schedule accordingly.\n\nKind regards,\n\nPackaging Procurement"
+  },
+  {
+    "id": 23,
+    "recipient": "rnd@ourcaramelcompany.com",
+    "subject": "Trial Results: New 'Honey-Lavender' Formulation",
+    "content": "Dear R&D Team,\n\nthe latest trial batch of the 'Honey-Lavender' formulation has been completed, and the results are promising. The lavender aroma is well balanced against the honey sweetness, though two of the five tasters noted a slightly soapy aftertaste at higher lavender concentrations.\n\nI recommend we reduce the lavender extract by 10% in the next iteration and repeat the panel test. Please let me know if you'd like to review the full tasting notes before we proceed.\n\nBest regards,\n\nFlavor Development"
+  },
+  {
+    "id": 24,
+    "recipient": "j.walsh@shieldrisk-insurance.com.au",
+    "subject": "Annual Renewal: Product Liability Insurance Policy",
+    "content": "Dear Mr. Walsh,\n\nour product liability insurance policy is due for renewal next month, and we would like to review the current terms before confirming.\n\nGiven our expanded export activity this year, could you advise whether our coverage limits should be adjusted? We would also appreciate an updated premium quote reflecting our latest production volume.\n\nPlease let us know if you need any additional documentation from our side.\n\nKind regards,\n\nRisk Management"
+  },
+  {
+    "id": 25,
+    "recipient": "finance@ourcaramelcompany.com",
+    "subject": "Kickoff: Fiscal Year 2027 Budget Planning",
+    "content": "Dear Finance Team,\n\nas we begin preparing the budget for fiscal year 2027, I would like to schedule a kickoff meeting with all department heads to align on assumptions for raw material costs, planned capital expenditure, and headcount changes.\n\nCould you please circulate the budget template and submission deadline to the department heads this week? We should aim to have first drafts ready before the end of the month.\n\nThank you,\n\nOffice of the CFO"
+  },
+  {
+    "id": 26,
+    "recipient": "a.lindqvist@nordic-realty.se",
+    "subject": "Lease Renewal: Warehouse Unit 12, Distribution Park",
+    "content": "Dear Ms. Lindqvist,\n\nour current lease for Warehouse Unit 12 at the Distribution Park is due to expire in three months, and we would like to discuss renewal terms.\n\nGiven the planned expansion of our export operations, we may also be interested in the adjacent unit should it become available. Could you let us know the landlord's position on a longer-term lease and current market rates?\n\nWe would welcome a call at your earliest convenience.\n\nKind regards,\n\nFacilities & Real Estate"
+  },
+  {
+    "id": 27,
+    "recipient": "safety@ourcaramelcompany.com",
+    "subject": "Notice: Mandatory Fire Drill Next Thursday",
+    "content": "Dear Safety Team,\n\nas part of our annual compliance requirements, please confirm the arrangements for the mandatory fire drill scheduled for next Thursday at 11:00 am.\n\nCould you circulate the evacuation assembly points to all department heads in advance, and ensure the fire wardens on each floor are briefed? We would also like a short summary report afterward for our safety file.\n\nThank you for coordinating this.\n\nOperations Management"
+  },
+  {
+    "id": 28,
+    "recipient": "b.devries@greenvolt-energy.nl",
+    "subject": "Contract Renewal: Industrial Electricity Supply Agreement",
+    "content": "Dear Mr. de Vries,\n\nour current electricity supply agreement is approaching its renewal date, and given the recent volatility in energy prices, we would like to explore our options before committing to a new term.\n\nCould you provide updated rate proposals for both a fixed-price and a variable-rate contract, based on our historical consumption data which is attached? We are particularly interested in any options that include a share of renewable sourcing.\n\nWe look forward to your proposal.\n\nKind regards,\n\nProcurement - Utilities"
+  },
+  {
+    "id": 29,
+    "recipient": "tradeshow@ourcaramelcompany.com",
+    "subject": "Planning: Booth Design for the Sweets & Snacks Expo",
+    "content": "Dear Sales & Events Team,\n\nwith the Sweets & Snacks Expo coming up in a few months, we need to finalize our booth design and product lineup.\n\nI suggest we feature the Sea Salt Edition and the new Chili-Mango line as centerpiece tastings, along with a small display of our export packaging. Please let me know your preferred booth size and whether we should bring in additional staff for the three-day event.\n\nLet's set up a planning call this week.\n\nBest regards,\n\nMarketing & Events"
+  },
+  {
+    "id": 30,
+    "recipient": "m.garcia@iberian-copack.es",
+    "subject": "Inquiry: Additional Contract Manufacturing Capacity",
+    "content": "Dear Ms. Garcia,\n\ndue to strong demand for our Sea Salt Edition in Southern Europe, we are exploring additional contract manufacturing capacity to supplement our own production.\n\nCould you let us know your current availability for co-packing runs over the next two quarters, along with your minimum order quantities and lead times? We would also need to discuss quality control and recipe confidentiality arrangements.\n\nWe would welcome a call to discuss further.\n\nKind regards,\n\nSupply Chain Management"
+  },
+  {
+    "id": 31,
+    "recipient": "legal@ourcaramelcompany.com",
+    "subject": "Update: Trademark Registration for 'Chili-Mango' Line",
+    "content": "Dear Legal Team,\n\nas the 'Chili-Mango' product line moves toward launch, could you confirm the status of the trademark registration filed last quarter?\n\nMarketing would like to begin using the name in promotional material and packaging mockups, but we want to make sure we have clearance first. Please let us know if there are any objections outstanding or if we are clear to proceed.\n\nThank you,\n\nProduct Management"
+  },
+  {
+    "id": 32,
+    "recipient": "l.rossi@talentbridge-staffing.it",
+    "subject": "Request: Temporary Staff for Peak Holiday Production",
+    "content": "Dear Ms. Rossi,\n\nwith the holiday production peak approaching, we anticipate needing additional temporary staff on the packaging lines for approximately six weeks.\n\nCould you let us know your current availability for candidates with food production experience, and your standard placement terms? We would like to begin onboarding at least two weeks before the peak starts.\n\nPlease send over your standard agreement for review.\n\nKind regards,\n\nHuman Resources"
+  },
+  {
+    "id": 33,
+    "recipient": "training@ourcaramelcompany.com",
+    "subject": "Schedule: New Employee Onboarding - Next Intake",
+    "content": "Dear Training Team,\n\nwe have five new hires starting across Production and Quality Assurance next Monday. Could you confirm the onboarding schedule, including the food safety induction and the facility tour?\n\nPlease also make sure the new starters receive their access badges and PPE before their first shift. Let me know if there's anything you need from the hiring managers ahead of time.\n\nThank you,\n\nHuman Resources"
+  },
+  {
+    "id": 34,
+    "recipient": "k.nowak@ecocert-audit.pl",
+    "subject": "Scheduling: Annual Organic Certification Audit",
+    "content": "Dear Ms. Nowak,\n\nour annual organic certification audit is due, and we would like to schedule a date within the next six weeks.\n\nCould you send us the updated documentation checklist so we can prepare our records in advance? We would also appreciate confirmation of whether the audit will be conducted on-site or remotely this year.\n\nPlease let us know your available dates.\n\nKind regards,\n\nQuality Assurance"
+  },
+  {
+    "id": 35,
+    "recipient": "vendormgmt@ourcaramelcompany.com",
+    "subject": "Review: Annual Evaluation of Packaging Suppliers",
+    "content": "Dear Vendor Management Team,\n\nas part of our annual supplier review, could you compile the scorecards for our three main packaging suppliers, covering on-time delivery, defect rates, and pricing trends over the past year?\n\nWe would like to discuss the results before renewing any contracts for next year, particularly given the recent quality issues with the wax paper coating. Please schedule a review meeting once the data is ready.\n\nThank you,\n\nQuality Management"
+  },
+  {
+    "id": 36,
+    "recipient": "t.lim@oceanfreight-forwarders.sg",
+    "subject": "Customs Clearance Query: EU Shipment Documentation",
+    "content": "Dear Mr. Lim,\n\nwe are preparing a new shipment to our distribution partner in the EU and want to confirm the customs documentation required on our side.\n\nCould you advise whether the certificates of origin and ingredient declarations from our last shipment are still valid, or whether updated versions are needed given the recent regulatory changes? We would like to avoid any delays at the border.\n\nPlease let us know what you need from us.\n\nKind regards,\n\nExport Department"
+  },
+  {
+    "id": 37,
+    "recipient": "communications@ourcaramelcompany.com",
+    "subject": "Draft Review: Press Release for the Chili-Mango Launch",
+    "content": "Dear Communications Team,\n\nattached is the draft press release announcing the launch of our new Chili-Mango product line. Could you review it for tone and make sure the quotes from the Product Development lead are accurate?\n\nWe are aiming to distribute it to trade press by the end of next week, so please share any feedback by Wednesday. Let me know if you'd like to include a comment from the Executive Board as well.\n\nThank you,\n\nProduct Management"
+  },
+  {
+    "id": 38,
+    "recipient": "ads@harbor-tribune.co",
+    "subject": "Booking Request: Weekend Print Advertisement",
+    "content": "Dear Advertising Team,\n\nwe would like to book a quarter-page advertisement in this Saturday's edition to promote our autumn caramel collection in local stores.\n\nCould you confirm availability and send over the current rate card along with the file specifications for print-ready artwork? We would need to submit final artwork by Thursday at the latest.\n\nPlease let us know if that timeline works.\n\nKind regards,\n\nMarketing & Communications"
+  },
+  {
+    "id": 39,
+    "recipient": "engineering@ourcaramelcompany.com",
+    "subject": "Schedule: Conveyor Belt Repair on Packaging Line 2",
+    "content": "Dear Engineering Team,\n\nthe conveyor belt on Packaging Line 2 has been slipping intermittently during the last two shifts, causing minor jams at the wrapping station.\n\nCould you schedule an inspection and repair before the weekend, ideally during a planned downtime window so we don't disrupt the current production run? Please let the shift supervisor know once a time has been confirmed.\n\nThank you,\n\nProduction Management"
+  },
+  {
+    "id": 40,
+    "recipient": "p.dubois@belgo-chocolatiers.be",
+    "subject": "Order Confirmation Request: Dark Couverture Chocolate",
+    "content": "Dear Mr. Dubois,\n\nwe would like to place our quarterly order for dark couverture chocolate, in the same specification and quantity as our last shipment.\n\nCould you confirm current availability and the expected delivery window? Given the strong demand for our chocolate-caramel line this quarter, we would appreciate an expedited delivery if possible.\n\nPlease send an updated invoice once the order is confirmed.\n\nKind regards,\n\nRaw Materials Purchasing"
+  },
+  {
+    "id": 41,
+    "recipient": "sustainability@ourcaramelcompany.com",
+    "subject": "Proposal: Reducing Plastic Use in Secondary Packaging",
+    "content": "Dear Sustainability Team,\n\nfollowing the sustainability targets set out earlier this year, I would like to propose replacing the plastic overwrap on our multipack boxes with a recyclable paper-based alternative.\n\nWe have already had informal conversations with our packaging supplier about feasibility and cost. Could you help coordinate a small-scale trial before we present the proposal to the Executive Board?\n\nHappy to discuss further whenever convenient.\n\nBest regards,\n\nPackaging Development"
+  },
+  {
+    "id": 42,
+    "recipient": "results@purity-labs.ie",
+    "subject": "Request: Results for Sample Batch 915 Analysis",
+    "content": "Dear Laboratory Team,\n\nwe submitted sample batch 915 (Sea Salt Edition) for shelf-life and microbiological analysis two weeks ago and wanted to check on the status of the results.\n\nAs this batch is scheduled for release next week, we would appreciate receiving the report as soon as it's available. Please let us know if any additional samples or documentation are required from our end.\n\nThank you for your support.\n\nQuality Assurance"
+  },
+  {
+    "id": 43,
+    "recipient": "keyaccounts@ourcaramelcompany.com",
+    "subject": "Preparation: Renewal Negotiation with Major Retail Partner",
+    "content": "Dear Key Accounts Team,\n\nour annual contract renewal discussion with our largest retail partner is coming up next month, and I would like to prepare our negotiation position in advance.\n\nCould you pull together the sales volumes, margin trends, and any promotional performance data from the past year? It would also help to have a summary of any complaints or delivery issues raised by the retailer, so we can address them proactively.\n\nLet's schedule a prep meeting once the data is ready.\n\nKind regards,\n\nSales Management"
+  },
+  {
+    "id": 44,
+    "recipient": "sales@cloudledger-systems.us",
+    "subject": "Follow-up: ERP System Upgrade Proposal",
+    "content": "Dear Sales Team,\n\nthank you for the demonstration of your updated ERP module last week. We are particularly interested in the improved inventory forecasting features for our packaging lines.\n\nCould you send over a detailed proposal including implementation timeline, data migration approach, and pricing for our company size? We would also like to understand what support is available during the transition period.\n\nWe look forward to your proposal.\n\nKind regards,\n\nIT Department"
+  },
+  {
+    "id": 45,
+    "recipient": "maintenance@ourcaramelcompany.com",
+    "subject": "Schedule: Quarterly HVAC Filter Replacement",
+    "content": "Dear Maintenance Team,\n\nit's time for the quarterly replacement of the HVAC filters across the production and warehouse areas, as required by our air quality protocol.\n\nCould you schedule this for a low-activity period, ideally over the weekend, and confirm once the replacement filters have been ordered? Please also log the completion in the maintenance system for our next audit.\n\nThank you,\n\nFacilities Management"
+  },
+  {
+    "id": 46,
+    "recipient": "productdev@ourcaramelcompany.com",
+    "subject": "Feedback Requested: New Resealable Pouch Prototype",
+    "content": "Dear Product Development Team,\n\nwe have received the first prototype of the resealable pouch for the multipack line, and initial handling feels promising.\n\nCould your team run it through the standard drop-test and seal-integrity checks before we share it with Marketing for consumer testing? We would like to have preliminary results within two weeks if possible.\n\nPlease let me know if you need additional samples from the supplier.\n\nBest regards,\n\nPackaging Development"
+  },
+  {
+    "id": 47,
+    "recipient": "execassistant@ourcaramelcompany.com",
+    "subject": "Agenda Request: Next Board Meeting",
+    "content": "Dear Executive Assistant,\n\ncould you please circulate a call for agenda items ahead of next month's board meeting? I would like to include an update on the export expansion, the Q4 budget review, and the sustainability packaging proposal.\n\nPlease also confirm the meeting room booking and check whether any board members will be joining remotely, so we can arrange the video conferencing setup in advance.\n\nThank you for coordinating.\n\nOffice of the CEO"
+  },
+  {
+    "id": 48,
+    "recipient": "warehouse@ourcaramelcompany.com",
+    "subject": "Reminder: Quarterly Inventory Count Next Weekend",
+    "content": "Dear Warehouse Team,\n\nthis is a reminder that the quarterly full inventory count is scheduled for next weekend. Could you confirm staffing levels for both Saturday and Sunday, and make sure the counting sheets and scanners are ready in advance?\n\nPlease also let Finance know once the count is complete so the stock valuation can be updated before month-end close.\n\nThank you for your preparation.\n\nOperations Management"
+  },
+  {
+    "id": 49,
+    "recipient": "internalaudit@ourcaramelcompany.com",
+    "subject": "Preparation: Upcoming Quality Management System Audit",
+    "content": "Dear Internal Audit Team,\n\nour quality management system audit is scheduled for later this month, and I would like to make sure all departments are prepared.\n\nCould you circulate the checklist of documentation each department needs to have ready, and flag any open corrective actions from last year's audit that still need closing out? A short reminder to department heads two weeks before the audit date would also be helpful.\n\nThank you,\n\nQuality Management"
+  },
+  {
+    "id": 50,
+    "recipient": "compliance@ourcaramelcompany.com",
+    "subject": "Reminder: Annual Data Privacy Training Deadline",
+    "content": "Dear Compliance Team,\n\nthis is a reminder that the annual data privacy training module is due to be completed by all employees by the end of the month.\n\nCould you send a reminder to department heads listing the current completion rates for their teams? Please also confirm whether the updated module reflecting last year's policy changes has been fully rolled out.\n\nThank you for coordinating this.\n\nHuman Resources"
+  }
+]
